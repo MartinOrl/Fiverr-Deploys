@@ -1,0 +1,186 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Token | ERC20 Token Generator</title>
+    <link rel="shortcut icon" href="./public/favicon.ico" type="image/x-icon">
+    <meta name='description' content="Easily deploy Smart Contract for a Standard, Capped, Mintable, Burnable, Payable ERC20 Token." >
+    <link rel="stylesheet" href="token.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+</head>
+<body>
+    <div id='navbar'>
+        <div id='left-side'>
+            <a href='https://vittominacori.github.io/erc20-generator/' class='link'>
+                <i class="fas fa-angle-left"></i> Go Back
+            </a>
+            <p>Create Token</p>
+        </div>
+        <div id='right-side'>
+            <a class='link'>Home</a>
+            <a class='link'>Docs</a>
+            <a class='link'>About</a>
+            <a class='link'>Donate</a>
+        </div>
+    </div>
+    <div class='container'>
+        <div class='warning'>
+            <h2>Alert</h2>
+            <p>To use this app please install <a href="https://metamask.io/">MetaMask</a> extension on Chrome Desktop</p>
+            <hr>
+            <p>Use any other wallet at your own risk.</p>
+        </div>
+        <div class="box-container">
+            <div class="box-responsive" style="height: 100%; width: 60%;">
+                <div class="box detail-box">
+                    <div class='form'>
+                        <h2>Token Details</h2>
+                        <form>  
+                            <div class="form-row">
+                                <div class="column">
+                                    <label for="token-name">Token Name <sup>*</sup></label>
+                                    <input type="text" class="input" name="token-name" placeholder="Token Name" required>
+                                </div>
+                                <div class="column">
+                                    <label for="token-symbol">Token Symbol <sup>*</sup></label>
+                                    <input type="text" class="input" name="token-symbol" placeholder="Token Symbol" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="column">
+                                    <label for="total-supply">Total Supply <sup>*</sup></label>
+                                    <input type="number" class="input" id="total-supply" name="total-supply" min='0' placeholder="Your token max supply">
+                                </div>
+                                <div class="column">
+                                    <label for="initial-supply">Initial Supply <sup>*</sup></label>
+                                    <input type="number" class="input" id="initial-supply" name="initial-supply" min='0' placeholder="Your token initial supply" onchange="checkData()">
+                                </div>
+                            </div>
+                            <div class="form-row end">
+                                <div class="column">
+                                    <label for="token-decimals">Token Decimals</label>
+                                    <input type="number" class="input" id='token-decimals' name='token-decimals' max='24' min='0' value='18' >
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="box network-box" >
+                    <div class="form" style="width: 100%;">
+                        <label name="network-type">Network Type</label>
+                        <select name="network-type" id="network-type" class="input" onchange="checkData()">
+                            <optgroup>
+                                <option value="main">Main Ethereum Network</option>
+                                <option value="ropsten">Ropsten Test Network</option>
+                                <option value="rinkeby">Rinkeby Test Network</option>
+                                <option value="kovan">Kovan Test Network</option>
+                                <option value="goerli">Goerli Test Network</option>
+                            </optgroup>
+                        </select>
+                        <div class="warning test display" id='test-warning'>
+                            <h2>You selected a TEST Network</h2>
+                            <hr>
+                            <p>To deploy on Main Network you must select Main Ethereum Network. </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="box option-box box-responsive">
+                <div class="form">
+                    <form action="">
+                        <div class="form-row">
+                            <div class="column">
+                                <label for="token-type">Token Type <sup>*</sup></label>
+                                <select name="token-type" id="token-type" class="input" onchange="setMode()">
+                                    <optgroup >
+                                        <option value="simple">SimpleERC20</option>
+                                        <option value="standard">StandardERC20</option>
+                                        <option value="common">CommonERC20</option>
+                                        <option value="powerful">PowerfulERC20</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                            <div class="column">
+                                <label for="token-type-cap">
+                                    <span style="color: rgba(0,0,0,.6)" ><sub>Token Supply Type</sub></span>
+                                </label>
+                                <select disabled name="token-type-cap" id="token-type-cap" class="input">
+                                    <optgroup>
+                                        <option id="fixed" value="fixed">Fixed</option>
+                                        <option id="capped" value="capped">Capped</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="column checkbox">
+                                <label class="switch" style="height: 34px;">
+                                    <input type="checkbox" name="mintable" class="check">
+                                    <span class="slider round"></span>
+                                    <p>Mintable</p>
+                                </label>
+                                <p>You will be able to generate tokens by minting them.</p>
+                            </div>
+                            <div class="column checkbox">
+                                <label class="switch" style="height: 34px;">
+                                    <input type="checkbox" name="burnable" class="check">
+                                    <span class="slider round"></span>
+                                    <p>Burnable</p>
+                                </label>
+                                <p>Your tokens can be burnt.</p>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="column checkbox">
+                                <label class="switch" style="height: 34px;">
+                                    <input type="checkbox" name="erc" class="check">
+                                    <span class="slider round"></span>
+                                    <p>ERC 1363</p>
+                                </label>
+                                <p>The ERC1363 is an ERC20 compatible Token that can make a callback on the receiver contract to notify token transfers or token approvals.</p>
+                            </div>
+                            <div class="column checkbox">
+                                <label class="switch" style="height: 34px;">
+                                    <input type="checkbox" name="recover" class="check">
+                                    <span class="slider round"></span>
+                                    <p>Token Recover</p>
+                                </label>
+                                <p>It allows the contract owner to recover any ERC20 token sent into the contract for error.</p>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="checkbox" style="margin: 0 auto; width: 40%;">
+                                <label class="switch" style="height: 34px;">
+                                    <input type="checkbox" name="copyright" class="check">
+                                    <span class="slider round"></span>
+                                    <p>Remove Copyright</p>
+                                </label>
+                                <p>Remove the link pointing to this page from your contract.</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="box payment-box">
+            <div class="form payment">
+                <h2>Payment</h2>
+                <div style="display: flex; margin: 8px 0; justify-content: space-between;">
+                    <p>Token deployment fee:</p>
+                    <p class="value" id='value'>0.00 ETH</p>
+                </div>
+                <hr>
+                <p style="opacity: 0.5;"><sup>*</sup>GAS fee will be added to final amount</p>
+            </div>
+            <div class="share-button">
+                <span>Confirm</span>
+                <a href="#"><i class="fas fa-check"></i></a>
+            </div>
+        </div>
+        
+    </div>
+    <script src="token.min.js">
+    </script>
+</body>
+</html>
