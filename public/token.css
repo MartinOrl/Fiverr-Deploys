@@ -264,7 +264,6 @@ input:checked ~ p{
   .share-button a {
     flex: 1;
     font-size: 26px;
-    margin-right: 20px;
     color: #2d3436;
     text-align: center;
     transform: translateX(-100%);
