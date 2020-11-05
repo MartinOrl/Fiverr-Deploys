@@ -35,8 +35,6 @@ initialSupply.addEventListener('change', (e) => {
 function setMode(){
     switch (tokenType.value){
         case 'simple':
-            tokenDecimals.disabled= true;
-            tokenTypeCap.value='fixed';
             switches['copyright'].checked = false;
             initialSupply.disabled = false;
             switches[0].checked = false;
@@ -49,7 +47,6 @@ function setMode(){
         case 'standard':
             switches['copyright'].checked = true;
             initialSupply.disabled = true;
-            tokenDecimals.disabled = false;
             switches[0].checked = false;
             switches[1].checked = false;
             switches[2].checked = false;
@@ -59,8 +56,6 @@ function setMode(){
             return ''
         case 'common':
             initialSupply.disabled = false;
-            tokenTypeCap.value = 'capped';
-            tokenDecimals.disabled = false;
             switches[0].checked = true;
             switches[1].checked = true;
             switches[2].checked = false;
@@ -70,8 +65,6 @@ function setMode(){
             value.innerHTML = '0.55 ETH'
             return ''
         case 'powerful':
-            tokenTypeCap.value = 'capped';
-            tokenDecimals.disabled = false;
             initialSupply.disabled = false;
             switches[0].checked = true;
             switches[1].checked = true;
