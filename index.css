@@ -173,6 +173,11 @@ img{
     }
     .global-container{
         max-height: unset;
+        max-width: 80%;
+        height: unset;
+        transform: translate(-50%, -27%);
+        position: absolute;
+
     }
     .title{
         text-align: center;
@@ -216,29 +221,31 @@ img{
 @media screen and (max-width: 520px){
     .global-container{
         max-height: unset;
+        max-width: 80%;
+        top: 35%;
     }
     
     .box:nth-of-type(1){
         transform: unset;
         top: 9%;
-        left: 33%;
+        left: 25%;
     }
     .box:nth-of-type(2){
         top: 25%;
-        left: 45%;
+        left: 40%;
     }
     .box:nth-of-type(3){
         top: 48.8%;
-        left: 38%;
+        left: 36%;
         transform: unset;
     }
     .box:nth-of-type(4){
         top: 61%;
-        left: 42%;
+        left: 39%;
         transform: unset;
     }
     .box:nth-of-type(5){
         top: 75.6%;
-        left: 31.5%;
+        left: 27.5%;
     }
 }   
