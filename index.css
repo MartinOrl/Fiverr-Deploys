@@ -219,8 +219,7 @@ img{
 
 @media screen and (max-width: 520px){
     .disclaimer-toggle{
-        text-align: unset;
-        right: 4%;
+        text-align: end;
     }
     .box p{
         font-size: 13px;
