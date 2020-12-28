@@ -1,0 +1,153 @@
+body{
+    margin: 0;
+    background: rgb(0,0,0);
+    color: #34e4da !important;
+}
+
+img{
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+}
+
+#container{
+    width: 100%;
+    height: 100%;
+    max-width: 1460px;
+    max-height: 821px;
+    position: relative;
+}
+
+.title{
+    position: absolute;
+    left: 1%;
+    top: 3%;
+    transform: rotate(-18deg);
+}
+
+.box{
+    position: absolute;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    max-width: 188px;
+    transition: 250ms ease-in-out;
+    padding: 0 32px 12px 16px;
+    border-radius: 12px;
+}
+
+.box:hover{
+    background: rgba(255,255,255,.12);
+}
+
+.box h1{
+    font-size: 2rem;
+}
+.box p{
+    font-size: 1.4rem;
+    margin: 4px 0; 
+}
+.box:nth-of-type(1){
+    transform: rotate(-9deg);
+    top: 78.4%;
+    left: 84%;
+}
+.box:nth-of-type(2){
+    top: 77.3%;
+    left: 48%;
+    transform: rotate(-1deg);
+    
+}
+.box:nth-of-type(3){
+    top: 75.2%;
+    left: 10%;
+    transform: rotate(-13deg);
+}
+.box:nth-of-type(4){
+    top: 27.8%;
+    left: 11%;
+    transform: rotate(-3deg);
+}
+.box:nth-of-type(5){
+    top: 11.1%;
+    left: 55%;
+}
+
+.global-container{
+    width: 100%;
+    height: 100%;
+    max-width: 1460px;
+    max-height: 821px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#disclaimer{
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 4;
+    transform: translate(-50%, -80%);
+    padding: 16px 40px;
+    background: white;
+    text-align: center;
+    border-radius: 16px;
+}
+#disclaimer p{
+    color: black;
+}
+#disclaimer button{
+    margin-top: 8px;
+    padding: 16px 32px;
+    color: black;
+    border: 1px solid black;
+    outline: none;
+    background: none;
+    transition: 250ms ease-in-out;
+    cursor: pointer;
+}
+#disclaimer button:hover{
+    background: #0392cf;
+    color: white;
+    border: 1px solid white;
+}
+.clicked{
+    opacity: 0;
+    transform: translateY(-16px);
+}
+
+.warning{
+    color: red !important;
+}
+.popup{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.62);
+    z-index: 4;
+    position: relative;
+    transition: 150ms ease-in-out;
+}
+
+@media screen and (max-width: 1200px){
+    .box h1{
+        font-size: 1.7rem;
+    }
+    .box p{
+        font-size: 1.2rem
+    }
+}
+@media screen and (max-width: 992px){
+    .box h1{
+        font-size: 24px;
+        margin: 8px 0;
+    }
+    .box p{
+        font-size: 16px;
+    }
+    .box{
+        max-width: 140px;
+    }
+}
