@@ -4,7 +4,7 @@ var audio1 = document.getElementsByTagName('audio')[0]
 var audio2 = document.getElementsByTagName('audio')[1]
 
 if(window.innerWidth < 992){
-    document.getElementById('image').src = 'https://i.ibb.co/T0Q2bC5/mobile.png'
+    document.getElementById('image').src = './mobile.png'
 }
 
 document.getElementsByClassName('disclaimer-toggle')[0].addEventListener('click', () => {
