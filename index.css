@@ -95,7 +95,7 @@ img{
 #disclaimer p{
     color: black;
 }
-#disclaimer button{
+button{
     margin-top: 8px;
     padding: 16px 32px;
     color: black;
@@ -105,7 +105,7 @@ img{
     transition: 250ms ease-in-out;
     cursor: pointer;
 }
-#disclaimer button:hover{
+button:hover{
     background: #0392cf;
     color: white;
     border: 1px solid white;
@@ -126,6 +126,34 @@ img{
     z-index: 4;
     position: relative;
     transition: 150ms ease-in-out;
+}
+
+.contract{
+    display: none;
+}
+#contract{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.62);
+    z-index: 4;
+    transition: 150ms ease-in-out;
+    color: black;
+}
+
+.contract-popup{
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 4;
+    transform: translate(-50%, -80%);
+    padding: 16px 40px;
+    background: white;
+    text-align: center;
+    border-radius: 16px;
 }
 
 .disclaimer-toggle{

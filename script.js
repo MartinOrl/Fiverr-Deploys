@@ -15,6 +15,17 @@ button.addEventListener('click', () => {
     popup.classList.add('clicked')
 })
 
+document.querySelectorAll('.box').forEach(elem => {
+    elem.addEventListener('click', () => {
+        document.getElementById('contract').classList.remove('contract')
+    })
+})
+
+document.getElementsByClassName('toggle')[0].addEventListener('click', () => {
+    console.log("clicked toggle")
+    document.getElementById('contract').classList.add('contract')
+})
+
 
 
 document.querySelectorAll('.box').forEach(elem => {
