@@ -174,7 +174,6 @@ img{
     .global-container{
         max-height: unset;
         max-width: 80%;
-        height: unset;
         transform: translate(-50%, -27%);
         position: absolute;
 
