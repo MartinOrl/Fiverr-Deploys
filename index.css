@@ -2,6 +2,7 @@ body{
     margin: 0;
     background: rgb(0,0,0);
     color: #34e4da !important;
+    user-select: none;
 }
 
 img{
@@ -13,8 +14,6 @@ img{
 #container{
     width: 100%;
     height: 100%;
-    max-width: 1460px;
-    max-height: 821px;
     position: relative;
 }
 
@@ -23,6 +22,7 @@ img{
     left: 1%;
     top: 3%;
     transform: rotate(-18deg);
+    font-weight: 400;
 }
 
 .box{
@@ -32,7 +32,7 @@ img{
     cursor: pointer;
     max-width: 188px;
     transition: 250ms ease-in-out;
-    padding: 0 32px 12px 16px;
+    padding: 8px 16px;
     border-radius: 12px;
 }
 
@@ -40,37 +40,33 @@ img{
     background: rgba(255,255,255,.12);
 }
 
-.box h1{
-    font-size: 2rem;
-}
 .box p{
     font-size: 1.4rem;
     margin: 4px 0; 
+    font-weight: bold;
 }
 .box:nth-of-type(1){
-    transform: rotate(-9deg);
-    top: 78.4%;
-    left: 84%;
+    transform: rotate(-10deg);
+    top: 79%;
+    left: 81%;
 }
 .box:nth-of-type(2){
-    top: 77.3%;
-    left: 48%;
-    transform: rotate(-1deg);
-    
+    top: 80%;
+    left: 47%;
 }
 .box:nth-of-type(3){
-    top: 75.2%;
-    left: 10%;
+    top: 78%;
+    left: 9%;
     transform: rotate(-13deg);
 }
 .box:nth-of-type(4){
-    top: 27.8%;
-    left: 11%;
+    top: 28%;
+    left: 10%;
     transform: rotate(-3deg);
 }
 .box:nth-of-type(5){
     top: 11.1%;
-    left: 55%;
+    left: 54.5%;
 }
 
 .global-container{
@@ -117,6 +113,7 @@ img{
 .clicked{
     opacity: 0;
     transform: translateY(-16px);
+    z-index: -5 !important;
 }
 
 .warning{
@@ -131,23 +128,117 @@ img{
     transition: 150ms ease-in-out;
 }
 
+.disclaimer-toggle{
+    position: absolute;
+    left: 4%;
+    top: 12%;
+    transform: rotate(-18deg);
+    cursor: pointer;
+}
+
 @media screen and (max-width: 1200px){
-    .box h1{
-        font-size: 1.7rem;
+    .box{
+        padding: 4px 8px;
     }
     .box p{
-        font-size: 1.2rem
+        font-size: 1.2rem;
+        max-width: 150px;
+    }
+    .box:nth-of-type(1){
+        transform: unset;
+        top: 78%;
+        left: 80%;
+    }
+    .box:nth-of-type(2){
+        top: 79%;
+        left: 48%;
+    }
+    .box:nth-of-type(4){
+        top: 29%;
+        left: 11%;
+        transform: rotate(-3deg);
+    }
+    .box:nth-of-type(5){
+        top: 13%;
+        left: 55%;
     }
 }
 @media screen and (max-width: 992px){
-    .box h1{
-        font-size: 24px;
-        margin: 8px 0;
-    }
     .box p{
         font-size: 16px;
+        max-width: 140px;
     }
     .box{
         max-width: 140px;
     }
+    .global-container{
+        max-height: unset;
+    }
+    .title{
+        text-align: center;
+        left: unset;
+        width: 100%;
+        transform: none;
+        top: 1%;
+    }
+    .disclaimer-toggle{
+        transform: none;
+        top: 5%;
+        width: 100%;
+        text-align: center;
+        left: unset;
+    }
+    .box:nth-of-type(1){
+        transform: unset;
+        top: 9.5%;
+        left: 37%;
+    }
+    .box:nth-of-type(2){
+        top: 25%;
+        left: 45%;
+    }
+    .box:nth-of-type(3){
+        top: 48.8%;
+        left: 42%;
+        transform: unset;
+    }
+    .box:nth-of-type(4){
+        top: 61%;
+        left: 44%;
+        transform: unset;
+    }
+    .box:nth-of-type(5){
+        top: 75.6%;
+        left: 38%;
+    }
 }
+
+@media screen and (max-width: 520px){
+    .global-container{
+        max-height: unset;
+    }
+    
+    .box:nth-of-type(1){
+        transform: unset;
+        top: 9%;
+        left: 33%;
+    }
+    .box:nth-of-type(2){
+        top: 25%;
+        left: 45%;
+    }
+    .box:nth-of-type(3){
+        top: 48.8%;
+        left: 38%;
+        transform: unset;
+    }
+    .box:nth-of-type(4){
+        top: 61%;
+        left: 42%;
+        transform: unset;
+    }
+    .box:nth-of-type(5){
+        top: 75.6%;
+        left: 31.5%;
+    }
+}   

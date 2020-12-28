@@ -3,11 +3,16 @@ const popup = document.getElementsByClassName('popup')[0]
 var audio1 = document.getElementsByTagName('audio')[0]
 var audio2 = document.getElementsByTagName('audio')[1]
 
+if(window.innerWidth < 992){
+    document.getElementById('image').src = './mobile.png'
+}
+
+document.getElementsByClassName('disclaimer-toggle')[0].addEventListener('click', () => {
+    popup.classList.remove('clicked')
+})
+
 button.addEventListener('click', () => {
     popup.classList.add('clicked')
-    setTimeout(() => {
-        popup.remove()
-    }, 400);
 })
 
 
