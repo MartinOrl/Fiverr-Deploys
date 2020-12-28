@@ -174,7 +174,7 @@ img{
     .global-container{
         max-height: unset;
         max-width: 80%;
-        transform: translate(-50%, -27%);
+        transform: translate(-50%, -32%);
         position: absolute;
     }
     .title{
@@ -182,7 +182,8 @@ img{
         left: unset;
         width: 100%;
         transform: none;
-        top: 1%;
+        top: 0;
+        margin-top: 4px;
     }
     .disclaimer-toggle{
         transform: none;
