@@ -1,11 +1,24 @@
+
 const button = document.getElementById('button')
 const popup = document.getElementsByClassName('popup')[0]
 var audio1 = document.getElementsByTagName('audio')[0]
 var audio2 = document.getElementsByTagName('audio')[1]
 
 if(window.innerWidth < 992){
-    document.getElementById('image').src = './mobile.png'
+    document.getElementById('image').src = 'images/mob.jpg'
 }
+
+var changed = false
+
+window.addEventListener('resize', () => {
+    if(window.innerWidth < 992){
+        document.getElementById('image').src = 'images/mob.jpg'
+        changed = true
+    }
+    if(window.innerWidth > 992 && changed){
+        document.getElementById('image').src='images/newbg.jpg'
+    }
+})
 
 document.getElementsByClassName('disclaimer-toggle')[0].addEventListener('click', () => {
     popup.classList.remove('clicked')
@@ -39,3 +52,7 @@ document.querySelectorAll('.box').forEach(elem => {
         audio1.play()
     })
 })
+
+particlesJS.load('particles-js', './particles.json', function() {
+    console.log('callback - particles.js config loaded');
+  });

@@ -3,6 +3,7 @@ body{
     background: rgb(0,0,0);
     color: #34e4da !important;
     user-select: none;
+    overflow-x: hidden;
 }
 
 img{
@@ -78,6 +79,7 @@ img{
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
 }
 
 #disclaimer{
@@ -91,6 +93,7 @@ img{
     background: white;
     text-align: center;
     border-radius: 16px;
+    -webkit-transform: translate(-50%, -80%);
 }
 #disclaimer p{
     color: black;
@@ -103,6 +106,7 @@ button{
     outline: none;
     background: none;
     transition: 250ms ease-in-out;
+    -webkit-transition: 250ms ease-in-out;
     cursor: pointer;
 }
 button:hover{
@@ -126,13 +130,14 @@ button:hover{
     z-index: 4;
     position: relative;
     transition: 150ms ease-in-out;
+    -webkit-transition: 150ms ease-in-out;
 }
 
 .contract{
     display: none;
 }
 #contract{
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     top: 0;
@@ -141,6 +146,7 @@ button:hover{
     z-index: 4;
     transition: 150ms ease-in-out;
     color: black;
+    -webkit-transition: 150ms ease-in-out;
 }
 
 .contract-popup{
@@ -154,6 +160,9 @@ button:hover{
     background: white;
     text-align: center;
     border-radius: 16px;
+    -moz-transform: translate(-50%, -80%);
+    -o-transform: translate(-50%, -80%);
+    -webkit-transform: translate(-50%, -80%);
 }
 
 .disclaimer-toggle{
@@ -162,6 +171,32 @@ button:hover{
     top: 12%;
     transform: rotate(-18deg);
     cursor: pointer;
+}
+
+@media screen and (max-width: 1440px){
+    .box:nth-of-type(1){
+        transform: rotate(-10deg);
+        top: 74%;
+        left: 81%;
+    }
+    .box:nth-of-type(2){
+        top: 76%;
+        left: 47%;
+    }
+    .box:nth-of-type(3){
+        top: 75%;
+        left: 9%;
+        transform: rotate(-13deg);
+    }
+    .box:nth-of-type(4){
+        top: 28.5%;
+        left: 10%;
+        transform: rotate(-3deg);
+    }
+    .box:nth-of-type(5){
+        top: 14%;
+        left: 54.5%;
+    }
 }
 
 @media screen and (max-width: 1200px){
@@ -208,7 +243,7 @@ button:hover{
     .title{
         text-align: center;
         left: unset;
-        width: 100%;
+        width: 70% !important;
         transform: none;
         top: 0;
         margin-top: 4px;
@@ -216,40 +251,39 @@ button:hover{
     .disclaimer-toggle{
         transform: none;
         top: 5%;
-        width: 100%;
-        text-align: center;
+        width: 70%;
+        text-align: center ;
         left: unset;
+        margin-top: 4px;
     }
     .box:nth-of-type(1){
         transform: unset;
-        top: 8.8%;
-        left: 37%;
+        top: 77.6%;
+        left: 34%;
     }
     .box:nth-of-type(2){
-        top: 25%;
-        left: 45%;
+        top: 66%;
+        left: 46%;
     }
     .box:nth-of-type(3){
-        top: 48.2%;
-        left: 42%;
+        top: 51.2%;
+        left: 38%;
         transform: unset;
     }
     .box:nth-of-type(4){
-        top: 61%;
-        left: 43%;
+        top: 25%;
+        left: 37%;
         transform: unset;
     }
     .box:nth-of-type(5){
-        top: 74.6%;
-        left: 35%;
+        top: 10.8%;
+        left: 34%;
     }
 }
 
 @media screen and (max-width: 520px){
     .disclaimer-toggle{
-        text-align: end;
-        width: 85%;
-        margin: 0 auto;
+        margin-top: 0;
     }
     .box p{
         font-size: 18px;
@@ -267,27 +301,61 @@ button:hover{
     img{
         height: unset
     }
-    .box:nth-of-type(1){
+    .box:nth-of-type(5){
         transform: unset;
-        top: 8.8%;
-        left: 35%;
-    }
-    .box:nth-of-type(2){
-        top: 25%;
-        left: 45%;
-    }
-    .box:nth-of-type(3){
-        top: 49.2%;
-        left: 38%;
-        transform: unset;
+        top: 12.8%;
+        left: 31%;
     }
     .box:nth-of-type(4){
-        top: 62%;
+        top: 27%;
+        left: 41%;
+    }
+    .box:nth-of-type(3){
+        top: 52.2%;
+        left: 37%;
+        transform: unset;
+    }
+    .box:nth-of-type(2){
+        top: 66%;
         left: 45%;
         transform: unset;
     }
-    .box:nth-of-type(5){
-        top: 75.6%;
+    .box:nth-of-type(1){
+        top: 78.6%;
         left: 32.5%;
     }
+    
+}
+
+@keyframes rotateChar{
+    0%, 45%{
+      transform: translate(-120px, -50%)
+    }
+    100%{
+      transform: translate(3500px, -50%) rotate(960deg)
+    }
+}
+
+  
+.orange{
+    height: 90px;
+    width: auto;
+    z-index: 5;
+    transform: translateX(-200px);
+    animation: rotateChar 45s linear infinite;
+    position: absolute;
+    top: 50%;
+    -webkit-animation: rotateChar 45s linear infinite;
+    -moz-animation: rotateChar 45s linear infinite;
+    -o-transform: translateX(-200px);
+}
+
+
+#particles-js{
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
 }
