@@ -1,3 +1,10 @@
+:root{
+    --width: 90px;
+    --x-speed: 18s;
+    --y-speed: 13s;
+    --transition-speed: 1s
+}
+
 body{
     margin: 0;
     background: rgb(0,0,0);
@@ -6,16 +13,18 @@ body{
     overflow-x: hidden;
 }
 
-img{
+#image{
     object-fit: contain;
     height: 100%;
     width: 100%;
+    position: relative;
 }
 
 #container{
     width: 100%;
     height: 100%;
     position: relative;
+    z-index: 2;
 }
 
 .title{
@@ -79,6 +88,7 @@ img{
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    z-index: 5;
     -webkit-transform: translate(-50%, -50%);
 }
 
@@ -87,7 +97,6 @@ img{
     position: absolute;
     top: 50%;
     left: 50%;
-    z-index: 4;
     transform: translate(-50%, -80%);
     padding: 16px 40px;
     background: white;
@@ -127,7 +136,7 @@ button:hover{
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,.62);
-    z-index: 4;
+    z-index: 20;
     position: relative;
     transition: 150ms ease-in-out;
     -webkit-transition: 150ms ease-in-out;
@@ -143,7 +152,7 @@ button:hover{
     top: 0;
     left: 0;
     background: rgba(0,0,0,.62);
-    z-index: 4;
+    z-index: 20;
     transition: 150ms ease-in-out;
     color: black;
     -webkit-transition: 150ms ease-in-out;
@@ -173,6 +182,20 @@ button:hover{
     cursor: pointer;
 }
 
+#links{
+    display: flex;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+
+}
+
+#links img{
+    height: 40px;
+    width: auto;
+    margin: 0 8px;
+}
+
 @media screen and (max-width: 1440px){
     .box:nth-of-type(1){
         transform: rotate(-10deg);
@@ -195,6 +218,32 @@ button:hover{
     }
     .box:nth-of-type(5){
         top: 14%;
+        left: 54.5%;
+    }
+}
+
+@media screen and (width: 1280px){
+    .box:nth-of-type(1){
+        transform: rotate(-10deg);
+        top: 77%;
+        left: 80.3%;
+    }
+    .box:nth-of-type(2){
+        top: 78%;
+        left: 47%;
+    }
+    .box:nth-of-type(3){
+        top: 76%;
+        left: 8%;
+        transform: rotate(-13deg);
+    }
+    .box:nth-of-type(4){
+        top: 27.8%;
+        left: 10%;
+        transform: rotate(-3deg);
+    }
+    .box:nth-of-type(5){
+        top: 10%;
         left: 54.5%;
     }
 }
@@ -227,6 +276,10 @@ button:hover{
     }
 }
 @media screen and (max-width: 992px){
+    #links{
+        right: 50%;
+        transform: translateX(50%)
+    }
     .box p{
         font-size: 16px;
         max-width: 140px;
@@ -285,9 +338,11 @@ button:hover{
     .disclaimer-toggle{
         margin-top: 0;
     }
+    .box{
+        max-width: 180px;
+    }
     .box p{
         font-size: 18px;
-        max-width: 110px;
     }
     .global-container{
         max-height: unset;
@@ -305,6 +360,7 @@ button:hover{
         transform: unset;
         top: 12.8%;
         left: 31%;
+        width: 160px;
     }
     .box:nth-of-type(4){
         top: 27%;
@@ -328,11 +384,49 @@ button:hover{
 }
 
 @keyframes rotateChar{
-    0%, 45%{
-      transform: translate(-120px, -50%)
+    0%, 30%{
+      transform: translateX(-120px)
     }
     100%{
-      transform: translate(3500px, -50%) rotate(960deg)
+      transform: translateX(3500px) rotate(960deg)
+    }
+
+}
+
+@keyframes rotateChar{
+    0%{
+        transform: translateX(-120px);
+    }
+    8%{
+        transform: translateX(2500px) rotate(960deg)
+    }
+    24%{
+        transform: translate(-400px, -350px) rotate(4800deg)
+    }
+    25%, 35%{
+        transform: translateY(-150px) translateX(-250px)
+    }
+    45%{
+        transform: translate(2500px, 200px) rotate(6400deg)
+    }
+    56%, 60%{
+        transform: translateY(-700px) translateX(2500px);
+    }
+    100%{
+        transform: translate(-340px, 300px) rotate(3200deg)
+    }
+    
+}
+
+@keyframes x{
+    100% {
+        transform: translateX(calc(120vw - var(--width)))
+    }
+}
+
+@keyframes y{
+    100%{
+        transform: translateY(calc(130vh - var(--width))) rotate(640deg)
     }
 }
 
@@ -340,16 +434,23 @@ button:hover{
 .orange{
     height: 90px;
     width: auto;
-    z-index: 5;
-    transform: translateX(-200px);
-    animation: rotateChar 45s linear infinite;
+    z-index: 1;
+    animation: y var(--y-speed) linear infinite alternate;
     position: absolute;
     top: 50%;
-    -webkit-animation: rotateChar 45s linear infinite;
-    -moz-animation: rotateChar 45s linear infinite;
-    -o-transform: translateX(-200px);
+    left: 50%;
+    
 }
 
+.orange-container{
+    position: fixed;
+    top: -150px;
+    left: -150px;
+}
+
+.orange-wrap{
+    animation: x var(--x-speed) linear infinite alternate;
+}
 
 #particles-js{
     width: 100%;
@@ -359,3 +460,4 @@ button:hover{
     position: fixed;
     top: 0;
 }
+
