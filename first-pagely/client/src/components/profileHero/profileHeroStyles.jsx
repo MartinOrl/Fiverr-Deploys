@@ -40,9 +40,13 @@ export const SideImage = styled.div`
     width: 17px;
     height: 17px;
     cursor: pointer;
+    img{
+        position: relative;
+        z-index: 2;
+    }
     div{
         background: white;
-        z-index: -1;
+        z-index: 0;
         width: 17px;
         padding: 16px;
         height: 17px;
