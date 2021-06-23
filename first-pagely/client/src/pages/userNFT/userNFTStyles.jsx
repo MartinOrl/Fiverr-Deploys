@@ -18,7 +18,28 @@ export const ContentContainer = styled.div`
         width: 70%;
     }
     @media screen and (max-width: 640px){
-        width: 80%;
+        width: 90%;
+    }
+`
+
+export const HeadingButtons = styled.div`
+    width: 80%;
+    justify-content: flex-end;
+    display: flex;
+    margin: 0 auto;
+    p{
+        padding: 8px 32px;
+        background: linear-gradient(45deg, #8743ff, #4136f1);
+        color: white;
+        border-radius: 24px;
+        margin: 16px 0 16px 24px;
+        cursor: pointer;
+    }
+    @media screen and (max-width: 996px){
+        width: 70%;
+    }
+    @media screen and (max-width: 640px){
+        width: 90%;
     }
 `
 
@@ -26,21 +47,39 @@ export const Imagecontainer = styled.div`
     ${background};
     margin-bottom: 32px;
     width: 100%;
-    img{
+    &>img{
         width: 100%;
     }
+
     div{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        div{
+            display: flex;
+            align-items: center;
+            &>img{
+                width: 40px;
+                object-fit: contain;
+                margin-left: 16px;
+                border-radius: 50%;
+                box-shadow: 0 3px 8px rgba(0,0,0,.2);
+ 
+                
+            }
+        }
         h1{
             color: #432ba6;
             @media screen and (max-width: 765px){
                 font-size: 1.4rem;
             }
         }
-
+        @media screen and (max-width: 350px){
+            flex-direction: column;
+            margin-bottom: 16px;
+        }
     }
+
 `
 
 export const LeftSide = styled.div`
@@ -61,6 +100,7 @@ export const RightSide = styled.div`
     @media screen and (max-width: 996px){
         width: 100%;
     }
+    
 `
 
 export const Likes = styled.p`
@@ -82,6 +122,7 @@ export const Likes = styled.p`
     }
 `
 
+
 export const Description = styled.div`
     ${background};
     color: #432ba6;
@@ -99,7 +140,10 @@ export const Description = styled.div`
             height: 24px;
             display: block;
             margin-right: 16px;
-            background: #432ba6;
+            img{
+                width: 100%;
+                object-fit: contain;
+            }
         }
     }
 `
@@ -107,7 +151,9 @@ export const Description = styled.div`
 export const Dropdown = styled.div`
     &>div:first-of-type{
         border-top: ${props => props.top ? 'none' : '1px solid rgba(0,0,0,.3)'};
-        border-bottom: ${props => props.bottom ? 'none' : '1px solid rgba(0,0,0,.3)'};
+        border-bottom: ${props => 
+            props.collapse ? '1px solid rgba(0,0,0,.3)' : props.bottom ? '1px solid rgba(0,0,0,.3)' : '' 
+        };
 
         width: 100%;
         display: flex;
@@ -133,16 +179,41 @@ export const Dropdown = styled.div`
             user-select: none;
             transition: 150ms ease-in-out;
             cursor: pointer;
-            z-index: 5;
+            z-index: 1;
             position: relative;
             transform: ${props => props.collapse ? 'rotate(270deg)' : 'rotate(90deg)'}
         }
     }
     &>div:last-of-type{
-        max-height: ${props => props.collapse ? '250px' : '0'};
+        max-height: ${props => props.collapse ? '400px' : '0'};
         transition: 250ms ease-in-out;
         overflow: hidden;
         color: #3f3e5e;
+        p{
+            text-align: center;
+        }
+        img{
+            margin: 24px auto;
+            display: block;
+        }
+    }
+`
+
+export const SpecialToggle = styled.p`
+    padding: 8px 24px;
+    border-radius: 8px;
+    border: 2px solid #1565D8;
+    color: #1565D8;
+    width: max-content;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    span{
+        margin-left: 8px;
+        transform-origin: center;
+        transform: rotate(90deg);
+        display: block;
+        font-weight: bold;
     }
 `
 
@@ -152,6 +223,10 @@ export const RightHeading = styled.div`
         justify-content: space-between;
         align-items: center;
         width: 100%;
+    }
+    &>div>div>img{
+        margin-left: 8px;
+        cursor: pointer;
     }
     p{
         color: #432ba6;
@@ -177,11 +252,11 @@ export const RightHeading = styled.div`
             font-size: 1rem;
             span{
                 border-radius: 50%;
-                width: 16px;
-                height: 16px;
+                width: 24px;
+                height: 24px;
                 display: block;
                 margin-right: 16px;
-                background: #432ba6;
+                
             }
         }
     }

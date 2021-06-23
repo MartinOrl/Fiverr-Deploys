@@ -11,12 +11,16 @@ import { CardsHolder, InputContainer, FilteringContainer, Dropdown, PageContaine
 import { nftsData } from '../../testData'
 
 import magnifySmall from '../../assets/magnifySmall.png'
+import cone from '../../assets/cone.png'
+import ball from '../../assets/ball.png'
 
 const ProfileSearch = () => {
     const [search, setSearch] = useState('')
     return (
         <PageContainer>
             <HeaderImg />
+            <img src={cone} alt="" />
+            <img src={ball} alt="" />
             <ProfileHero imgUrl={testImg} name='Azer' description='Activist, Actress, Artist, Bitcoin Supporter' address='0x3401ea5a8d91c...f153' />
 
             <FilteringContainer>
@@ -24,14 +28,17 @@ const ProfileSearch = () => {
                     <img src={magnifySmall} alt="" />
                     <input type="text" placeholder='Look for anything' value={search}  onChange={(e) => setSearch(e.target.value)} />
                 </InputContainer>
-                <Dropdown>All Items</Dropdown>
-                <Dropdown>Connect Wallet</Dropdown>
+                <div>
+                    <Dropdown>All Items</Dropdown>
+                    <Dropdown>Connect Wallet</Dropdown>
+                </div>
+   
             </FilteringContainer>
             <CardsHolder>
                 {
                     nftsData.map(nft => {
                         if(nft.name.includes(search)){
-                            return <NFTCard {...nft} />
+                            return <NFTCard key={nft.id} {...nft} />
                         }
                         return ''
                     })

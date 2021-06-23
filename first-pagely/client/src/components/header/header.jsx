@@ -19,14 +19,26 @@ function Header() {
                 <div>
                     <Burger onClick={() => setCollapse(!collapse)}><span></span><span></span><span></span></Burger>
                     <Collapsible collapse={collapse}>
-                        <p onClick={() => history.push('/about')}>About Us</p>
-                        <p onClick={() => history.push('/profile')}>My Items</p>
+                        <p onClick={() => {
+                            history.push('/about');
+                            collapse ? setCollapse(!collapse) : console.log()
+                        }}>About Us</p>
+                        <p onClick={() => {
+                            history.push('/profile');
+                            collapse ? setCollapse(!collapse) : console.log()
+                        }}>My Items</p>
                         <HowItWorks>
                             <p>How it works</p>
                             <p>White paper</p>
                         </HowItWorks>
-                        <CustomButton onClick={() => history.push('/createCollectible')}>Create</CustomButton>
-                        <CustomButton onClick={() => history.push('/connectWallet')}>Connect Wallet</CustomButton>
+                        <CustomButton onClick={() => {
+                            history.push('/createCollectible');
+                            collapse ? setCollapse(!collapse) : console.log()
+                        }}>Create</CustomButton>
+                        <CustomButton onClick={() => {
+                            history.push('/connectWallet');
+                            collapse ? setCollapse(!collapse) : console.log()
+                        }}>Connect Wallet</CustomButton>
                     </Collapsible>
                 </div>
             </HeaderContainer>

@@ -1,8 +1,13 @@
 import styled from "styled-components";
 
 export const PageContainer = styled.div`
-    background: white;
-    margin-top: -16px;
+    background: linear-gradient(0deg, rgba(250,251,251,0.001), rgb(237,244,255), rgba(250,251,251,.001) );
+    &>img{
+        position: absolute;
+        top: 480px;
+        left: -48px;
+        filter: blur(8px)
+    }
 `
 
 export const Container = styled.div`
@@ -13,6 +18,25 @@ export const Container = styled.div`
     @media screen and (max-width: 1240px){
         width: 90%;
         flex-direction: column;
+    }
+`
+
+export const Likes = styled.p`
+    padding: 8px;
+    background: ${props => props.liked ? '#8743ff' : '#f0e9ff'};
+    color: ${props => props.liked ? 'white' : 'black'};
+    margin: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    user-select: none;
+    min-width: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 150ms ease-in-out;
+    img{
+        filter: ${props => props.liked ? 'brightness(15)' : ''};
+        transition: 150ms ease-in-out;
     }
 `
 
@@ -30,6 +54,7 @@ export const ImageTitleContainer = styled.div`
 export const SectionContainer = styled.div`
     margin: 24px;
     border-radius: 16px;
+    position: relative;
     &:first-of-type{
         padding: 40px;
         background: #F4F7FC;
@@ -54,6 +79,12 @@ export const SectionContainer = styled.div`
                 box-sizing: border-box;
             }
         }
+    }
+    &>img:last-of-type{
+        position: absolute;
+        left: -48px;
+        bottom: -96px;
+        transform: scale(0.7);
     }
     &:last-of-type{
         &>div{

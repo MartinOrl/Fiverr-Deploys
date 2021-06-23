@@ -10,6 +10,12 @@ export const HeadingContainer = styled.div`
     background: white;
     padding: 0 0 32px;
     border-radius: 0 0 50% 50%;
+    position: relative;
+    &>img{
+        position: absolute;
+        right: 96px;
+        bottom: 32px;
+    }
     @media screen and (max-width: 780px){
         border-radius: 0 0 35% 35%;
     }
@@ -33,5 +39,12 @@ export const CardHolder = styled.div`
     justify-content: space-around;
     flex-wrap: wrap;
     width: 75%;
-    margin: 32px auto
+    margin: 32px auto;
+    position: relative;
+    &>img{
+        position: absolute;
+        right: 0;
+        bottom: -48px;
+        transform: scale(0.8);
+    }
 `

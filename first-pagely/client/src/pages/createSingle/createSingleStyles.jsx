@@ -41,6 +41,10 @@ export const ColumnPreview = styled.div`
             font-size: 1.7rem;
         }
     }
+    @media screen and (max-width: 1240px){
+        width: 80%;
+        margin: 16px auto 48px;
+    }
 `
 
 export const PageTitle = styled.h1`
@@ -190,6 +194,11 @@ export const Selections = styled.div`
     width: 100%;
     display: flex;
     justify-content: space-between;
+    @media screen and (max-width: 780px){
+        flex-wrap: wrap;
+        justify-content: unset;
+
+    }
 `
 
 export const StyledInput = styled.input`
@@ -301,5 +310,8 @@ export const ButtonContainer = styled.div`
     margin: 16px 0 96px;
     p{
         cursor: pointer;
+    }
+    @media screen and (max-width: 1240px){
+        margin-bottom: 24px;
     }
 `

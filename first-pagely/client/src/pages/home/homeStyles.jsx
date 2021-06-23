@@ -60,7 +60,7 @@ export const NameShadow = styled.h1`
     position: absolute;
     top: -56px;
     font-size: 56px;
-    opacity: 0.1;
+    opacity: 0.075;
     color: #1d5e6d;
     left: 50%;
     transform: translateX(-50%);
@@ -155,6 +155,7 @@ export const CollectionPreview = styled.div`
 export const Seller = styled.div`
     width: 190px;
     display: flex;
+    cursor: pointer;
     justify-content: space-around;
     align-items: center;
     box-sizing: border-box;

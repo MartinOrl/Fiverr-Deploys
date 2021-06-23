@@ -2,6 +2,19 @@ import styled from "styled-components";
 
 export const ProfileContainer = styled.div`
     padding: 0 0 32px;
+    background: white;
+    position: relative;
+    &>img:first-of-type{
+        position: absolute;
+        left: 96px;
+        top: 450px;
+        filter: blur(8px);
+    }
+    &>img:nth-of-type(2){
+        position: absolute;
+        right: 144px;
+        top: 615px;
+    }
 `
 
 export const FiltersContainer = styled.div`

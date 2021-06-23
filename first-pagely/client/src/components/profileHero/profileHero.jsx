@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
 
-import { Container, ProfilePicture, ImageBg, Address, NameShadow } from './profileHeroStyles'
+import { Container, ProfilePicture, ImageBg, Address, NameShadow, SideMenu, SideImage } from './profileHeroStyles'
 
 import copy from '../../assets/copy.png'
+import warning from '../../assets/warning.png'
+import share from '../../assets/share.png'
+import friendAdd from '../../assets/friendAdd.png'
 
 const ProfileHero = ({imgUrl, name, description, address}) => {
     const [active, setActive] = useState(false)
@@ -19,10 +22,21 @@ const ProfileHero = ({imgUrl, name, description, address}) => {
             <Container>
                 <ProfilePicture src={imgUrl} alt="profile" />
                 <ImageBg />
-                <div>
-                
-                </div>
-                </Container>
+                <SideMenu>
+                    <SideImage>
+                        <img src={friendAdd} alt="" />
+                        <div></div>
+                    </SideImage>
+                    <SideImage>
+                        <img src={share} alt="" />
+                        <div></div>
+                    </SideImage>
+                    <SideImage>
+                        <img src={warning} alt="" />
+                        <div></div>
+                    </SideImage>
+                </SideMenu>
+            </Container>
             <Container>
                 <h1>{name}</h1>
                 <p>{description}</p>

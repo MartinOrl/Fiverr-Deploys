@@ -1,12 +1,12 @@
 import { lazy, Suspense } from 'react'
 import './App.css';
 
-import { Switch, Route, BrowserRouter } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 
 import Footer from './components/footer/footer';
 import Header from './components/header/header';
 import Fallback from './components/fallback/fallback';
-import MissingPage from './pages/404/404';
+// import MissingPage from './pages/404/404';
 
 
 // import Profile from './pages/profile/profile';

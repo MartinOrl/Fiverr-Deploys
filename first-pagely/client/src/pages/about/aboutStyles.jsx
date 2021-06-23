@@ -10,7 +10,10 @@ export const Background = styled.div`
     height: 100%;
     z-index: -1;
     @media screen and (max-width: 860px){
-        clip-path: polygon(0% 0%, 50% 8%, 100% 0%, 100% 100%, 0% 100%);
+        clip-path: polygon(0% 0%, 50% 5%, 100% 0%, 100% 100%, 0% 100%);
+    }
+    @media screen and (max-width: 860px){
+        clip-path: polygon(0% 0%, 50% 2%, 100% 0%, 100% 100%, 0% 100%);
     }
 `
 
@@ -31,6 +34,7 @@ export const AboutContainer = styled.div`
         }
         &>p{
             font-size: 22px;
+         
         }
         h1{
             width: 100%;
@@ -61,6 +65,11 @@ export const AboutContainer = styled.div`
     p{
         color: #808080;
     }
+    @media screen and (max-width: 1200px){
+        &>div:last-of-type>p{
+            font-size: 1.1rem;
+        }
+    }
 `
 
 export const AboutHeroContainer = styled.div`
@@ -70,7 +79,7 @@ export const AboutHeroContainer = styled.div`
     margin-bottom: 32px;
     &>div{
         width: 55%;
-
+        position: relative;
         h1{
             font-size: 32px;
             font-weight: 600;
@@ -82,8 +91,13 @@ export const AboutHeroContainer = styled.div`
         p{
             font-size: 22px;
         }
+        img{
+            position: absolute;
+            right: -220px;
+            top: -72px;
+        }
     }
-    img{
+    &>img{
         object-fit: contain;
         width: 35%;
         padding: 16px;
@@ -93,9 +107,10 @@ export const AboutHeroContainer = styled.div`
         height: max-content;
     }
     @media screen and (max-width: 1200px){
-        flex-direction: column-reverse;
+        flex-direction: column;
         div>p{
             font-size: 1.1rem;
+            text-align: start;
         }
         h1{
             text-align: center;
@@ -177,19 +192,53 @@ export const TeamMember = styled.div`
         bottom: -8px;
         left: 0;
     }
+    @media screen and (max-width: 817px){
+        div:last-of-type{
+            background: transparent;
+        }
+    }
 `
 
-export const Holder = styled.div`
+
+export const MembersContainer = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    @media screen and (max-width: 817px){
+        flex-direction: row;
+        width: max-content;
+        flex-wrap: nowrap;
+    }
+`
+
+export const OverflowContainer = styled.div`
+    width: 90%;
+    margin: 0 auto 48px;
+    @media screen and (max-width: 817px){
+        width:100%;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+    }
+`
+
+export const FAQHolder = styled.div`
     width: 90%;
     margin: 0 auto 48px;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    
 `
 
-
-
+export const SectionWithBg = styled.div`
+    position: relative;
+    z-index: 2;
+    &>img{
+        position: absolute;
+        left: 48px;
+        top: -48px;
+    }
+`
 
 
 export const SectionTitle = styled.h1`

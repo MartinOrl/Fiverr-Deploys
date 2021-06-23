@@ -1,11 +1,13 @@
 import React, {useState} from 'react'
 
-import {Text, InfoContainer, PageContainer, Container, ImageTitleContainer, SectionContainer, Bids, History , SaleInfo, Details, Tags, Toggle, ToggleableContainer, Toggles, Description, CreatorDetails, CreatorInfo, BidContainer } from './nftItemStyles'
+import { Likes, Text, InfoContainer, PageContainer, Container, ImageTitleContainer, SectionContainer, Bids, History , SaleInfo, Details, Tags, Toggle, ToggleableContainer, Toggles, Description, CreatorDetails, CreatorInfo, BidContainer } from './nftItemStyles'
 import HeaderImg from '../../components/headerImg/headerImg'
 import itemImage from '../../assets/itemImage.png'
 import rainbow from '../../assets/rainbow.png'
 import profile from '../../assets/profilePic.png'
 import flame from '../../assets/flame.png'
+import ball from '../../assets/ball.png'
+import cone from '../../assets/cone.png'
 
 const NFTDetails = () => {
     return(
@@ -80,20 +82,25 @@ const NFTHistory = ({history}) => {
 
 const NFTItem = () => {
     const [filter, setFilter ] = useState('details')
+    const [liked, setLiked] = useState(false)
+    var likes = 100;
     return (
         <PageContainer>
             <HeaderImg />
+            <img src={cone} alt="" />
             <Container>
                 <SectionContainer>
                     <ImageTitleContainer>
                         <h1>The Abandoned Church</h1>
                         <div>
+                            <Likes liked={liked ? 'liked' : ''} onClick={() => setLiked(!liked)}><span><img src="https://i.imgur.com/jD1XOMM.png" alt="" liked={liked ? 'liked' : ''} /></span> {liked ? likes+1 : likes}</Likes>
                         </div>
                     <div>
                     
                     </div>
                     </ImageTitleContainer>
                     <img src={itemImage} alt="" />
+                    <img src={ball} alt="" />
                 </SectionContainer>
                 <SectionContainer>    
                     <div>

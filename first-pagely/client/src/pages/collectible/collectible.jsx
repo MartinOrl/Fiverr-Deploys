@@ -8,6 +8,8 @@ import { Container, HeadingContainer, Disclaimer, CardHolder } from './collectib
 
 import single from '../../assets/singleCreate.png'
 import multiple from '../../assets/multipleCreate.png'
+import patch from '../../assets/patch.png'
+import cube from '../../assets/cube.png'
 
 const CollectibleCreate = () => {
     return (
@@ -15,10 +17,12 @@ const CollectibleCreate = () => {
             <HeaderImg />
             <HeadingContainer>
                 <PageHeading title='Create Collectible' text='Choose "Single" if you want your collectible to be one of a kind or "Multiple" if you want to sell one collectible multiple times' />
+                <img src={patch} alt="" />
             </HeadingContainer>
             <CardHolder>
                 <CollectibleCreateCard type='Single' img={single} timer={true} link='/createSingle' />
                 <CollectibleCreateCard type='Multiple' img={multiple} link='/' />
+                <img src={cube} alt="" />
             </CardHolder>
             <div>
                 <Disclaimer>We do not own your private keys and cannot access your funds without confirmation</Disclaimer>

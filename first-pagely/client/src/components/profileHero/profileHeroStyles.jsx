@@ -23,6 +23,39 @@ export const ProfilePicture = styled.img`
 
 `
 
+export const SideMenu = styled.div`
+    position: absolute;
+    right: -96px;
+    top: 16px;
+    height: 126px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+`
+
+export const SideImage = styled.div`
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+    div{
+        background: white;
+        z-index: -1;
+        width: 17px;
+        padding: 16px;
+        height: 17px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        filter: blur(4px);
+        box-shadow: 7px 7px 13px rgba(209,217,230,.9), -4px -4px 12px white;
+    }
+`
+
 export const Container = styled.div`
     width: 80%;
     margin: 24px auto 40px;
@@ -35,6 +68,10 @@ export const Container = styled.div`
     }
     p:first-of-type{
         margin-top: 0;
+    }
+    &:first-of-type{
+        width: max-content;
+        margin-bottom: 56px;
     }
 `
 

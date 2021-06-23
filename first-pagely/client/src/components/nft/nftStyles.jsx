@@ -6,6 +6,7 @@ export const NFTContainer = styled.div`
     background: white;
     border-radius: 16px;
     transition: 250ms ease-in-out;
+    
 `
 
 export const Image = styled.img`
@@ -13,6 +14,7 @@ export const Image = styled.img`
     height: 180px;
     object-fit: cover;
     border-radius: 16px 16px 0 0;
+    cursor: pointer;
 `
 
 export const InfoContainer = styled.div`

@@ -8,6 +8,7 @@ import SelectableContainer from '../../components/selectableContainer/selectable
 import Checkbox from '../../components/checkbox/checkbox'
 
 import testImg from '../../assets/ether.png'
+import { useHistory } from 'react-router-dom'
 
 const CreateSingle = () => {
     const [ activeSelection, setActiveSelection ] = useState('')
@@ -15,6 +16,7 @@ const CreateSingle = () => {
     const [collapse, setCollapse] = useState(false)
     const [currency, setCurrency] = useState('ETH')
     const [price, setPrice] = useState(0)
+    const history = useHistory()
 
     const handleUpload = (imageList, addUpdateIndex) => {
         console.log(imageList, addUpdateIndex)
@@ -79,12 +81,12 @@ const CreateSingle = () => {
                             <Section>
                                 <SectionTitle>Price</SectionTitle>
                                 <SectionDescription>Enter price to allow users instantly purchase your nft</SectionDescription>
-                                <PriceContainer collapse={collapse} >
+                                <PriceContainer collapse={collapse ? 'true' : ''} >
                                     <input type="number" name="price" id="price" min={0} placeholder='Enter price for one piece' value={price} onChange={(e) => setPrice(e.target.value)} />
-                                    <div collapse={collapse} >
+                                    <div>
                                         <p>{currency}</p>
-                                        <p collapse={collapse ? 'true' : 'false'} onClick={() => setCollapse(!collapse)} >&gt;</p>
-                                        <div collapse={collapse} >
+                                        <p onClick={() => setCollapse(!collapse)} >&gt;</p>
+                                        <div  >
                                             <Currency active={currency === 'ETH'}  onClick={() => setCurrency('ETH')} >ETH</Currency>
                                             <Currency active={currency === 'BTC'}  onClick={() => setCurrency('BTC')} >BTC</Currency>
                                             <Currency active={currency === 'DOGE'}  onClick={() => setCurrency('DOGE')} >DOGE</Currency>
@@ -140,7 +142,7 @@ const CreateSingle = () => {
                                 <Subtext>Suggested: 0%, 10%. 20%, 30%</Subtext>
                             </Section>
                             <ButtonContainer>
-                                <CreateButton>Create Item</CreateButton>
+                                <CreateButton onClick={() => history.push('/sellMethod')}>Create Item</CreateButton>
                                 <ChangesButton>Unsaved changes <span><img src="" alt="" /></span></ChangesButton>
                             </ButtonContainer>
                         </div>

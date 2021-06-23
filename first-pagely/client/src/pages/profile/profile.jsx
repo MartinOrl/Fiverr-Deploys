@@ -10,6 +10,10 @@ import NFTCard from '../../components/nft/nft'
 import HeaderImg from '../../components/headerImg/headerImg'
 import ProfileHero from '../../components/profileHero/profileHero'
 
+import cone from '../../assets/cone.png'
+import ball from '../../assets/ball.png'
+
+
 import { ProfileFilters, nftsData } from '../../testData'
 
 const Profile = () => {
@@ -17,7 +21,8 @@ const Profile = () => {
     return (
         <ProfileContainer>
             <HeaderImg />
-
+            <img src={cone} alt="" />
+            <img src={ball} alt="" />
             <ProfileHero imgUrl={profile} name='Satman' description='Activist, Actress, Artist, Bitcoin Supporter' address='0x3401ea5a8d91c...f153' />
             <OverflowContainer>
                 <FiltersContainer>

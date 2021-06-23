@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useHistory } from 'react-router-dom'
 
 import {Toggles, OverflowContainer, HeroBackground, RowContainer, Container, NameShadow, SectionName, LoadMore, CollectionPreview, Seller, LiveAuction } from './homeStyles'
 
@@ -13,9 +14,11 @@ import addImage from '../../assets/addImage.png'
 
 import { collectionsData, genres, liveAuctions, nftsData, topSellers } from '../../testData'
 
+
 const Home = () => {
     const [loadMore, setLoadMore] = useState(1)
-    const [ filters, setFilters ] = useState([])
+    // const [ filters, setFilters ] = useState([])
+    const history = useHistory()
     return (
         <div>
             <HeroBackground src={herobg} />
@@ -80,7 +83,7 @@ const Home = () => {
                         <RowContainer overflow='true'>
                             {
                                 topSellers.map(seller => (
-                                    <Seller key={seller.id}>
+                                    <Seller key={seller.id} onClick={() => history.push('/profile')} >
                                         <img src={seller.profileUrl} alt="" />
                                         <h1>{seller.name}</h1>
                                         <p>{seller.ammount ? `${seller.ammount} ETH` : '-'}</p>

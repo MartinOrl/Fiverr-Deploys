@@ -21,6 +21,10 @@ const StyledDiv = styled.div`
         margin-bottom: 8px;
         font-size: 1.5rem
     }
+    @media screen and (max-width: 780px){
+        width: 50%;
+        margin: 0 auto 24px;
+    }
 `
 
 const SelectableContainer = ({children, count, active, action}) => {
