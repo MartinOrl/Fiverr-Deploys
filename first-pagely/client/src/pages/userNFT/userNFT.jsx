@@ -12,6 +12,7 @@ import dotsWhite from '../../assets/dots.png'
 import specialBall from '../../assets/3dBall.png'
 import trading from '../../assets/trading.png'
 import offer from '../../assets/offer.png'
+import eye from '../../assets/eye.png'
 
 const DropdownContainer = ({children, title, top, bottom}) => {
     const [collapse, setCollapse] = useState(false)
@@ -78,13 +79,14 @@ const UserNFT = () => {
                         <h1>Name NFT</h1>
                         <div>
                             <p><span><img src={specialBall} alt="" /></span> Owned by you</p>
-                            <p>23 views</p>
+                            <p><span><img src={eye} alt="" /></span> 23 views</p>
                         </div>
                     </RightHeading>
                     <PriceContainer>
                         <DropdownContainer title='Price History' top="false">
                             <SpecialToggle>All Time <span>&gt;</span></SpecialToggle>
                             <img src={trading} alt="" />
+                            <p>No listings yet</p>
                         </DropdownContainer>
                         <DropdownContainer title='Listings' top="false">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium fugiat dolore amet nostrum cupiditate temporibus!</p>
@@ -92,7 +94,7 @@ const UserNFT = () => {
                         <DropdownContainer title='Offers' top="false">
                             
                             <img src={offer} alt="" />
-                            <p>No pffers yet</p>
+                            <p>No offers yet</p>
                         </DropdownContainer>
 
                         

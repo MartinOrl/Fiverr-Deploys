@@ -6,6 +6,10 @@ const ToggleSwitch = styled.label`
     width: 60px;
     height: 34px;
     display: block;
+    @media screen and (max-width: 940px){
+        height: 28px;
+        width: 48px;
+    }
     input{
         opacity: 0;
         width: 0;
@@ -33,6 +37,10 @@ const ToggleSwitch = styled.label`
             -webkit-transition: .4s;
             transition: .4s;
             border-radius: 50%;
+            @media screen and (max-width: 940px){
+                height: 20px;
+                width: 20px;
+            }
         }
     }
     input:checked + span{
@@ -44,8 +52,14 @@ const ToggleSwitch = styled.label`
     input:checked + span:before{
         -webkit-transform: translateX(26px);
         -ms-transform: translateX(26px);
-        transform: translateX(26px)
+        transform: translateX(26px);
+        @media screen and (max-width: 940px){
+            -webkit-transform: translateX(20px);
+            -ms-transform: translateX(20px);
+            transform: translateX(20px);
+        }
     }
+   
 
 `
 

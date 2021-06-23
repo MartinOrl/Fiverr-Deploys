@@ -9,7 +9,9 @@ const StyledDiv = styled.div`
     border: 2px solid #432ba6;
     border-radius: 8px;
     width: ${props =>  `${95/props.count}%`};
-    padding: 32px 0;
+    padding: 16px 16px;
+    box-sizing: border-box;
+    text-align: center;
     font-weight: bold;
     background: ${props => props.active ? 'linear-gradient(45deg, #4136f1, #8743ff)' : 'transparent'};
     color: ${props => props.active ? 'white' : '#432ba6'};
@@ -20,6 +22,10 @@ const StyledDiv = styled.div`
         margin: 0;
         margin-bottom: 8px;
         font-size: 1.5rem
+    }
+    p{
+        margin: 0;
+        margin-top: 8px;
     }
     @media screen and (max-width: 780px){
         width: 50%;

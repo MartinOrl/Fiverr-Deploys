@@ -255,7 +255,7 @@ export const RightHeading = styled.div`
                 width: 24px;
                 height: 24px;
                 display: block;
-                margin-right: 16px;
+                margin-right: 8px;
                 
             }
         }

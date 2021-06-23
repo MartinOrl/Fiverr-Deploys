@@ -6,16 +6,23 @@ import Checkbox from '../../components/checkbox/checkbox'
 
 import { PageContainer, MethodsContainer, ColumnDetails, Summary, Section, SummarySection, LocalNav, Listening, Instructions } from './sellMethodStyles'
 
+import twist from '../../assets/twist.png'
+import collectionIco from '../../assets/collectionIcon.png'
+
 const SellMethod = () => {
     const [method, setMethod] = useState('')
+    const [collapse, setCollapse] = useState(false)
     return (
         <div>
             <HeaderImg />
             <LocalNav>
-                <img src="" alt="" />
                 <div>
-                    <p>Collections</p>
-                    <h1>Name NFT</h1>
+                    <p>&lt;</p>
+                    <img src={collectionIco} alt="" />
+                    <div>
+                        <p>Collections</p>
+                        <h1>Name NFT</h1>
+                    </div>
                 </div>
             </LocalNav>
             <PageContainer>
@@ -64,10 +71,10 @@ const SellMethod = () => {
                         </div>
                         <Checkbox />
                     </Section>
-                    <Instructions>
+                    <Instructions collapse={collapse ? 'true' : ''}>
                         <div>
                             <h1>Instructions</h1>
-                            <p>&gt;</p>
+                            <p onClick={() => setCollapse(!collapse)}>&gt;</p>
                         </div>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et obcaecati amet voluptatum natus inventore earum a molestias libero nemo maxime odio corporis recusandae laboriosam quaerat expedita esse, commodi rem, magnam iure dolorem architecto animi nihil?</p>
                     </Instructions>
@@ -76,8 +83,8 @@ const SellMethod = () => {
                     <h1>Summary</h1>
                     <Listening>
                         <h1>Listening</h1>
-                        <p>Your item will be listed for <span><img src="" alt="" /></span> 0.2</p>
-                        <p>Post your listening</p>
+                        <p>Your item will be listed for <span><img src={twist} alt="" /></span> 0.2</p>
+                        <p>Post your listening &gt;</p>
                     </Listening>
                     <SummarySection>
                         <div>
