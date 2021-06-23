@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', 'Roboto', 'Oxygen', 'Segoe UI', -apple-system;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  max-width: 100vw;
+  width: 100vw;
+  overflow-x: hidden;
+  background: #edf4ff;
+}
+
+div{
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+}
+div::-webkit-scrollbar{
+  display: none;
+
+}
