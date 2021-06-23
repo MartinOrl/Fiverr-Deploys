@@ -14,6 +14,11 @@ export const PageContainer = styled.div`
 
 export const ColumnDetails = styled.div`
     width: 55%;
+    @media screen and (max-width: 1240px){
+        width: 80%;
+        margin: 16px auto;
+    }
+    
 `
 
 export const ColumnPreview = styled.div`
@@ -41,6 +46,9 @@ export const ColumnPreview = styled.div`
 export const PageTitle = styled.h1`
     width: 80%;
     margin: 64px auto 32px;
+    @media screen and (max-width: 1240px){
+        text-align: center;
+    }
 `
 
 export const PriceContainer = styled.div`
@@ -171,6 +179,11 @@ export const Row = styled.div`
     align-items: flex-start;
     width: 80%;
     margin: 24px auto;
+    @media screen and (max-width: 1240px){
+        flex-direction: column;
+        justify-content: space-around;
+
+    }
 `
 
 export const Selections = styled.div`

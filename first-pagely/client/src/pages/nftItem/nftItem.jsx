@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-import { PageContainer, Container, ImageTitleContainer, SectionContainer, Bids, History , SaleInfo, Details, Tags, Toggle, ToggleableContainer, Toggles, Description, CreatorDetails, CreatorInfo, BidContainer } from './nftItemStyles'
+import {Text, InfoContainer, PageContainer, Container, ImageTitleContainer, SectionContainer, Bids, History , SaleInfo, Details, Tags, Toggle, ToggleableContainer, Toggles, Description, CreatorDetails, CreatorInfo, BidContainer } from './nftItemStyles'
 import HeaderImg from '../../components/headerImg/headerImg'
 import itemImage from '../../assets/itemImage.png'
 import rainbow from '../../assets/rainbow.png'
@@ -19,7 +19,33 @@ const NFTDetails = () => {
 const NFTBids = ({bids}) => {
     return(
         <Bids>
-        
+            <InfoContainer>
+                <img src={profile} alt="" />
+                <div>
+                    <Text>0.004 wETH <span>by</span> 0xc58a44dea...f0b8</Text>
+                    <p>30.5.2021, 16:15</p>
+                
+                </div>
+
+            </InfoContainer>
+            <InfoContainer>
+                <img src={profile} alt="" />
+                <div>
+                    <Text decoration="true" >0.004 wETH <span>by</span> Official NFTFY Collection</Text>
+                    <p>30.5.2021, 16:15</p>
+                
+                </div>
+
+            </InfoContainer>
+            <InfoContainer>
+                <img src={profile} alt="" />
+                <div>
+                    <Text decoration="true" >0.004 wETH <span>by</span> HC1</Text>
+                    <p>30.5.2021, 16:15</p>
+                
+                </div>
+
+            </InfoContainer>
         </Bids>
     )
 }
@@ -27,7 +53,27 @@ const NFTBids = ({bids}) => {
 const NFTHistory = ({history}) => {
     return(
         <History>
-        
+            <InfoContainer>
+                <img src={profile} alt="" />
+                <div>
+                    <Text >Bid <span>accepted 0.025 wETH</span></Text>
+                    <p>by <span>Official NFTFY Collection</span> at 30.05.2021, 20:05</p>
+                </div>
+            </InfoContainer>
+            <InfoContainer>
+                <img src={profile} alt="" />
+                <div>
+                    <Text >Bid <span>accepted 0.025 wETH</span></Text>
+                    <p>by <span>Official NFTFY Collection</span> at 30.05.2021, 20:05</p>
+                </div>
+            </InfoContainer>
+            <InfoContainer>
+                <img src={profile} alt="" />
+                <div>
+                    <Text >Bid <span>accepted 0.025 wETH</span></Text>
+                    <p>by <span>Official NFTFY Collection</span> at 30.05.2021, 20:05</p>
+                </div>
+            </InfoContainer>
         </History>
     )
 }

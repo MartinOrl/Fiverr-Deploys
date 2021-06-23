@@ -1,7 +1,7 @@
 import { lazy, Suspense } from 'react'
 import './App.css';
 
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, BrowserRouter } from 'react-router-dom'
 
 import Footer from './components/footer/footer';
 import Header from './components/header/header';
@@ -31,21 +31,20 @@ function App() {
   return (
     <div className="App">
       <Header />
-        <Switch>
-          <Suspense fallback={<Fallback />} >
+      <Suspense fallback={<Fallback />} >
+          <Switch>
             <Route exact path='/' component={Home} />
-            <Route exact path='/about' component={About} />
-            <Route exact path='/createCollectible' component={CollectibleCreate} />
-            <Route exact path='/connectWallet' component={ConnectWallet} />
-            <Route exact path='/profile' component={Profile} />
-            <Route exact path='/nftItem' component={NFTItem}  />
-            <Route exact path='/createSingle' component={CreateSingle} />
-            <Route exact path='/profileSearch' component={ProfileSearch} />
-            <Route exact path='/sellMethod' component={SellMethod} />
-            <Route exact path='/userNFT' component={UserNFT} />
-            
-          </Suspense>
-        </Switch>
+            <Route path='/about' component={About} />
+            <Route path='/createCollectible' component={CollectibleCreate} />
+            <Route path='/connectWallet' component={ConnectWallet} />
+            <Route path='/profile' component={Profile} />
+            <Route path='/nftItem' component={NFTItem}  />
+            <Route path='/createSingle' component={CreateSingle} />
+            <Route path='/profileSearch' component={ProfileSearch} />
+            <Route path='/sellMethod' component={SellMethod} />
+            <Route path='/userNFT' component={UserNFT} />
+          </Switch>
+      </Suspense>
       <Footer />
     </div>
   );

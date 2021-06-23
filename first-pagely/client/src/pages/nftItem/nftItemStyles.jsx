@@ -210,12 +210,12 @@ export const ToggleableContainer = styled.div`
     position: relative;
     margin: 64px 0 24px;
 
-    div:last-of-type{
+    &>div:last-of-type{
         background: linear-gradient(90deg, #8743ff, #4136f1);
         background-size: 120%;
         position: relative;
         z-index: 3;
-        padding: 24px 16px;
+        padding: 16px 16px;
         border-radius: 16px;
         border: 1px solid rgba(255,255,255,.8);
         box-sizing: border-box;
@@ -261,9 +261,109 @@ export const Details = styled.div`
     }
 `
 
-export const Bids = styled.div`
+export const Text = styled.p`
+    text-decoration: ${props => props.decoration ? 'line-through' : 'none'};
+`
 
+export const InfoContainer = styled.div`
+    display: flex;
+    width: 100%;
+    padding: 16px 0;
+    box-sizing: border-box;
+    border-bottom: 2px dashed #b2a1ef;
+    align-items: center;
+    &:last-of-type{
+        border-bottom: none;
+    }
+    &:first-of-type{
+        padding-top: 0;
+    }
+
+    img{
+        width: 48px;
+        height: 48px;
+        padding: 8px;
+        background: white;
+        border-radius: 50%;
+        box-shadow: -5px -5px 13px #9076ff, 5px 5px 8px #3f2aa3;
+        margin-right: 16px;
+    }
+    div{
+        border: none;
+        p{
+            margin: 0 ;
+        }
+        p:last-of-type{
+            opacity: 0.6;
+        }
+        
+        &:last-of-type{
+            padding: 0 !important;
+            border: none !important;
+        }
+    }
+`
+
+export const Bids = styled.div`
+    /* &>div{
+        display: flex;
+        width: 100%;
+        padding: 16px 0;
+        box-sizing: border-box;
+        border-bottom: 2px dashed #b2a1ef;
+        align-items: center;
+        &:last-of-type{
+            border-bottom: none;
+        }
+        img{
+            width: 48px;
+            height: 48px;
+            padding: 8px;
+            background: white;
+            border-radius: 50%;
+            box-shadow: -5px -5px 13px #9076ff, 5px 5px 8px #3f2aa3;
+            margin-right: 16px;
+        }
+        div{
+            border: none;
+            p{
+                margin: 0 ;
+            }
+            p:first-of-type{
+                color: white;
+                text-decoration: line-through;
+                span{
+                    color: black;
+                }
+            }
+            p:last-of-type{
+                opacity: 0.6;
+                color: white;
+            }
+            &:first-of-type{
+                p:first-of-type{
+                    text-decoration: none;
+                }
+            }
+            &:last-of-type{
+                padding: 0 !important;
+                border: none !important;
+            }
+        }
+    } */
+    p{
+        color: white;
+        span{
+            color: black;
+        }
+    }
 `
 export const History = styled.div`
-
+    p{
+        color: #ca95ff;
+        opacity: 1 !important;
+        span{
+            color: white;
+        }
+    }
 `
