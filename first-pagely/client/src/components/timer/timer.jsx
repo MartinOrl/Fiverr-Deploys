@@ -31,11 +31,10 @@ const renderer = ({hours, minutes, seconds, completed}) => {
     }
 }
 
-const Timer = ({seconds}) => {
- 
+const Timer = ({end}) => {
 
     return (
-        <Countdown date={Date.now() + seconds} renderer={renderer} />
+        <Countdown date={end*1000} renderer={renderer} />
     )
 }
 

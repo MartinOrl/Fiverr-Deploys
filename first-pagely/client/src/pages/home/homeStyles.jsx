@@ -193,8 +193,11 @@ export const LiveAuction = styled.div`
     div:first-of-type{
         display: flex;
         justify-content: space-between;
+
         img{
             width: 100%;
+            object-fit: cover;
+            height: 220px;
         }
     }
     div:last-of-type{

@@ -39,6 +39,7 @@ function App() {
             <Route path='/connectWallet' component={ConnectWallet} />
             <Route path='/profile' component={Profile} />
             <Route path='/nftItem' component={NFTItem}  />
+            <Route path='/nft/:id' component={NFTItem} />
             <Route path='/createSingle' component={CreateSingle} />
             <Route path='/profileSearch' component={ProfileSearch} />
             <Route path='/sellMethod' component={SellMethod} />

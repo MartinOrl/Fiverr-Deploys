@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 
 import { ProfileContainer, FiltersContainer, FilteredContainer, OverflowContainer } from './profileStyles'
 
-import profile from '../../assets/profileImg.png'
-
 
 import ProfileFilter from '../../components/profileFilter/profileFilter'
 import NFTCard from '../../components/nft/nft'
@@ -14,7 +12,7 @@ import cone from '../../assets/cone.png'
 import ball from '../../assets/ball.png'
 
 
-import { ProfileFilters, nftsData } from '../../testData'
+import { ProfileFilters, myProfile } from '../../testData'
 
 const Profile = () => {
     const [active, setActive ] = useState('')
@@ -23,7 +21,7 @@ const Profile = () => {
             <HeaderImg />
             <img src={cone} alt="" />
             <img src={ball} alt="" />
-            <ProfileHero imgUrl={profile} name='Satman' description='Activist, Actress, Artist, Bitcoin Supporter' address='0x3401ea5a8d91c...f153' />
+            <ProfileHero imgUrl={myProfile.profileUrl} name={myProfile.name} description={myProfile.description} shortAddress={myProfile.shortAddress} fullAddress={myProfile.address} />
             <OverflowContainer>
                 <FiltersContainer>
                     {
@@ -36,7 +34,7 @@ const Profile = () => {
             <FilteredContainer >
 
             {
-                nftsData.map(data => {
+                myProfile.nfts.map(data => {
                     if(active){
                         if(data.profileCategories.includes(active)){
                             return <NFTCard key={data.id} {...data} />

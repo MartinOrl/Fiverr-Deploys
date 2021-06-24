@@ -2,12 +2,14 @@ import React, {useState} from 'react'
 
 import { Likes, Text, InfoContainer, PageContainer, Container, ImageTitleContainer, SectionContainer, Bids, History , SaleInfo, Details, Tags, Toggle, ToggleableContainer, Toggles, Description, CreatorDetails, CreatorInfo, BidContainer } from './nftItemStyles'
 import HeaderImg from '../../components/headerImg/headerImg'
-import itemImage from '../../assets/itemImage.png'
 import rainbow from '../../assets/rainbow.png'
 import profile from '../../assets/profilePic.png'
 import flame from '../../assets/flame.png'
 import ball from '../../assets/ball.png'
 import cone from '../../assets/cone.png'
+import dots from '../../assets/dots.png'
+import { useParams } from 'react-router-dom'
+import { nftsData } from '../../testData'
 
 const NFTDetails = () => {
     return(
@@ -83,29 +85,37 @@ const NFTHistory = ({history}) => {
 const NFTItem = () => {
     const [filter, setFilter ] = useState('details')
     const [liked, setLiked] = useState(false)
-    var likes = 100;
+    const {id} = useParams()
+    const [data, setData] = useState(() => {
+        console.log(nftsData.filter(item => item.id == id)[0])
+        return nftsData.filter(item => item.id === id)[0]
+    }) 
+    
+
     return (
+        data ?
         <PageContainer>
             <HeaderImg />
             <img src={cone} alt="" />
             <Container>
                 <SectionContainer>
                     <ImageTitleContainer>
-                        <h1>The Abandoned Church</h1>
+                        <h1>{data.name}</h1>
                         <div>
-                            <Likes liked={liked ? 'liked' : ''} onClick={() => setLiked(!liked)}><span><img src="https://i.imgur.com/jD1XOMM.png" alt="" liked={liked ? 'liked' : ''} /></span> {liked ? likes+1 : likes}</Likes>
+                            <Likes liked={liked ? 'liked' : ''} onClick={() => setLiked(!liked)}><span><img src="https://i.imgur.com/jD1XOMM.png" alt="" liked={liked ? 'liked' : ''} /></span> {liked ? data.likes+1 : data.likes}</Likes>
+                            <img src={dots} alt="" />
                         </div>
                     <div>
                     
                     </div>
                     </ImageTitleContainer>
-                    <img src={itemImage} alt="" />
+                    <img src={data.imgUrl} alt="" />
                     <img src={ball} alt="" />
                 </SectionContainer>
                 <SectionContainer>    
                     <div>
-                        <h1>The Abandoned Church</h1>
-                        <SaleInfo>Not For Sale - Highest Bid <span>0.004 wETH</span></SaleInfo>
+                        <h1>{data.name}</h1>
+                        <SaleInfo>Not For Sale - Highest Bid <span>{data.price} wETH</span></SaleInfo>
                         <Tags>
                             <p><span><img src={rainbow} alt="" /></span> Art</p>
                             <p>Unlockable</p>
@@ -117,7 +127,7 @@ const NFTItem = () => {
                                     <img src={profile} alt="" />
                                     <div>
                                         <p>Creator</p>
-                                        <p>Deftroy</p>
+                                        <p>{data.creator}</p>
                                     </div>
                                 </div>
                                 <div>
@@ -143,7 +153,7 @@ const NFTItem = () => {
                         </ToggleableContainer>
                     </div>
                     <BidContainer>
-                        <p>0.004 wETH <strong>$10.46</strong> for 1 edition</p>
+                        <p>{data.price} wETH <strong>$10.46</strong> for 1 edition</p>
                         <p>Highest bid by <strong>0xc58a44dea...f0b8</strong> </p>
                         <div>
                             <p>Place a bid</p>
@@ -154,6 +164,7 @@ const NFTItem = () => {
                 
             </Container>
         </PageContainer>
+        : ''
     )
 }
 

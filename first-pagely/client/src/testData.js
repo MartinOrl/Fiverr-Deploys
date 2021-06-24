@@ -1,3 +1,93 @@
+export const myProfile = {
+    name: 'Satman',
+    address: '0x3401ea5a8d91c5864258f153',
+    shortAddress: '0x3401ea5a8d91c...f153',
+    profileUrl: 'https://i.imgur.com/K5vh4CA.png',
+    description: 'Activist, Actress, Artist, Bitcoin Supporter',
+    nfts: [
+        {
+        id: 'Me0CVslF',
+        imgUrl: "https://images.unsplash.com/photo-1618224706414-92301b84910d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=807Q.png",
+        name: 'The Cube',
+        price: "0.001",
+        count: 90,
+        likes: 111,
+        creator: 'Satman',
+        profileCategories: [
+            'sale',
+            'created'
+        ],
+        homeCategories: [
+            'metal',
+            'blues'
+        ]
+    },
+    {
+        id: 'LLTPWmrj',
+        imgUrl: "https://images.unsplash.com/photo-1624223867968-969ea88a04b9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=682&q=80",
+        name: 'Hive',
+        price: "0.5",
+        count: 50,
+        likes: 87,
+        creator: 'Satman',
+        profileCategories: [
+            'sale',
+            'created'
+        ],
+        homeCategories: [
+            'blues'
+        ]
+    },
+    {
+        id: 'q2mltetS',
+        imgUrl: "https://i.imgur.com/PFoFP7Q.png",
+        name: 'NFT PAPI STICKER #3',
+        price: "0.001",
+        count: 35,
+        likes: 282,
+        creator: 'Satman',
+        profileCategories: [
+            'sale',
+        ],
+        homeCategories: [
+            'electronic',
+            'metal',
+        ]
+    },
+    {
+        id: 'mVlzgSqd-ur',
+        imgUrl: "https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+        name: 'Hallway to heaven',
+        price: "0.001",
+        count: 50,
+        likes: 319,
+        creator: 'Satman',
+        profileCategories: [
+            'created'
+        ],
+        homeCategories: [
+            'metal',
+            'blues'
+        ]
+    },
+    {
+        id: 'Z_sBCeaI',
+        imgUrl: "https://images.wallpaperscraft.com/image/river_home_art_128746_1280x720.jpg",
+        name: 'Dream Kingdom',
+        price: "0.003",
+        count: 30,
+        likes: 199,
+        creator: 'Satman',
+        profileCategories: [
+            'created'
+        ],
+        homeCategories: [
+            'electronic',
+        ]
+    },
+    ]
+}
+
 export const topSellers = [
     {
         id: 'seller1',
@@ -62,8 +152,8 @@ export const genres = [
 export const liveAuctions = [
     {
         id: 'live1',
-        imgUrl: 'https://i.imgur.com/PFoFP7Q.png',
-        name: 'Secent Girl',
+        imgUrl: 'https://images.wallpaperscraft.com/image/bicycle_art_girl_128536_1280x720.jpg',
+        name: 'StreetShop',
         timeLeft: '31h 31m 26s left',
         price: 1.234
     },
@@ -76,15 +166,15 @@ export const liveAuctions = [
     },
     {
         id: 'live3',
-        imgUrl: 'https://i.imgur.com/PFoFP7Q.png',
-        name: 'Secent Girl',
+        imgUrl: 'https://images.wallpaperscraft.com/image/plane_sky_art_129149_1280x720.jpg',
+        name: 'Fly away',
         timeLeft: '31h 31m 26s left',
         price: 1.234
     },
     {
         id: 'live41',
-        imgUrl: 'https://i.imgur.com/PFoFP7Q.png',
-        name: 'Secent Girl',
+        imgUrl: 'https://images.wallpaperscraft.com/image/winter_animals_art_129250_1280x720.jpg',
+        name: 'The Hunt',
         timeLeft: '31h 31m 26s left',
         price: 1.234
     },
@@ -179,12 +269,13 @@ export const ProfileFilters = [
 
 export const nftsData = [
     {
-        id: 1,
+        id: 'CCoHzcck',
         imgUrl: "https://i.imgur.com/PFoFP7Q.png",
         name: 'NFT PAPI STICKER #1',
         price: "0.001",
         count: 90,
-        likes: 200,
+        likes: 111,
+        creator: 'SaltBae',
         profileCategories: [
             'sale',
             'created'
@@ -195,12 +286,13 @@ export const nftsData = [
         ]
     },
     {
-        id: 2,
-        imgUrl: "https://i.imgur.com/PFoFP7Q.png",
-        name: 'NFT PAPI STICKER #2',
+        id: '6wGnUAHQ',
+        imgUrl: "https://images.wallpaperscraft.com/image/bicycle_trees_art_131605_1280x720.jpg",
+        name: 'Dream Future',
         price: "0.002",
         count: 80,
-        likes: 200,
+        likes: 87,
+        creator: 'Saltaway',
         profileCategories: [
             'sale',
             'created'
@@ -210,12 +302,13 @@ export const nftsData = [
         ]
     },
     {
-        id: 3,
-        imgUrl: "https://i.imgur.com/PFoFP7Q.png",
-        name: 'NFT PAPI STICKER #3',
+        id: 'oHxv9llR',
+        imgUrl: "https://images.wallpaperscraft.com/image/child_river_dreams_127495_1280x720.jpg",
+        name: 'The Arrival',
         price: "0.001",
         count: 35,
-        likes: 200,
+        likes: 282,
+        creator: 'Phalanx',
         profileCategories: [
             'sale',
         ],
@@ -225,13 +318,109 @@ export const nftsData = [
         ]
     },
     {
-        id: 4,
+        id: 'lMPFp-ur',
+        imgUrl: "https://images.wallpaperscraft.com/image/deer_forest_night_130294_1280x720.jpg",
+        name: 'Patronus',
+        price: "0.001",
+        count: 50,
+        likes: 319,
+        creator: 'Vaulter',
+        profileCategories: [
+            'created'
+        ],
+        homeCategories: [
+            'metal',
+            'blues'
+        ]
+    },
+    {
+        id: 'YbTpZeqK',
+        imgUrl: "https://images.wallpaperscraft.com/image/man_paint_sky_129261_1280x720.jpg",
+        name: 'Freedom of nature',
+        price: "0.003",
+        count: 30,
+        likes: 199,
+        creator: 'DesertDoge',
+        profileCategories: [
+            'created'
+        ],
+        homeCategories: [
+            'electronic',
+        ]
+    },
+    {
+        id: 'jNQJfXc-',
+        imgUrl: "https://images.wallpaperscraft.com/image/surrealism_boat_clouds_130292_1280x720.jpg",
+        name: 'Top of the World',
+        price: "0.002",
+        count: 80,
+        likes: 471,
+        creator: 'Scholar',
+        profileCategories: [
+            'created'
+        ],
+        homeCategories: [
+            'electronic',
+            'metal',
+        ]
+    },
+    {
+        id: 'K49yBP24',
+        imgUrl: "https://images.wallpaperscraft.com/image/landscape_art_road_127350_1280x720.jpg",
+        name: 'Valley of Peace',
+        price: "0.001",
+        count: 35,
+        likes: 357,
+        creator: 'FRegulations',
+        profileCategories: [
+            'sale',
+        ],
+        homeCategories: [
+            'metal',
+            'blues'
+        ]
+    },
+    {
+        id: 'dcz3_-l_',
         imgUrl: "https://i.imgur.com/PFoFP7Q.png",
         name: 'NFT PAPI STICKER #4',
         price: "0.001",
         count: 50,
-        likes: 200,
+        likes: 117,
+        creator: 'Ghost',
         profileCategories: [
+            'created'
+        ],
+        homeCategories: [
+            'blues'
+        ]
+    },
+    {
+        id: 'Q1uFkOd2',
+        imgUrl: "https://i.imgur.com/PFoFP7Q.png",
+        name: 'NFT PAPI STICKER #5',
+        price: "0.003",
+        count: 30,
+        likes: 103,
+        creator: 'CrewBit',
+        profileCategories: [
+            'sale',
+        ],
+        homeCategories: [
+            'electronic',
+            'metal',
+        ]
+    },
+    {
+        id: 'Me0CVslF',
+        imgUrl: "https://images.unsplash.com/photo-1618224706414-92301b84910d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=807Q.png",
+        name: 'The Cube',
+        price: "0.001",
+        count: 90,
+        likes: 111,
+        creator: 'Satman',
+        profileCategories: [
+            'sale',
             'created'
         ],
         homeCategories: [
@@ -240,70 +429,29 @@ export const nftsData = [
         ]
     },
     {
-        id: 5,
-        imgUrl: "https://i.imgur.com/PFoFP7Q.png",
-        name: 'NFT PAPI STICKER #5',
-        price: "0.003",
-        count: 30,
-        likes: 200,
+        id: 'LLTPWmrj',
+        imgUrl: "https://images.unsplash.com/photo-1624223867968-969ea88a04b9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=682&q=80",
+        name: 'Hive',
+        price: "0.5",
+        count: 50,
+        likes: 87,
+        creator: 'Satman',
         profileCategories: [
+            'sale',
             'created'
         ],
         homeCategories: [
-            'electronic',
+            'blues'
         ]
     },
     {
-        id: 6,
-        imgUrl: "https://i.imgur.com/PFoFP7Q.png",
-        name: 'NFT PAPI STICKER #2',
-        price: "0.002",
-        count: 80,
-        likes: 200,
-        profileCategories: [
-            'created'
-        ],
-        homeCategories: [
-            'electronic',
-            'metal',
-        ]
-    },
-    {
-        id: 7,
+        id: 'q2mltetS',
         imgUrl: "https://i.imgur.com/PFoFP7Q.png",
         name: 'NFT PAPI STICKER #3',
         price: "0.001",
         count: 35,
-        likes: 200,
-        profileCategories: [
-            'sale',
-        ],
-        homeCategories: [
-            'metal',
-            'blues'
-        ]
-    },
-    {
-        id: 8,
-        imgUrl: "https://i.imgur.com/PFoFP7Q.png",
-        name: 'NFT PAPI STICKER #4',
-        price: "0.001",
-        count: 50,
-        likes: 200,
-        profileCategories: [
-            'created'
-        ],
-        homeCategories: [
-            'blues'
-        ]
-    },
-    {
-        id: 9,
-        imgUrl: "https://i.imgur.com/PFoFP7Q.png",
-        name: 'NFT PAPI STICKER #5',
-        price: "0.003",
-        count: 30,
-        likes: 200,
+        likes: 282,
+        creator: 'Satman',
         profileCategories: [
             'sale',
         ],
@@ -311,7 +459,38 @@ export const nftsData = [
             'electronic',
             'metal',
         ]
-    }
+    },
+    {
+        id: 'mVlzgSqd-ur',
+        imgUrl: "https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80",
+        name: 'Hallway to heaven',
+        price: "0.001",
+        count: 50,
+        likes: 319,
+        creator: 'Satman',
+        profileCategories: [
+            'created'
+        ],
+        homeCategories: [
+            'metal',
+            'blues'
+        ]
+    },
+    {
+        id: 'Z_sBCeaI',
+        imgUrl: "https://images.wallpaperscraft.com/image/river_home_art_128746_1280x720.jpg",
+        name: 'Dream Kingdom',
+        price: "0.003",
+        count: 30,
+        likes: 199,
+        creator: 'Satman',
+        profileCategories: [
+            'created'
+        ],
+        homeCategories: [
+            'electronic',
+        ]
+    },
 ]
 
 export const teamMembers = [

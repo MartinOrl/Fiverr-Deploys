@@ -10,6 +10,10 @@ import Checkbox from '../../components/checkbox/checkbox'
 import testImg from '../../assets/ether.png'
 import { useHistory } from 'react-router-dom'
 
+import priceTag from '../../assets/priceTag.png'
+import clock from '../../assets/clock.png'
+import unlimited from '../../assets/infinity.png'
+
 const CreateSingle = () => {
     const [ activeSelection, setActiveSelection ] = useState('')
     const [ file, setFile ] = useState([])
@@ -65,15 +69,15 @@ const CreateSingle = () => {
                                 </SectionHeading>
                                 <Selections>
                                     <SelectableContainer count={3} active={activeSelection === 'price'} action={() => setActiveSelection('price')} >
-                                        <img src="" alt="" />
+                                        <img src={priceTag} alt="" />
                                         <p>Fixed Price</p>
                                     </SelectableContainer>
                                     <SelectableContainer count={3} active={activeSelection === 'timed'} action={() => setActiveSelection('timed')} >
-                                        <img src="" alt="" />
+                                        <img src={clock} alt="" />
                                         <p>Timed Auction</p>
                                     </SelectableContainer>
                                     <SelectableContainer count={3} active={activeSelection === 'unlimited'} action={() => setActiveSelection('unlimited')} >
-                                        <img src="" alt="" />
+                                        <img src={unlimited} alt="" />
                                         <p>Unlimited Auction</p>
                                     </SelectableContainer>
                                 </Selections>

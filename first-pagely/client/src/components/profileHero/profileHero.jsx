@@ -7,10 +7,10 @@ import warning from '../../assets/warning.png'
 import share from '../../assets/share.png'
 import friendAdd from '../../assets/friendAdd.png'
 
-const ProfileHero = ({imgUrl, name, description, address}) => {
+const ProfileHero = ({imgUrl, name, description, shortAddress, fullAddress}) => {
     const [active, setActive] = useState(false)
     const handleClick = () => {
-        navigator.clipboard.writeText(address)
+        navigator.clipboard.writeText(fullAddress)
         setActive(true)
 
         setTimeout(() => {
@@ -40,7 +40,7 @@ const ProfileHero = ({imgUrl, name, description, address}) => {
             <Container>
                 <h1>{name}</h1>
                 <p>{description}</p>
-                <Address onClick={handleClick} active={active}  >{address}<span><img src={copy} alt="" /></span></Address>
+                <Address onClick={handleClick} active={active}  >{shortAddress}<span><img src={copy} alt="" /></span></Address>
                 <NameShadow>{name}</NameShadow>
             </Container>
         </div>

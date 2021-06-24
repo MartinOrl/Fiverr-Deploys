@@ -44,10 +44,20 @@ export const ImageTitleContainer = styled.div`
     display: flex;
     width: 100%;
     justify-content: space-between;
+    align-items: center;
     h1{
         color: #432ba9;
         margin: 0 16px 24px 0;
-
+        flex-grow: 2;
+    }
+    div{
+        width: max-content;
+        display: flex;
+        &>img{
+            margin-lefT: 16px;
+            display: block;
+            object-fit: contain;
+        }
     }
 `
 
@@ -61,6 +71,7 @@ export const SectionContainer = styled.div`
         border: 6px solid white;
 
         width: max-content;
+        max-width: 60%;
         height: max-content;
         @media screen and (max-width: 1700px){
             width: 58%;
@@ -79,6 +90,10 @@ export const SectionContainer = styled.div`
                 box-sizing: border-box;
             }
         }
+    }
+    &>img:first-of-type{
+        width: 100%;
+        border-radius: 16px;
     }
     &>img:last-of-type{
         position: absolute;

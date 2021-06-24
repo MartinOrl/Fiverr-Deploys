@@ -54,10 +54,9 @@ const Home = () => {
                 <OverflowContainer>
                     <RowContainer wrap='true' justify='space-between' overflowable="true">
                         {
-                            liveAuctions.map(auction => (
+                            liveAuctions.map((auction, i) => (
                                 <LiveAuction key={auction.id}>
-                                    <div>
-                                    </div>
+         
                                     <div>
                                         <img src={auction.imgUrl} alt="" />
                                         <div></div>
@@ -65,7 +64,7 @@ const Home = () => {
                                     <h1>{auction.name}</h1>
                                     <span></span>
                                     <p>Highest 1/1</p>
-                                    <Timer seconds={12900000} />
+                                    <Timer end={1624565800 - i*3328} />
                                     <p>{auction.price ? `${auction.price} wETH` : '-'}</p>
                                 </LiveAuction>
                             ))
@@ -107,7 +106,7 @@ const Home = () => {
                     {
                         nftsData.map((nft, i) => {
                             if(i+1 <= 8*loadMore){
-                                return <NFTCard key={nft.id}  {...nft} />
+                                return <NFTCard key={nft.id}  {...nft} link={`/nft/${nft.id}`} />
                             }
                             return ''
                         })

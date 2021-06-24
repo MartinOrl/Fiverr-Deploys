@@ -3,12 +3,12 @@ import { useHistory } from 'react-router-dom'
 
 import { NFTContainer, Image, InfoContainer, Name, Price, ActionButton, Likes, ActionContainer } from './nftStyles'
 
-const NFTCard = ({imgUrl, name, price, likes, count}) => {
+const NFTCard = ({imgUrl, name, price, likes, count, link}) => {
     const [liked, setLiked] = useState(false)
     const history = useHistory()
     return (
         <NFTContainer>
-            <Image src={imgUrl} alt="" onClick={() => history.push('/nftItem')} />
+            <Image src={imgUrl} alt="" onClick={() => history.push(link)} />
             <InfoContainer>
                 <Name>{name}</Name>
                 <Price>From ~<span>{price}</span> {count}</Price>

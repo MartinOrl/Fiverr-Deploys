@@ -27,6 +27,9 @@ const StyledDiv = styled.div`
         margin: 0;
         margin-top: 8px;
     }
+    img{
+        filter: ${props => props.active ? 'brightness(45)' : ''}
+    }
     @media screen and (max-width: 780px){
         width: 50%;
         margin: 0 auto 24px;
