@@ -15,6 +15,10 @@ export const ProfileContainer = styled.div`
         right: 144px;
         top: 615px;
     }
+    &>h1{
+        text-align: center;
+        color: #432ba9;
+    }
 `
 
 export const FiltersContainer = styled.div`

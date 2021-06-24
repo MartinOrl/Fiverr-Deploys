@@ -29,6 +29,7 @@ export const LocalNav = styled.div`
         border-radius: 8px;
         border: 4px solid white;
         width: max-content;
+        cursor: pointer;
         &>p{
             font-weight: bold;
         }

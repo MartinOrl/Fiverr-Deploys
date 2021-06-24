@@ -190,6 +190,11 @@ export const LiveAuction = styled.div`
     background: white;
     border-radius: 24px;
     margin: 16px 24px 16px 0;
+    cursor: pointer;
+    transition: 250ms ease-in-out;
+    &:hover{
+        box-shadow: 4px 4px 8px rgba(0,0,0,.10);
+    }
     div:first-of-type{
         display: flex;
         justify-content: space-between;
@@ -231,6 +236,7 @@ export const LiveAuction = styled.div`
         display: flex;
         align-items: center;
         justify-content: space-between;
+        width: 80%;
         span{
             display: block;
             margin-left: 16px;

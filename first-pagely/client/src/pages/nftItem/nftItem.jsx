@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-import { Likes, Text, InfoContainer, PageContainer, Container, ImageTitleContainer, SectionContainer, Bids, History , SaleInfo, Details, Tags, Toggle, ToggleableContainer, Toggles, Description, CreatorDetails, CreatorInfo, BidContainer } from './nftItemStyles'
+import { DropDown, Likes, Text, InfoContainer, PageContainer, Container, ImageTitleContainer, SectionContainer, Bids, History , SaleInfo, Details, Tags, Toggle, ToggleableContainer, Toggles, Description, CreatorDetails, CreatorInfo, BidContainer } from './nftItemStyles'
 import HeaderImg from '../../components/headerImg/headerImg'
 import rainbow from '../../assets/rainbow.png'
 import profile from '../../assets/profilePic.png'
@@ -20,9 +20,26 @@ const NFTDetails = () => {
     )
 }
 
-const NFTBids = ({bids}) => {
+const NFTBids = ({bids, bonus}) => {
+    const date = new Date()
     return(
         <Bids>
+            {
+                bonus > 0
+                ?
+                (
+                    <InfoContainer>
+                        <img src={profile} alt="" />
+                        <div>
+                            <Text>{bonus} wETH <span>by</span> You</Text>
+                            <p>{`${date.getDate()}.${date.getMonth() +1}.${date.getFullYear()}, ${date.getHours()}:${date.getMinutes()}`}</p>
+                        
+                        </div>
+                    </InfoContainer>
+                )
+                :
+                ''
+            }
             <InfoContainer>
                 <img src={profile} alt="" />
                 <div>
@@ -85,12 +102,19 @@ const NFTHistory = ({history}) => {
 const NFTItem = () => {
     const [filter, setFilter ] = useState('details')
     const [liked, setLiked] = useState(false)
+    const [collapse, setCollapse] = useState(false)
+    const [bid, setBid] = useState(0)
+    const [inputVal, setInputVal] = useState('')
     const {id} = useParams()
     const [data, setData] = useState(() => {
         console.log(nftsData.filter(item => item.id == id)[0])
         return nftsData.filter(item => item.id === id)[0]
     }) 
     
+    const action = () => {
+        setBid(inputVal);
+        setCollapse(false)
+    }
 
     return (
         data ?
@@ -147,18 +171,34 @@ const NFTItem = () => {
                                 <Toggle active={filter === 'history'} onClick={() => setFilter('history')} >History</Toggle>
                             </Toggles>
                             {
-                                filter === 'details' ? <NFTDetails /> : filter === 'bids' ? <NFTBids bids='' /> : <NFTHistory />
+                                filter === 'details' ? <NFTDetails /> : filter === 'bids' ? <NFTBids bids=''  bonus={bid} /> : <NFTHistory />
                             }
                             
                         </ToggleableContainer>
                     </div>
                     <BidContainer>
-                        <p>{data.price} wETH <strong>$10.46</strong> for 1 edition</p>
-                        <p>Highest bid by <strong>0xc58a44dea...f0b8</strong> </p>
-                        <div>
-                            <p>Place a bid</p>
-                            <p>Share</p>
-                        </div>
+                        <p>{bid > 0 ? bid : data.price} wETH <strong>$10.46</strong> for 1 edition</p>
+                        <p>Highest bid by 
+                        {bid > 0 ? <strong> You</strong> : <strong>0xc58a44dea...f0b8</strong> }
+                        </p>
+                        {
+                            !collapse
+                            ?
+                            (
+                                <div>
+                                    <p onClick={() => setCollapse(true)}>Place a bid</p>
+                                    <p>Share</p>
+                                </div>
+                            )
+                            :
+                            (
+                                <DropDown>
+                                    <input type='number' value={inputVal} placeholder='Your Bid (min 0.001)' min={0.001} onChange={(e) => setInputVal(e.target.value)} />
+                                    <p onClick={() => inputVal > 0 ? action() : ''}>Submit</p>
+                                </DropDown>
+                            )
+                        }
+
                     </BidContainer>
                 </SectionContainer>  
                 

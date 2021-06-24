@@ -222,6 +222,7 @@ export const CreatorDetails = styled.div`
 export const BidContainer = styled.div`
     margin: 24px 0;
     font-size: 1.3rem;
+    background: white !important;
     &>p:nth-of-type(2){
         width: 100%;
         padding: 8px 12px;
@@ -230,30 +231,48 @@ export const BidContainer = styled.div`
         border-radius: 16px;
         margin: 0px 0;
     }
-    div{
+    &>div:first-of-type{
         display: flex;
-        justify-content: space-between;
-        p{
-            padding: 8px 0;
-            width: 45%;
-            text-align: center;
-            border-radius: 24px;
-            border: 1px solid white;
-            box-sizing: border-box;
-            background: white;
-            color: black;
-
-            &:first-of-type{
-                background: linear-gradient(-135deg, #8743ff, #4136f1);
-                background-size: 120%;
-                color: white;
-                cursor: pointer;
-                transition: 250ms ease-in-out;
-                &:hover{
-                    box-shadow: 2px 3px 8px rgba(0,0,0,.3);
-                }
-            }
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    &>div:nth-of-type(2){
+        color: #4523ce;
+        h1{
+            margin: 16px 0 0 0;
+            font-size: 1.5rem;
         }
+        p{
+            box-sizing: border-box;
+            padding: 8px 40px;
+            background: linear-gradient(-135deg, #8743ff, #4136f1);
+            background-size: 125%;
+            width: max-content;
+            border-radius: 16px;
+            color: white;
+            margin-top: 16px;
+            cursor: pointer;
+        }
+    }
+`
+
+export const StyledInput = styled.input`
+    width: 100%;
+    outline: none;
+    border: 1px solid white;
+    background: #f4f7fc;
+    box-shadow: 2px 4px 8px rgba(0,0,0,.15);
+    padding: 16px 24px;
+    box-sizing: border-box;
+    display: block;
+    margin: 8px 0 24px;
+    border-radius: 16px;
+    color: black;
+    font-size: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    &:placeholder{
+        font-family: Poppins, Roboto, 'Segoe UI'
     }
 `
 

@@ -21,7 +21,7 @@ const CollectibleCreate = () => {
             </HeadingContainer>
             <CardHolder>
                 <CollectibleCreateCard type='Single' img={single} timer={true} link='/createSingle' />
-                <CollectibleCreateCard type='Multiple' img={multiple} link='/' />
+                <CollectibleCreateCard type='Multiple' img={multiple} link='/createMultiple' />
                 <img src={cube} alt="" />
             </CardHolder>
             <div>

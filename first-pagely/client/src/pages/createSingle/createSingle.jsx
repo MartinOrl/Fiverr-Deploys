@@ -83,26 +83,76 @@ const CreateSingle = () => {
                                 </Selections>
                             </Section>
                             <Section>
-                                <SectionTitle>Price</SectionTitle>
-                                <SectionDescription>Enter price to allow users instantly purchase your nft</SectionDescription>
-                                <PriceContainer collapse={collapse ? 'true' : ''} >
-                                    <input type="number" name="price" id="price" min={0} placeholder='Enter price for one piece' value={price} onChange={(e) => setPrice(e.target.value)} />
+                            {
+                                activeSelection === 'timed' ?
+                                (
+                                <div>
                                     <div>
-                                        <p>{currency}</p>
-                                        <p onClick={() => setCollapse(!collapse)} >&gt;</p>
-                                        <div  >
-                                            <Currency active={currency === 'ETH'}  onClick={() => setCurrency('ETH')} >ETH</Currency>
-                                            <Currency active={currency === 'BTC'}  onClick={() => setCurrency('BTC')} >BTC</Currency>
-                                            <Currency active={currency === 'DOGE'}  onClick={() => setCurrency('DOGE')} >DOGE</Currency>
-                                            <Currency active={currency === 'XRP'}  onClick={() => setCurrency('XRP')} >XRP</Currency>
-                                        </div>
+                                        <SectionTitle>Start Price</SectionTitle>
+                                        <PriceContainer collapse={collapse ? 'true' : ''} >
+                                            <input type="number" name="price" id="price" min={0} placeholder='Enter price for one piece' value={price} onChange={(e) => setPrice(e.target.value)} />
+                                            <div>
+                                                <p>{currency}</p>
+                                                <p onClick={() => setCollapse(!collapse)} >&gt;</p>
+                                                <div  >
+                                                    <Currency active={currency === 'ETH'}  onClick={() => setCurrency('ETH')} >ETH</Currency>
+                                                    <Currency active={currency === 'BTC'}  onClick={() => setCurrency('BTC')} >BTC</Currency>
+                                                    <Currency active={currency === 'DOGE'}  onClick={() => setCurrency('DOGE')} >DOGE</Currency>
+                                                    <Currency active={currency === 'XRP'}  onClick={() => setCurrency('XRP')} >XRP</Currency>
+                                                </div>
+                                            </div>
+                                        </PriceContainer>
                                     </div>
-                                </PriceContainer>
-                                
+                                    <div>
+                                        <SectionTitle>End Price</SectionTitle>
+                                        <PriceContainer collapse={collapse ? 'true' : ''} >
+                                            <input type="number" name="price" id="price" min={0} placeholder='Enter price for one piece' value={price} onChange={(e) => setPrice(e.target.value)} />
+                                            <div>
+                                                <p>{currency}</p>
+                                                <p onClick={() => setCollapse(!collapse)} >&gt;</p>
+                                                <div  >
+                                                    <Currency active={currency === 'ETH'}  onClick={() => setCurrency('ETH')} >ETH</Currency>
+                                                    <Currency active={currency === 'BTC'}  onClick={() => setCurrency('BTC')} >BTC</Currency>
+                                                    <Currency active={currency === 'DOGE'}  onClick={() => setCurrency('DOGE')} >DOGE</Currency>
+                                                    <Currency active={currency === 'XRP'}  onClick={() => setCurrency('XRP')} >XRP</Currency>
+                                                </div>
+                                            </div>
+                                        </PriceContainer>
+                                    </div>
+                                    <div>
+                                        <SectionTitle>End Price</SectionTitle>
+                                        <StyledInput type='number' placeholder='04h 00m 00s' />
+                                    </div>
+                                </div>
+                                )
+
+                                : (
+                                    <div>
+                                        <SectionTitle>Price</SectionTitle>
+                                        <SectionDescription>Enter price to allow users instantly purchase your nft</SectionDescription>
+                                        <PriceContainer collapse={collapse ? 'true' : ''} >
+                                            <input type="number" name="price" id="price" min={0} placeholder='Enter price for one piece' value={price} onChange={(e) => setPrice(e.target.value)} />
+                                            <div>
+                                                <p>{currency}</p>
+                                                <p onClick={() => setCollapse(!collapse)} >&gt;</p>
+                                                <div  >
+                                                    <Currency active={currency === 'ETH'}  onClick={() => setCurrency('ETH')} >ETH</Currency>
+                                                    <Currency active={currency === 'BTC'}  onClick={() => setCurrency('BTC')} >BTC</Currency>
+                                                    <Currency active={currency === 'DOGE'}  onClick={() => setCurrency('DOGE')} >DOGE</Currency>
+                                                    <Currency active={currency === 'XRP'}  onClick={() => setCurrency('XRP')} >XRP</Currency>
+                                                </div>
+                                            </div>
+                                        </PriceContainer>
+                                    </div>
+                                )
+                            }
 
                                 <BonusInfo>
                                     <p>Service Fee <span>2.5%</span> </p>
-                                    <p>You will receive <span>{price ? (price*0.975).toFixed(3) : '0'} {currency}</span></p>
+                                    {
+                                        activeSelection === 'timed' ? '' :
+                                        (<p>You will receive <span>{price ? (price*0.975).toFixed(3) : '0'} {currency}</span></p>)
+                                    }
                                 </BonusInfo>
                                 <BonusInfo>
                                     <SectionHeading>

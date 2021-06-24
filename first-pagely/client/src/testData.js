@@ -22,6 +22,7 @@ export const myProfile = {
             'blues'
         ]
     },
+  
     {
         id: 'LLTPWmrj',
         imgUrl: "https://images.unsplash.com/photo-1624223867968-969ea88a04b9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=682&q=80",
@@ -85,7 +86,45 @@ export const myProfile = {
             'electronic',
         ]
     },
-    ]
+    ],
+    unlisted: [
+        {
+            id: 'yHsAizsE',
+            imgUrl: "https://images.wallpaperscraft.com/image/bird_silhouette_vector_134154_1280x720.jpg",
+            name: 'Freedom',
+            creator: 'Satman'
+        },
+        {
+            id: 'X65dD6wZ',
+            imgUrl: "https://images.wallpaperscraft.com/image/astronaut_spacesuit_sadness_173223_1280x720.jpg",
+            name: 'Best Friend',
+            creator: 'Satman'
+        },
+        {
+            id: 'FdwFgvbv',
+            imgUrl: "https://images.wallpaperscraft.com/image/astronaut_spacesuit_reflection_144426_1280x720.jpg",
+            name: 'HomeComing',
+            creator: 'Satman'
+        },
+        {
+            id: 'VtJ0dfYT',
+            imgUrl: "https://images.wallpaperscraft.com/image/flight_balloon_sky_86980_1280x720.jpg",
+            name: 'Touching the Sky',
+            creator: 'Satman'
+        },
+        {
+            id: 'hZkRk_Gb',
+            imgUrl: "https://images.wallpaperscraft.com/image/cosmonaut_space_suit_multicolored_123724_1280x720.jpg",
+            name: 'Breakdown',
+            creator: 'Satman'
+        },
+        {
+            id: 'q5oDUxwC',
+            imgUrl: "https://images.wallpaperscraft.com/image/galaxy_earth_network_126341_1280x720.jpg",
+            name: 'WWW',
+            creator: 'Satman'
+        },
+    ],
 }
 
 export const topSellers = [
@@ -151,32 +190,32 @@ export const genres = [
 
 export const liveAuctions = [
     {
-        id: 'live1',
-        imgUrl: 'https://images.wallpaperscraft.com/image/bicycle_art_girl_128536_1280x720.jpg',
-        name: 'StreetShop',
-        timeLeft: '31h 31m 26s left',
-        price: 1.234
+        id: 'CCoHzcck',
+        imgUrl: "https://images.wallpaperscraft.com/image/cyclist_rock_cliff_129695_1280x720.jpg",
+        name: 'End of the road',
+        endDate: 1624615512,
+        price: 0.001
     },
     {
-        id: 'live2',
-        imgUrl: 'https://i.imgur.com/PFoFP7Q.png',
-        name: 'Secent Girl',
-        timeLeft: '31h 31m 26s left',
-        price: 1.234
+        id: 'lMPFp-ur',
+        imgUrl: "https://images.wallpaperscraft.com/image/deer_forest_night_130294_1280x720.jpg",
+        name: 'Patronus',
+        endDate: 1624619850,
+        price: 0.005
     },
     {
-        id: 'live3',
-        imgUrl: 'https://images.wallpaperscraft.com/image/plane_sky_art_129149_1280x720.jpg',
-        name: 'Fly away',
-        timeLeft: '31h 31m 26s left',
-        price: 1.234
+        id: 'jNQJfXc-',
+        imgUrl: "https://images.wallpaperscraft.com/image/surrealism_boat_clouds_130292_1280x720.jpg",
+        name: 'Top of the World',
+        endDate: 1624623500,
+        price: 0.002
     },
     {
-        id: 'live41',
-        imgUrl: 'https://images.wallpaperscraft.com/image/winter_animals_art_129250_1280x720.jpg',
-        name: 'The Hunt',
-        timeLeft: '31h 31m 26s left',
-        price: 1.234
+        id: 'Me0CVslF',
+        imgUrl: "https://images.unsplash.com/photo-1618224706414-92301b84910d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=807Q.png",
+        name: 'The Cube',
+        endDate: 1624623800,
+        price: 0.001,
     },
 
 ]
@@ -270,8 +309,8 @@ export const ProfileFilters = [
 export const nftsData = [
     {
         id: 'CCoHzcck',
-        imgUrl: "https://i.imgur.com/PFoFP7Q.png",
-        name: 'NFT PAPI STICKER #1',
+        imgUrl: "https://images.wallpaperscraft.com/image/cyclist_rock_cliff_129695_1280x720.jpg",
+        name: 'End of the road',
         price: "0.001",
         count: 90,
         likes: 111,
@@ -321,7 +360,7 @@ export const nftsData = [
         id: 'lMPFp-ur',
         imgUrl: "https://images.wallpaperscraft.com/image/deer_forest_night_130294_1280x720.jpg",
         name: 'Patronus',
-        price: "0.001",
+        price: 0.005,
         count: 50,
         likes: 319,
         creator: 'Vaulter',
@@ -382,8 +421,8 @@ export const nftsData = [
     },
     {
         id: 'dcz3_-l_',
-        imgUrl: "https://i.imgur.com/PFoFP7Q.png",
-        name: 'NFT PAPI STICKER #4',
+        imgUrl: "https://images.wallpaperscraft.com/image/house_hut_night_149437_1280x720.jpg",
+        name: 'Hot Hut',
         price: "0.001",
         count: 50,
         likes: 117,
@@ -397,8 +436,8 @@ export const nftsData = [
     },
     {
         id: 'Q1uFkOd2',
-        imgUrl: "https://i.imgur.com/PFoFP7Q.png",
-        name: 'NFT PAPI STICKER #5',
+        imgUrl: "https://images.wallpaperscraft.com/image/child_night_tree_129606_1280x720.jpg",
+        name: 'Realm of Dreams',
         price: "0.003",
         count: 30,
         likes: 103,
@@ -446,8 +485,8 @@ export const nftsData = [
     },
     {
         id: 'q2mltetS',
-        imgUrl: "https://i.imgur.com/PFoFP7Q.png",
-        name: 'NFT PAPI STICKER #3',
+        imgUrl: "https://images.wallpaperscraft.com/image/silhouette_portal_glow_141493_1280x720.jpg",
+        name: 'The Others',
         price: "0.001",
         count: 35,
         likes: 282,

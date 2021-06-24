@@ -37,14 +37,22 @@ const Profile = () => {
                 myProfile.nfts.map(data => {
                     if(active){
                         if(data.profileCategories.includes(active)){
-                            return <NFTCard key={data.id} {...data} />
+                            return <NFTCard key={data.id} {...data} link={`/nft/${data.id}`} />
                         }
                         return ''
                     }
-                    return <NFTCard key={data.id} {...data} />
+                    return <NFTCard key={data.id} {...data} link={`/nft/${data.id}`} />
                 })
             }
             
+            </FilteredContainer>
+            <h1>Unlisted Items</h1>
+            <FilteredContainer>
+                {
+                    myProfile.unlisted.map(item => (
+                        <NFTCard key={item.id} {...item} link={`/unlisted/${item.id}`} />
+                    ))
+                }
             </FilteredContainer>
         </ProfileContainer>
     )

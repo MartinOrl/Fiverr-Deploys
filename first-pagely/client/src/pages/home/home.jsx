@@ -55,7 +55,7 @@ const Home = () => {
                     <RowContainer wrap='true' justify='space-between' overflowable="true">
                         {
                             liveAuctions.map((auction, i) => (
-                                <LiveAuction key={auction.id}>
+                                <LiveAuction key={auction.id} onClick={() => history.push(`/nft/${auction.id}`)}>
          
                                     <div>
                                         <img src={auction.imgUrl} alt="" />
@@ -64,7 +64,7 @@ const Home = () => {
                                     <h1>{auction.name}</h1>
                                     <span></span>
                                     <p>Highest 1/1</p>
-                                    <Timer end={1624565800 - i*3328} />
+                                    <Timer end={auction.endDate} />
                                     <p>{auction.price ? `${auction.price} wETH` : '-'}</p>
                                 </LiveAuction>
                             ))

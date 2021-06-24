@@ -26,6 +26,8 @@ const CreateSingle = lazy(() => import('./pages/createSingle/createSingle'))
 const ProfileSearch = lazy(() => import('./pages/profileSearch/profileSearch'))
 const SellMethod = lazy(() => import('./pages/sellMethod/sellMethod'))
 const UserNFT = lazy(() => import('./pages/userNFT/userNFT'))
+const CreateMultiple = lazy(() => import('./pages/createMultiple/createMultiple'))
+const UnlistedItem = lazy(() => import('./pages/unlisted/unlisted'))
 
 function App() {
   return (
@@ -38,9 +40,11 @@ function App() {
             <Route path='/createCollectible' component={CollectibleCreate} />
             <Route path='/connectWallet' component={ConnectWallet} />
             <Route path='/profile' component={Profile} />
-            <Route path='/nftItem' component={NFTItem}  />
+        
             <Route path='/nft/:id' component={NFTItem} />
+            <Route path='/unlisted/:id' component={UnlistedItem} />
             <Route path='/createSingle' component={CreateSingle} />
+            <Route path='/createMultiple' component={CreateMultiple} />
             <Route path='/profileSearch' component={ProfileSearch} />
             <Route path='/sellMethod' component={SellMethod} />
             <Route path='/userNFT' component={UserNFT} />

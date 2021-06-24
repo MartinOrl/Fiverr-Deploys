@@ -11,11 +11,21 @@ const NFTCard = ({imgUrl, name, price, likes, count, link}) => {
             <Image src={imgUrl} alt="" onClick={() => history.push(link)} />
             <InfoContainer>
                 <Name>{name}</Name>
-                <Price>From ~<span>{price}</span> {count}</Price>
-                <ActionContainer>
-                    <ActionButton onClick={() => history.push(link)}>Place a bid</ActionButton>
-                    <Likes liked={liked ? 'liked' : ''} onClick={() => setLiked(!liked)}><span><img src="https://i.imgur.com/jD1XOMM.png" alt="" liked={liked ? 'liked' : ''} /></span> {liked ? likes+1 : likes}</Likes>
-                </ActionContainer>
+                {
+                    price ? <Price>From ~<span>{price}</span> {count}</Price> : ''
+                }
+    
+                {
+                    price ? 
+                    <ActionContainer>
+                        <ActionButton onClick={() => history.push(link)}>Place a bid</ActionButton>
+                        <Likes liked={liked ? 'liked' : ''} onClick={() => setLiked(!liked)}><span><img src="https://i.imgur.com/jD1XOMM.png" alt="" liked={liked ? 'liked' : ''} /></span> {liked ? likes+1 : likes}</Likes>
+                    </ActionContainer>
+                    :
+                    <ActionContainer>
+                        <ActionButton onClick={() => history.push('/sellMethod')}>Mint</ActionButton>
+                    </ActionContainer>
+                }
             </InfoContainer>
         </NFTContainer>
     )
