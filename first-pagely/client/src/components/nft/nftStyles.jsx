@@ -40,6 +40,7 @@ export const ActionButton = styled.p`
     background-size: 130%;
     margin: 0;
     border-radius: 24px;
+    cursor: pointer;
 `
 
 export const Likes = styled.p`

@@ -22,12 +22,12 @@ export const CardsHolder = styled.div`
     width: 80%;
     margin: 16px auto;
     &>div{
-        margin: 16px;
-        margin-left: 0;
+        margin: 16px 24px;;
+       
     }
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    
     position: relative;
     z-index: 4;
     @media screen and (max-width: 790px){

@@ -21,7 +21,7 @@ const ProfileSearch = () => {
             <HeaderImg />
             <img src={cone} alt="" />
             <img src={ball} alt="" />
-            <ProfileHero imgUrl={testImg} name='Azer' description='Activist, Actress, Artist, Bitcoin Supporter' address='0x3401ea5a8d91c...f153' />
+            <ProfileHero imgUrl={testImg} name='Azer' description='Activist, Actress, Artist, Bitcoin Supporter' shortAddress='0x3401ea5a8d91c...f153' fullAddress='0x3401ea5a8d91ca1f89f153' />
 
             <FilteringContainer>
                 <InputContainer>
@@ -37,8 +37,8 @@ const ProfileSearch = () => {
             <CardsHolder>
                 {
                     nftsData.map(nft => {
-                        if(nft.name.includes(search)){
-                            return <NFTCard key={nft.id} {...nft} />
+                        if(nft.name.toLowerCase().includes(search.toLowerCase())){
+                            return <NFTCard key={nft.id} {...nft} link={`/nft/${nft.id}`} />
                         }
                         return ''
                     })
