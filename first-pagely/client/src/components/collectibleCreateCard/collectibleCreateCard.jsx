@@ -10,7 +10,7 @@ const CollectibleCreateCard = ({type, img, timer, link}) => {
         <CardContainer>
             <img src={img} alt="" />
             {
-                timer ? (<Timer end={1624569800} />) : ''
+                timer ? (<Timer end={1624625800} />) : ''
             }
             <CreateButton onClick={() => history.push(link)}>{type}</CreateButton>
         </CardContainer>
