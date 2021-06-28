@@ -229,6 +229,9 @@ p{
     .roadmap div{
         width: 100%;
     }
+}
+
+@media screen and (max-width: 1024px){
     .row{
         flex-direction: column;
     }
