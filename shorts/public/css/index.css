@@ -15,21 +15,34 @@ body{
     min-height: 100vh;
     background-image: url('/public/images/mmm/hero.png');
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     background-position: 0 -64px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 96px;
+
+    padding: 96px 0 32px;
     text-align: center;
     margin-bottom: 96px;
 }
+.hero img{
+    height: 152px;
+}
 .hero h1{
     margin: 24px 0;
-    width: 650px;
-    font-size: 2.6rem;
-
+    width: 560px;
+    font-size: 2.2rem;
 }
+.hero p{
+    margin: 16px auto;
+}
+
+.flexible-container img{
+    width: 240px;
+}
+
+
+
 p{
     font-weight: 600;
     font-size: 1.6rem;
@@ -38,6 +51,7 @@ p{
     line-height: 2.8rem;
 }
 .hero-button{
+    margin-top: 48px !important;
     padding: 16px 40px;
     background: #ffed90;
     border-radius: 6px;
@@ -45,7 +59,14 @@ p{
     font-size: 2.5rem;
     color: #000;
     font-family: 'Syne', 'Segoe UI', sans-serif;
+    transition: 250ms ease-in-out;
     font-weight: bold;
+    cursor: pointer;
+}
+
+.hero-button:hover{
+    color: #000;
+    background: #fff;
 }
 
 .row{
@@ -53,8 +74,8 @@ p{
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    width: 90%;
-    margin: 32px auto;
+    width: 80%;
+    margin: 64px auto;
 }
 
 .reverse{
@@ -75,15 +96,15 @@ p{
 .row div p{
     line-height: 3.4rem;
     width: 100%;
-}
-br{
-    margin: 16px 0;
-    display: block;
+    font-size: 1.3rem
 }
 
+.row h1{
+    font-size: 1.9rem;
+}
 
 .row div img{
-    width: 520px;
+    width: 350px;
     object-fit: contain;
     display: block;
     margin: 0 auto;
@@ -133,13 +154,13 @@ br{
 
 .roadmap{
     width: 100%;
-    padding-top: 450px;
+
     background-image: url('/public/images/mmm/bgRoadmap.png');
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     justify-content: space-between;
-    padding: 1080px 168px 620px;
+    padding: 640px 168px 620px;
     box-sizing: border-box;
     font-weight: 600;
 }
@@ -150,19 +171,87 @@ br{
 
 .roadmap p{
     margin: 8px 0 24px;
-    line-height: 4rem;
+    line-height: 3rem;
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+.br{
+    display: block;
+    margin: 6px 0;
 }
 
 .roadmap div{
-    width: 45%;
+    width: 50%;
 }
 
 .welcome{
     width: 90%;
-    margin: 64px auto;
+    margin: 96px auto 64px;
 }
 .welcome img{
-    width: 360px;
+    width: 350px;
     object-fit: contain;
 }
 
+@media screen and (max-width: 1505px){
+    .roadmap{
+        padding-top: 250px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .roadmap>div:first-of-type>h1{
+        text-align: center;
+    }
+    .roadmap p{
+        font-size: 1.3rem;
+        line-height: 2rem;
+    }
+}
+@media screen and (max-width: 1280px){
+    .hero{
+        padding-top: 48px;
+    }
+    .hero p, .welcome p{
+        width: 80%;
+    }
+    .hero-button{
+        width: max-content !important;
+    }
+    .roadmap{
+        padding-top: 96px;
+        background-position: center;
+    }
+    .roadmap div{
+        width: 100%;
+    }
+    .row{
+        flex-direction: column;
+    }
+    .row div img, .welcome img{
+        width: 75%;
+    }
+    .row div, .row div:first-of-type{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 740px){
+    .hero h1{
+        font-size: 1.8rem;
+        width: 80%;
+    }
+    .hero p{
+        font-size: 1.2rem;
+        margin: 8px 0;
+    }
+    .hero-button{
+        font-size: 1.8rem !important;
+    }
+}
+
+@media screen and (max-width: 680px){
+    .roadmap{
+        padding: 96px 64px 48px;
+    }
+}
