@@ -30,7 +30,7 @@ body{
 }
 .hero h1{
     margin: 24px 0;
-    width: 560px;
+    width: 680px;
     font-size: 2.2rem;
 }
 .hero p{
@@ -90,13 +90,13 @@ p{
 }
 
 .row div:first-of-type{
-    width: 35%;
+    width: 38%;
 }
 
 .row div p{
-    line-height: 3.4rem;
+    line-height: 30px;
     width: 100%;
-    font-size: 1.3rem
+    font-size: 25px;
 }
 
 .row h1{
@@ -189,6 +189,10 @@ p{
     width: 90%;
     margin: 96px auto 64px;
 }
+.welcome p{
+    width: 28%;
+}
+
 .welcome img{
     width: 350px;
     object-fit: contain;
