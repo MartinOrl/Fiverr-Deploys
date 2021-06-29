@@ -95,7 +95,7 @@ p{
 
 .row div p{
     line-height: 30px;
-    width: 100%;
+    width: 578px;
     font-size: 25px;
 }
 
@@ -193,6 +193,13 @@ p{
     width: 28%;
 }
 
+.welcome div{
+    display: flex;
+    justify-content: space-evenly;
+    width: 75%;
+    flex-wrap: wrap;
+}
+
 .welcome img{
     width: 350px;
     object-fit: contain;
@@ -212,11 +219,17 @@ p{
         line-height: 2rem;
     }
 }
+
+@media screen and (max-width: 1400px){
+    .row div:first-of-type{
+        width: 55%;
+    }
+}
 @media screen and (max-width: 1280px){
     .hero{
         padding-top: 48px;
     }
-    .hero p, .welcome p{
+    .welcome p{
         width: 80%;
     }
     .hero-button{
@@ -229,6 +242,12 @@ p{
     .roadmap div{
         width: 100%;
     }
+    .row div img{
+        width: 240px;
+    }
+    .row div p{
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 1024px){
@@ -239,6 +258,15 @@ p{
         width: 75%;
     }
     .row div, .row div:first-of-type{
+        width: 80%;
+    }
+    .welcome img{
+        width: 240px;
+    }
+}
+
+@media screen and (max-width: 785px){
+    .hero p, .hero h1{
         width: 80%;
     }
 }
