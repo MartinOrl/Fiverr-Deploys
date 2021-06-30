@@ -1,0 +1,154 @@
+main{
+    padding: 144px 164px 96px;
+}
+
+.card{
+    width: 265px;
+    height: 295px;
+
+    box-shadow: 3px 5px 8px rgba(0,0,0,.25), inset 2px 4px 8px rgba(0,0,0,.05);
+    border-radius: 16px;
+    margin: 16px;
+    position: relative;
+    cursor: pointer;
+}
+
+.card div{
+    position: absolute;
+    top: 0;
+    lefT: 0;
+    width: 100%;
+    height: 100%;
+    padding: 24px 32px;
+    box-sizing: border-box;
+    background: rgba(241,247,252,.45);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: 500ms ease-in-out;
+    transform: rotateY(180deg);
+    transform-origin: center;
+}
+
+.card:hover div{
+    opacity: 1;
+    transform: rotateY(0);
+}
+
+.card h1{
+    color: #5c5cff;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.card p{
+    line-height: 32px;
+}
+
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 24px 32px;
+    box-sizing: border-box;
+}
+
+.card-holder{
+    width: 100%;
+    margin-bottom: 64px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.results>div>h1{
+    color: #5c5cff;
+    font-size: 24px;
+    padding: 8px 96px 8px 0;
+    border-bottom: 2px solid #5c5cff;
+    width: max-content
+}
+
+.heading{
+    width: max-content;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.heading h1{
+    font-size: 40px;
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 24px;
+}
+.heading p{
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0 0 8px;
+}
+.heading span{
+    width: 50%;
+    background: #5c5cff;
+    height: 2px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    display: block;
+    margin: 0 auto 32px;
+}
+
+.heading div{
+    padding: 8px 24px;
+    display: flex;
+    align-items: center;
+    border-radius: 16px;;
+    box-sizing: border-box;
+    width: 740px;
+    box-shadow: 3px 5px 8px rgba(0,0,0,.25), inset 2px 4px 8px rgba(0,0,0,.05);
+}
+
+.heading img{
+    opacity: 0.6;
+    transform: scale(0.8);
+    margin-right: 16px;
+}
+
+.heading input{
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: none;
+    flex-grow: 2;
+}
+
+@media screen and (max-width: 1080px){
+    .heading{
+        width: 90%;
+    }
+    .heading div{
+        width: 95%;
+        margin: 24px auto;
+    }
+
+
+}
+
+@media screen and (max-width: 980px){
+    main{
+        padding: 144px 96px 48px;
+    }
+}
+
+@media screen and (max-width: 785px){
+    .card-holder{
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .results>div>h1{
+        margin: 16px auto;
+        width: max-content;
+        text-align: center;
+        padding: 8px 40px;
+    }
+    main{
+        padding: 144px 48px 48px;
+    }
+}

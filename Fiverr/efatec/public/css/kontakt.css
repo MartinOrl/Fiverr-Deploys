@@ -1,0 +1,155 @@
+body>a{
+    display: block;
+    height: 24px;
+
+    position: absolute;
+    top: 64px;
+    left: 114px;
+    
+}
+
+body>a>img{
+    height: 100%;
+    object-fit: contain;
+}
+
+body{
+    display: flex;
+}
+
+body>div{
+    width: 50%;
+    min-height: 100vh;
+    padding: 144px 114px 48px;
+    box-sizing: border-box;
+}
+body>div:last-of-type{
+    background: #171717
+}
+
+body>div:first-of-type p{
+    font-size: 20px;
+    font-weight: 500;
+    opacity: 0.6;
+}
+
+label, input{
+    display: block;
+}
+label{
+    font-size: 24px;
+    margin: 0 0 16px;
+    font-weight: 500;
+}
+input, textarea{
+    padding: 16px 24px;
+    width: 80%;
+    background: #171717;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    color: #fff;
+    margin-bottom: 32px;
+    box-sizing: border-box;
+    max-width: 80%;
+    max-height: 160px;
+    font-family: 'Montserrat', 'Segoe UI', sans-serif;
+}
+
+button{
+    padding: 24px 48px;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    background: #5c5cff;
+    margin-top: -16px;
+    cursor: pointer;
+    transition: 250ms ease-in-out;
+    transform-origin: left;
+}
+button:hover{
+    background: #2f2f97;
+    transform: scale(1.02);
+}
+.contacts>img{
+    margin-left: 24px;
+}
+
+
+.contacts div{
+    display: flex;
+    align-items: center;
+    margin: 0 0 16px;
+}
+
+.contacts p{
+    margin-left: 24px;
+    color: #fff;
+    opacity: 0.6;
+}
+.contacts>div>img{
+    width: 32px;
+    object-fit: contain;
+}
+
+@media screen and (max-width: 1420px){
+    body>div:first-of-type{
+        width:55%
+    }
+    body>div:last-of-type{
+        width: 45%;
+    }
+    body>div{
+        padding: 144px 80px 48px
+    }
+    body>a{
+        left: 80px;
+    }
+    .contacts>img{
+        width: 80%;
+        
+    }
+}
+@media screen and (max-width: 980px){
+    body{
+        flex-direction: column;
+        align-items: center;
+    }
+    body>a{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    body>div:first-of-type{
+        width: 90%;
+    }
+    body>div:last-of-type{
+        width: 100%;
+    }
+    .contacts>img{
+        width: 60%;
+        display: block;
+        margin-bottom: 64px;
+
+    }
+    form button{
+        margin: 0px auto !important;
+    }
+    input, textarea{
+        width: 100%;
+        max-width: 100%;
+    }
+    .contacts{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+@media screen and (max-width: 640px){
+    body>div{
+        padding: 96px 48px 48px;
+        min-height: max-content;
+    }
+
+}

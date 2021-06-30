@@ -1,0 +1,144 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efatec | About</title>
+    <link rel="shortcut icon" href="https://assets-global.website-files.com/600852f148f509c6dbd2d768/6009e8189beb6849f49d63f1_e32.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="/public/css/about.css">
+    <link rel="stylesheet" href="/public/css/common.css">
+</head>
+<body>
+    <header>
+        <a href='/'><img src="/public/assets/logo.gif" alt="" class="logo"></a>
+        <img src="/public/assets/burger.png" alt="" id="on-toggle" > 
+    </header>
+
+    <main>
+        <h1 class="page-heading">Das Sind Wir</h1>
+        <div class="container row">
+            <div>
+                <h1>Seit 2007</h1>
+                <p>Ihr Ansprechpartner für durchdachte und individuelle Lösungen<br>Angesiedelt im Bergischen Land (NRW) stellen wir seit vielen Jahren unser know how unter Beweis<br>Alles aus einer Hand, vom ersten Schweißpunkt bis zur letzten Schraube, führen wir alles im eigenem Haus in Haan aus.</p>
+            </div>
+            <div class="about-image">
+                <img src="https://i.imgur.com/15Ddysq.png" alt="">
+                <span></span>
+                <p>1960, ein Teil des heutigen Zuhauses der efatec wird errichtet</p>
+            </div>
+        </div>
+        <span class="separator"></span>
+        <div>
+            <div class="name-shadow">
+                <h1>Zeitasche</h1>
+                <h1>Zeitasche</h1>
+            </div>
+            <div class="timeline">
+                <span class="width"></span>
+                <div class="history start">
+                    <span class="dot"></span>
+                    <p>February <span>2007</span></p>
+                    <h1>Gründung</h1>
+                    <span></span>
+                    <p>Im Februar 2007 wurde die efatec gegründet, als Hersteller für Elektrofahrzeuge im Innen- und Außenbereich und als Lösungsorientiertes Unternehmen für Sonderbau.</p>
+                </div>
+                <div class="history end">
+                    <span class="dot"></span>
+                    <p>September <span>2020</span></p>
+                    <h1>Neue Geschäftsführende Gesellschafter</h1>
+                    <span></span>
+                    <p>Übernahme der efatec durch die neuen Gesellschafter Herr Thomas Balicki und Jaroslaw Jankowski, die Ihre Tätigkeiten auch als Geschäftsführer wahrnehmen.</p>
+                </div>
+            </div>
+        </div>
+        <p class="page-ending">
+            Und die Geschichte geht weiter ...
+        </p>
+    </main>
+
+    <footer>
+        <div>
+            <img src="/public/assets/logo.gif" alt="" class="logo">
+            <h1>Newsletter</h1>
+            <p>Bleiben Sie auf dem Laufenden</p>
+            <form action="#">
+                <input type="email" name="email" id="email">
+                <button type="submit">Submit</button>
+            </form>
+            <div class="copyright">
+                <p>© Efatec GmbH, 2021<br>All rights reserved</p>
+            </div>
+        </div>
+        <div>
+            <div>
+                <p>Sitemap</p>
+                <a href="/">Home</a>
+                <a href="/about">Das sind wir</a>
+                <a href="/produkte">Produkte</a>
+                <a href="/kontakt">Kontakt</a>
+            </div>
+            <div class="contact">
+                <p>Kontakt</p>
+                <div>
+                    <h1>Champagne 4</h1>
+                    <h1>42781 Haan</h1>
+                </div>
+                <div>
+                    <h1>info@efatec.de</h1>
+                    <h1>+49 2104 / 138840</h1>
+                </div>
+            </div>
+            <div>
+                <p>Vernetzen</p>
+                <a href="https://www.facebook.com/efatec.de/">Facebook</a>
+                <a href="https://www.instagram.com/efatec.de/">Instagram</a>
+                <a href="https://twitter.com/efatec">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+
+    <section class="global-nav">
+        <div>
+            <img src="/public/assets/logo.gif" alt="" class="logo">
+            <p id='off-toggle'>X</p>
+        </div>
+        <div>
+            <div>
+                <p>Sitemap</p>
+                <a href="/">Home</a>
+                <a href="/about">Das sind wir</a>
+                <a href="/produkte">Produkte</a>
+                <a href="/kontakt">Kontakt</a>
+            </div>
+            <div class="contact">
+                <p>Kontakt</p>
+                <div>
+                    <h1>Champagne 4</h1>
+                    <h1>42781 Haan</h1>
+                </div>
+                <div>
+                    <h1>info@efatec.de</h1>
+                    <h1>+49 2104 / 138840</h1>
+                </div>
+            </div>
+            <div>
+                <p>Vernetzen</p>
+                <a href="https://www.facebook.com/efatec.de/">Facebook</a>
+                <a href="https://www.instagram.com/efatec.de/">Instagram</a>
+                <a href="https://twitter.com/efatec">Twitter</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.querySelector('#on-toggle').addEventListener('click', () => {
+            document.querySelector('.global-nav').classList.toggle('visible-nav')
+        })
+        document.querySelector('#off-toggle').addEventListener('click', () => {
+            document.querySelector('.global-nav').classList.toggle('collapsed-nav')
+            document.querySelector('.global-nav').classList.toggle('visible-nav')
+        })
+    </script>
+</body>
+</html>

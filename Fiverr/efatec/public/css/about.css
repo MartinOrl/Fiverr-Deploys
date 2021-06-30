@@ -1,0 +1,232 @@
+main{
+    padding: 144px 164px 96px;
+}
+
+.page-heading{
+    padding: 8px 24px;
+    border-bottom: 3px solid #39a2db;
+    font-size: 32px;
+    font-weight: 500;
+    width: max-content;
+    margin: 16px auto;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+.row>div{
+    width: 47%;
+}
+.row h1{
+    padding: 0 32px 8px 0;
+    border-bottom: 3px solid #5c5cff;
+    font-size: 32px;
+    font-weight: 500;
+    width: max-content;
+}
+.row>div:first-of-type>p{
+    width: 75%;
+    font-size: 20px;
+}
+br{
+    display: block;
+    margin: 12px 0;
+}
+
+.about-image span{
+    width: 48px;
+    height: 2px;
+    border-radius: 8px;
+    background: rgba(0,0,0,.4);
+    display: block;
+    margin: 16px 0;
+}
+.about-image p{
+    color: rgba(0,0,0,.6);
+    width: 55%;
+    margin: 0;
+}
+
+.separator{
+    margin: 164px auto;
+    width: 80%;
+    background: #5c5cff;
+    height: 2px;
+    border-radius: 8px;
+    display: block;
+}
+
+.name-shadow{
+    position: relative;
+    width: max-content;
+    margin: 24px auto;
+}
+.name-shadow>h1:first-of-type{
+    position: absolute;
+    font-size: 72px;
+    opacity: 0.15;
+    left: 50%;
+    bottom: 10%;
+    transform: translate(-50%, 50%);
+}
+
+.page-ending{
+    width: max-content;
+    margin: 48px auto 24px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.timeline{
+    position: relative;
+    width: 80%;
+    margin: 24px auto 320px;
+}
+
+.width{
+    height: 2px;
+    background: #5c5cff;
+    width: 82%;
+    display: block;
+    margin: 0 auto;
+}
+
+.dot{
+    width: 16px;
+    height: 16px;
+    border: 3px solid #5c5cff;
+    background: white;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+
+    box-sizing: border-box;
+}
+
+
+
+.history{
+    text-align: center;
+    width: 485px;
+    position: absolute;
+}
+.history h1{
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.history .dot{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -16px;
+}
+
+.history>span:last-of-type{
+    width: 160px;
+    margin: 8px auto 24px;
+    height: 3px;
+    border-radius: 6px;
+    background: #5c5cff;
+    display: block
+}
+.start{
+    top: 10px;
+    left: -9%;
+}
+.end{
+    top: 10px;
+    right: -9%;
+}
+
+@media screen and (max-width: 1415px){
+    .history{
+        width: 360px;
+    }
+}
+
+@media screen and (max-width: 1090px){
+    .width{
+        width: 2px;
+        height: 100%;
+    }
+    .history{
+        height: max-content
+    }
+    .start{
+        left: -140px;
+        top: 0;
+    }
+    .dot{
+        display: none;
+
+    }
+    .end{
+        right: -140px;
+        top: unset;
+        bottom: 0;
+    }
+    .row{
+        flex-direction: column;
+        align-items: center;
+    }
+    .row>div{
+        width: 90%;
+    }
+    .row>div>p{
+        width: 100% !important;
+    }
+}
+
+@media screen and (max-width: 980px){
+    main{
+        padding: 144px 96px;
+    }
+}
+
+@media screen and (max-width: 940px){
+    .history{
+        width: 240px;
+    }
+    .start{
+        left: -24px;
+    }
+    .end{
+        right: -24px;
+    }
+}
+@media screen and (max-width: 780px){
+    .width{
+        margin-top: 340px;
+        height: 320px;
+    }
+    .start{
+        left: 50%;
+        transform: translateX(-50%);
+        top: -320px;
+    }
+    .end{
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -360px;
+    }
+    .page-ending{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%) translateY(96px);
+    }
+}
+
+@media screen and (max-width: 620px){
+    .about-image img{
+        object-fit: contain;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 560px){
+    main{
+        padding: 144px 32px;
+    }
+}
