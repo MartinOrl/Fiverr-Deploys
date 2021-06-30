@@ -160,7 +160,9 @@ p{
     background-repeat: no-repeat;
     display: flex;
     justify-content: space-between;
-    padding: 640px 168px 620px;
+    flex-direction: column;
+    align-items: center;
+    padding: 1200px 168px 620px;
     box-sizing: border-box;
     font-weight: 600;
 }
@@ -169,35 +171,57 @@ p{
     color: #ffed90;
 }
 
+.roadmap h1{
+    font-weight: 600;
+    font-size: 32px;
+}
+
 .roadmap p{
     margin: 8px 0 24px;
-    line-height: 3rem;
-    font-size: 1.5rem;
+    line-height: 56px;
+    font-size: 24px;
     width: 100%;
+    font-weight: 600;
 }
 
 .br{
     display: block;
     margin: 6px 0;
 }
+.roadmap>div:first-of-type>h1{
+    font-size: 35px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 16px;
+}
 
 .roadmap div{
-    width: 50%;
+    width: 80%;
 }
 
 .welcome{
-    width: 90%;
+    width: 100%;
     margin: 96px auto 64px;
+    text-align: center;
 }
 .welcome p{
-    width: 28%;
+    width: 800px;
+    font-size: 32px;
+    margin: 32px auto 24px;
+    text-align: start;
 }
 
-.welcome div{
+.bosses{
+    width: 100%;
+    margin: 16px auto 144px;
+    position: relative;
+}
+
+.bosses-container{
     display: flex;
-    justify-content: space-evenly;
-    width: 75%;
-    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 50%;
+    margin: 0 auto;
 }
 
 .welcome img{
@@ -205,18 +229,96 @@ p{
     object-fit: contain;
 }
 
+.bosses>span{
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;;
+    background: white;
+    position: absolute;
+
+    top: 40px;
+}
+
+.bosses>span:nth-of-type(1){
+    opacity: 0.2;
+    left: -160px;
+}
+.bosses>span:nth-of-type(2){
+    opacity: 0.4;
+    left: 15%;
+}
+.bosses>span:nth-of-type(3){
+    opacity: 0.6;
+    right: 15%;
+}
+.bosses>span:nth-of-type(4){
+    opacity: 0.8;
+    right: -160px;
+}
+
+
+.newsletter{
+    text-align: center;
+}
+
+.newsletter span{
+    color: #ffed90;
+}
+
+.newsletter p{
+    width: 100%;
+}
+
+form{
+
+    display: flex;
+    justify-content: space-around;
+    margin: 144px 0 96px;
+}
+form>div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 64px;
+}
+
+input{
+    padding: 8px 24px;
+    color: white;
+    background: none;
+    outline: none;
+    font-size: 32px;
+    font-family: 'Syne', 'Segoe UI', sans-serif;
+    border: 1px solid white;
+}
+
+button[type='submit']{
+    padding: 8px 40px;
+    background: #ffed90;
+    color: black;
+    font-size: 32px;
+    margin-left: -4px;
+    outline: none;
+    border: 1px solid transparent;
+}
+
 @media screen and (max-width: 1505px){
-    .roadmap{
-        padding-top: 250px;
-        flex-direction: column;
-        align-items: center;
-    }
     .roadmap>div:first-of-type>h1{
         text-align: center;
     }
     .roadmap p{
         font-size: 1.3rem;
         line-height: 2rem;
+    }
+    .bosses>span{
+        width: 280px;
+        height: 280px;
+        top: 56px;
+    }
+    .bosses>span:nth-of-type(2){
+        left: 10%;
+    }
+    .bosses>span:nth-of-type(3){
+        right: 10%;
     }
 }
 
@@ -236,11 +338,7 @@ p{
         width: max-content !important;
     }
     .roadmap{
-        padding-top: 96px;
         background-position: center;
-    }
-    .roadmap div{
-        width: 100%;
     }
     .row div img{
         width: 240px;
