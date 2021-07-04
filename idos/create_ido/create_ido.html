@@ -1,0 +1,81 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Starter | Create Ido</title>
+    <link rel="stylesheet" href="/public/css/create_ido.css">
+</head>
+<body>
+    <span class="light"></span>
+    <nav class="navbar">
+        <img src="/public/assets/logo.png" alt="" class="logo">
+        <p id='navbar-toggle'>X</p>
+        <div id='navbar-dropdown'>
+            <a href="">Projects</a>
+            <a href="" class="active-link">Staking</a>
+            <a href="">Liquidity</a>
+            <p>0x8b7D...b49C</p>
+        </div>        
+    </nav>
+    <main>
+        <h1 class="page-heading">Create</h1>
+        <div class="container">
+            <h2>Presale Details</h2>
+            <form>
+                <div>
+                    <label for="address">* ERC20 Token Address</label>
+                    <input type="text" name="address" id="address" class="input" placeholder="0xc02aaa39b222te8d0a0e5">
+                </div>
+                <div>
+                    <label for="title">Sale Title</label>
+                    <input type="text" name="title" id="title" class="input" placeholder="Token Public Sale Round 1">
+                </div>
+                <div>
+                    <label for="price">* Token Price (ETH)</label>
+                    <input type="number" name="price" id="price" class="input" placeholder="0" min='0'>
+                </div>
+                <div>
+                    <label for="transfer-address">Address where UNSOLD TOKENS will be transferred to</label>
+                    <input type="text" name="transfer-address" id="transfer-address" placeholder="0x000000000000000000000" class="input">
+                </div>
+                <div>
+                    <label for="hard-cap">* Hard Cap (ETH)</label>
+                    <input type="number" name="hard-cap" id="hard-cap" placeholder="0" min='0' class="input">
+                </div>
+                <div>
+                    <label for="soft-cap">Soft Cap (ETH)</label>
+                    <input type="number" name="soft-cap" id="soft-cap" placeholder="0" min="0" class="input">
+                </div>
+                <div>
+                    <label for="max-investment">Max. Investment per Wallet (ETH)</label>
+                    <input type="number" name="max-investment" id="max-investment" class="input" min="0">
+                </div>
+                <div>
+                    <label for="min-investment">Min. Investment per Wallet (ETH)</label>
+                    <input type="number" name="min-investment" id="min-investment" class="input" placeholder="0" min="0">
+                </div>
+                <div>
+                    <label for="open-datetime">* Opens at</label>
+                    <input type="datetime-local" name="open-datetime" id="open-datetime" class="input" placeholder="19.01.2018 18:45">
+                </div>
+                <div>
+                    <label for="close-datetime">* Closes at</label>
+                    <input type="datetime-local" name="close-datetime" id="close-datetime" class="input" placeholder="19.01.2018 19:45">
+                </div>
+            </form>
+        </div>
+        <div class="container">
+            <h2>Whitelist</h2>
+            <form action="">
+                <div>
+                    <label for="whitelists">Whitelisted Addresses (Comma-separated)</label>
+                    <textarea name="whitelists" id="" cols="30" rows="10" class="input" placeholder="Example only:
+0xc02aaa39b222te8d0a0e5, 0xc02aaa39b222te8d0a0e5"></textarea>
+                </div>
+            </form>
+        </div>
+    </main>
+    
+</body>
+</html>

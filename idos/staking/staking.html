@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Starter | Staking</title>
+    <link rel="stylesheet" href="/public/css/staking.css">
+</head>
+<body>
+    <span class="light"></span>
+    <nav class="navbar">
+        <img src="/public/assets/logo.png" alt="" class="logo">
+        <p id='navbar-toggle'>X</p>
+        <div id='navbar-dropdown'>
+            <a href="">Projects</a>
+            <a href="" class="active-link">Staking</a>
+            <a href="">Liquidity</a>
+            <p>0x8b7D...b49C</p>
+        </div>        
+    </nav>
+    <main>
+        <h1>You are currently NOT eligible for any tiers!</h1>
+        <div class="stake-container">
+            <p>To be eligible for any of the tiers you are required to skate the following:</p>
+            <div class="stake-options">
+                <p class="stake"><span style='color: rgba(255,255,255,.8)'>100</span> <span style='color:#0041FF'>CARDS</span> for <span style='color: rgba(255,255,255,.8)'>Singles</span> tier</p>
+                <p class="stake"><span style='color: rgba(255,255,255,.8)'>500</span> <span style='color:#0041FF'>CARDS</span> for <span style='color: rgba(255,255,255,.8)'>Deuces</span> tier</p>
+                <p class="stake"><span style='color: rgba(255,255,255,.8)'>1000</span> <span style='color:#0041FF'>CARDS</span> for <span style='color: rgba(255,255,255,.8)'>Trips</span> tier</p>
+                <p class="stake"><span style='color: rgba(255,255,255,.8)'>1500</span> <span style='color:#0041FF'>CARDS</span> for <span style='color: lightsalmon'>Jacks</span> tier</p>
+                <p class="stake"><span style='color: rgba(255,255,255,.8)'>4500</span> <span style='color:#0041FF'>CARDS</span> for <span style='color: rgb(179, 179, 255)'>Queens</span> tier</p>
+                <p class="stake"><span style='color: rgba(255,255,255,.8)'>9000</span> <span style='color:#0041FF'>CARDS</span> for <span style='color: orange'>Kings</span> tier</p>
+                <p class="stake"><span style='color: rgba(255,255,255,.8)'>16000</span> <span style='color:#0041FF'>CARDS</span> for <span style='color: lightgreen'>King of Clubs</span> tier</p>
+            </div>
+        </div>
+        <div class="summary">
+            <div>
+                <p>Balance:</p>
+                <div>
+                    <p id='balance'>0.000</p>
+                    <p style='color: #0041ff'>CARDS</p>
+                </div>
+            </div>
+            <div>
+                <p>Staked:</p>
+                <div>
+                    <p id='staked'>0.000</p>
+                    <p style='color: #0041ff'>CARDS</p>
+                </div>
+            </div>
+            <div class="input-container">
+                <p>MAX</p>
+                <input type="number" name="amount" id="amount" min='0' placeholder='0'>
+                <p>Cards</p>
+            </div>
+            <div class="buttons">
+                <button style='background: #0041FF'>Stake</button>
+                <button style='background: rgba(255,255,255,.15); border: 1px solid white !important'>Unstake</button>
+            </div>
+        </div>
+    </main>
+
+    <script src=""></script>
+</body>
+</html>
