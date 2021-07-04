@@ -133,6 +133,7 @@ textarea{
 
 .radios>div{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .radios>div>div{
@@ -143,6 +144,7 @@ textarea{
     border-radius: 8px;
     box-sizing: border-box;
     margin-right: 16px;
+    width: max-content;
 }
 
 .radios label{
@@ -178,4 +180,15 @@ textarea{
     background: rgba(0,0,0,.7);
 }
 
+@media screen and (max-width: 1169px){
+    .radios>div>div{
+        margin-bottom: 8px;
+    }
+}
+
+@media screen and (max-width: 820px){
+    form>div{
+        width: 90%;
+    }
+}
 

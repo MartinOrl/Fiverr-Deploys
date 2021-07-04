@@ -160,6 +160,9 @@ button{
     background: #0041FF;
     cursor: pointer;
     transition: 250ms ease-in-out;
+    width: max-content;
+    margin: 8px 12px;
+    white-space: nowrap;
 }
 
 .container button:hover{
@@ -234,4 +237,33 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
 
 .sale-details div{
     width: max-content;
+}
+
+@media screen and (max-width: 1240px){
+    .sale-details{
+        width: 75%;
+        padding: 32px 48px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .row{
+        flex-direction: column;
+    }
+    .half-container{
+        width: 85% !important;
+        margin: 8px auto;
+    }
+    .sale-details{
+        width: 85%;
+    }
+    .buy-section{
+        padding:  32px 24px;
+    }
+    .buy-section div{
+        margin: 0 auto;
+    }
+    .buy-section input{
+        width: 85%
+    }
 }
