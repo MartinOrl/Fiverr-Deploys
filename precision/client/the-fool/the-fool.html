@@ -1,0 +1,117 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painting of Precision | The Fool</title>
+    <link rel="stylesheet" href="../../public/css/collection-page.css">
+</head>
+<body>
+    <div>
+        <nav>
+            <div>
+                <a href="/" class="branding">PAINTING OF PRECISION,<br>AND BEAUTY OF INDIFFERENCE</a>
+            </div>
+            <div>
+                <a href="#">Artists</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Connect Wallet</a>
+            </div>
+        </nav>
+        <main>
+            <div class="container">
+                <div class="box images modal">
+                    <p id='modal-off'>X</p>
+                    <div>
+
+                        <img class="image visible-image" src="https://images.squarespace-cdn.com/content/v1/5a11cc5acd39c3ad7686ffd5/1607993421487-9MYQ0DGJ0ZD70KFUGO7N/IMG_4692.PNG" alt="">
+                        <img class="image" src="https://images.squarespace-cdn.com/content/v1/5a11cc5acd39c3ad7686ffd5/1607991813674-K9C05EQZ5AR30Z3WRRB2/woman+with+bow.jpg" alt="">
+                        <img class="image" src="https://images.squarespace-cdn.com/content/v1/5a11cc5acd39c3ad7686ffd5/1607991886227-GBCFJ8S4WVI939MVETQB/Red+Narcissus.jpg" alt="">
+                        <div class="control right visible">
+                            <img src="/public/assets/arrow.png" alt="">
+                        </div>
+                        <div class="control left">
+                            <img src="/public/assets/arrow.png" alt="">
+                        </div>
+                                            
+                    </div>
+                </div>
+                <div class="modal-fill">
+
+                </div>
+                <div class="box">
+                    <h1>Shannon Cartier Lucy</h1>
+                    <h1>The Fool (2021)</h1>
+                    <div>
+                        <p>Portfolio of 8 paintings</p>
+                        <p>Non-Fungible Token (image / JPEG )</p>
+                        <p>Smart contract:<br>0xDCe09254dD3592381b6A5b7a444B29890b656e01</p>
+                        <p>2550x2550 pixels</p>
+                        <p>18MB</p>
+                        <p>Minted 2021</p>
+                        <p>Edition of 100</p>
+                    </div>
+                    <a href="#">Enquire</a>
+                </div>
+            </div>
+            <p class="description">Shannon Cartier Lucy (b. 1977, Nashville, TN) lives and works in Nashville and studied at New York University where she received a Bachelor of Arts degree. She also received a Master of Science degree from the University of Tennessee. She has exhibited at Lubov, New York, NY; Deboer Gallery, Los Angeles, CA; Kathleen Cullen Gallery, New York, NY; Team Gallery, New York, NY; Edward Cella Gallery, Los Angeles, CA; and Cynthia Broan Gallery, New York, NY.</p>
+        </main>
+    </div>
+    <footer>
+        <div>
+            <p>Contract - 0xDCe09254dD3872381b6A5b7a848B29890b656e01</p>
+            <p>© Painting of precision</p>
+        </div>
+        <div>
+            <a href="#">Connect</a>
+            <a href="#">Twitter</a>
+            <a href="#">Telegram</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+    <div class="white-bar"></div>
+    <script>
+        var state = 0;
+        const leftToggle = document.querySelector('.left')
+        const rightToggle = document.querySelector('.right')
+        const images = document.querySelectorAll('.image')
+
+        rightToggle.addEventListener('click', () => {
+            state += 1;
+            if(state > 0){
+                document.querySelector('.left').classList.add('visible')
+            }
+            if(state == 2){
+                document.querySelector('.right').classList.remove('visible')
+            }
+            document.querySelector('.visible-image').classList.remove('visible-image')
+            images[state].classList.toggle('visible-image')
+        })
+        leftToggle.addEventListener('click', () => {
+            state -= 1;
+            if(state < 2){
+                document.querySelector('.right').classList.add('visible')
+            }
+            if(state == 0){
+                document.querySelector('.left').classList.remove('visible')
+            }
+            document.querySelector('.visible-image').classList.remove('visible-image')
+            images[state].classList.toggle('visible-image')
+        })
+
+        document.querySelector('#modal-off').addEventListener('click', () => {
+            document.querySelector('.modal-active').classList.remove('modal-active')
+            document.querySelector('.modal-fill').classList.remove('modal-fill-active')
+        })
+
+        document.querySelectorAll('.image').forEach(item => item.addEventListener('click', () => {
+            if(!document.querySelector('.modal').classList.contains('modal-active')){
+                document.querySelector('.modal').classList.add('modal-active')
+                document.querySelector('.modal-fill').classList.add('modal-fill-active')
+            }
+        }))
+
+    </script>
+</body>
+</html>

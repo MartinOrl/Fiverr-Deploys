@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monkeys</title>
+    <link rel="stylesheet" href="/public/css/video-page.css">
+</head>
+<body>
+    <main>
+        <a href="#" class="cta">ADOPT ONE</a>
+        <p class="description">You can adopt a minimum of 1 and maximum of 10 Mini Monkey Mafia Monkeys. Each Monkey costs 0.07 ETH + gas</p>
+        <p id="adopted">1000/5000 Mini Monkeys Adopted</p>
+        <div class="image-container">
+            <img src="/public/assets/monkeBlue.png" alt="" id="image-target">
+        </div>
+    </main>
+
+    <script>
+        const paths = [
+            "/public/assets/monkeBlue.png",
+            "/public/assets/monkeWhiteRed.png",
+            "/public/assets/monkeyMan.png",
+            "/public/assets/monkeyWoman.png"
+        ]
+        var state = 0;
+
+        setInterval(() => {
+            console.log(state)
+            state += 1;
+            if(state == paths.length){
+                state = 0
+            };
+            document.querySelector('#image-target').src = paths[state]
+
+  
+        },500)
+
+
+    </script>
+</body>
+</html>
