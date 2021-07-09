@@ -192,4 +192,7 @@ body>div{
         box-sizing: border-box;
         text-align: center;
     }
+    body{
+        background-size: 100%;
+    }
 }
