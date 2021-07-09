@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway+Dots&family=Roboto:wght@300;400;500&display=swap');
+
+@keyframes appear{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+:root{
+    --bold: 500;
+    --normal: 400;
+    --light: 300;
+    --main-color: #000;
+    --footer-color: #211919;
+}
+
+body{
+
+    min-height: 100vh;
+    font-family: Roboto, 'Segoe UI', sans-serif, Arial;
+    margin: 24px 0;
+    color: var(--main-color);
+}
+
+body>div{
+    width: 65%;
+    margin: 0 auto;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info{
+    font-size: 24px;
+    margin-top: 0;
+    font-weight: var(--light);
+}
+
+nav div{
+    width: 50%
+}
+
+nav div:last-of-type{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%
+}
+
+nav>div:last-of-type>a{
+    font-size: 20px;
+    color: var(--main-color);
+    text-decoration: none;
+    outline: none;
+    font-weight: var(--light);
+}
+
+
+.branding{
+    font-family: 'Raleway Dots', 'Roboto', sans-serif;
+    margin-bottom: 0;
+    font-size: 32px;
+    text-decoration: none;
+    outline: none;
+    color: var(--main-color);
+    margin-top: 32px;
+    font-weight: bold;
+    display: block;
+}
+
+footer{
+    width: 75%;
+    background-color: var(--footer-color);
+    margin: 16px auto 96px;
+    padding: 4px 144px 4px 96px;
+    box-sizing: border-box;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer div{
+    width: max-content;
+    font-weight: var(--light);
+}
+
+footer a{
+    color: white;
+    display: block;
+    margin: 6px 0;
+    text-decoration: none;
+    outline: none;
+}
+
+footer a, footer p{
+    opacity: 0.7;
+}
+
+footer p{
+    margin: 4px 0;
+    width: max-content;
+}
+
+main{
+    margin-top: 48px;
+}
+
+
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.box{
+    position: relative;
+}
+
+.box:first-of-type{
+    width: 58%;
+
+}
+
+.box:last-of-type{
+    width: 38%;
+}
+
+.image{
+    width: 100%;
+    height: 620px;
+    object-fit: cover;
+
+}
+
+.box h1{
+    margin: 0 0 6px;
+    font-weight: var(--light);
+}
+.box>div{
+    margin: 24px 0 16px;
+    position: relative;
+}
+
+.box p{
+    margin: 0;
+    font-size: 20px;
+    font-weight: var(--light);
+    margin: 4px 0;
+    width: 100%;
+    word-break: break-all;
+}
+
+.box a{
+    font-size: 32px;
+    font-weight: var(--light);
+    color: var(--main-color);
+    text-decoration: none;
+    outline: none;
+}
+
+.description{
+    font-weight: var(--light);
+    line-height: 28px;
+    font-size: 19px;
+    min-height: 360px;
+}
+
+.white-bar{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 64px;
+    background: white;
+}
+
+.images img:nth-of-type(2), .images img:nth-of-type(3){
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.control{
+    position: absolute;
+    height: 100%;
+    padding: 0 24px;
+    color: white;
+    background: rgba(0,0,0,.15);
+    text-align: center;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 !important;
+    opacity: 0;
+    cursor: pointer;
+    display: none;
+    max-width: 0;
+    transition: 400ms ease-in-out;
+    z-index: 5;
+    user-select: none;
+}
+
+.control:hover{
+    background: rgba(0,0,0,.3)
+}
+
+.control:active{
+    background: rgba(0,0,0,.6)
+}
+
+
+
+.right{
+    right: 0;
+}
+.left{
+    left: 0;
+}
+
+.visible{
+    display: block;
+    opacity: 1;
+    max-width: 80px;
+}
+
+.control img{
+    width: 16px;
+    object-fit: contain;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    user-select: none;
+
+}
+
+.left img{
+    transform-origin: center;
+    transform: rotate(180deg);
+}
+
+.image{
+    transition: 500ms ease-in-out;
+    opacity: 0;
+    user-select: none;
+}
+
+.visible-image{
+    opacity: 1;
+}
+
+.modal{
+    transition: 400ms ease-in-out;
+    
+}
+
+.modal p{
+    display: none;
+    cursor: pointer;
+}
+
+.modal-active{
+    min-width: 100vw;
+    min-height: 100vh;
+    position: fixed;
+    z-index: 4;
+    background: white;
+    left: 0;
+    top: 0;
+    padding: 64px 0;
+    box-sizing: border-box;
+    animation: appear 600ms ease-in-out forwards;
+}
+
+.modal>div{
+    margin-top: 0;
+}
+
+.modal-active>div{
+    width: 60%;
+    margin: 16px auto;
+}
+
+.modal-active p{
+    display: block;
+    text-align: end;
+    margin-bottom: 0;
+    width: 60%;
+    margin: 0 auto;
+    font-weight: bold;
+}
+
+.modal-fill{
+    display: none;
+}
+
+.modal-fill-active{
+    display: block;
+}
+
+@media screen and (max-width: 1240px){
+    body>div, footer{
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 1080px){
+    .container{
+        flex-direction: column;
+    }
+    .box{
+        width: 100% !important;
+    }
+}
+
+
+@media screen and (max-width: 980px){
+    nav{
+        flex-direction: column;
+        text-align: center;
+    }
+    nav>div{
+        margin-bottom: 24px;
+    }
+    nav>div:last-of-type{
+        width: 70%;
+    }
+    .info{
+        text-align: center;
+    }
+    footer{
+        flex-direction: column;
+        align-items: unset;
+        padding: 4px 40px 4px 32px;
+    }
+    footer>div:last-of-type{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    footer>div{
+        width: 100%;
+    }
+    footer p{
+        width: 100%;
+        word-break: break-all;
+    }
+    footer>div:last-of-type>a{
+        display: block;
+        margin-right: 16px;
+    }
+    .modal-active>div, .modal-active p{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 640px){
+    nav>div{
+        width: 100%;
+    }
+    nav>div:last-of-type{
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    nav>div:last-of-type a{
+        margin: 8px;
+        display: block;
+    }
+    .modal-active>div, .modal-active p{
+        width: 90%;
+    }
+}
+

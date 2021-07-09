@@ -3,7 +3,9 @@
 body{
     margin: 0;
     font-family: 'Special Elite', 'Segoe UI', sans-serif;
-    background: linear-gradient(180deg, #7952B3, #3c2859);
+    /* background: linear-gradient(180deg, #3A6351, #14221c);
+    background: linear-gradient(180deg, #007965, #003d33); */
+    background: linear-gradient(180deg, #29ab87, #0e3c2f);
     min-height: 100vh;
     width: 100vw;
     overflow-x: hidden;

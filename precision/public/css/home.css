@@ -98,6 +98,7 @@ footer a, footer p{
 footer p{
     margin: 4px 0;
     width: max-content;
+    word-break: break-all;
 }
 
 
@@ -142,3 +143,65 @@ footer p{
     outline: none;
 }
 
+@media screen and (max-width: 1240px){
+    body>div, footer{
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 980px){
+    nav{
+        flex-direction: column;
+        text-align: center;
+    }
+    nav>div{
+        margin-bottom: 24px;
+    }
+    nav>div:last-of-type{
+        width: 70%;
+    }
+    .info{
+        text-align: center;
+    }
+    footer{
+        flex-direction: column;
+        align-items: unset;
+        padding: 4px 40px 4px 32px;
+    }
+    footer>div:last-of-type{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    footer>div{
+        width: 100%;
+    }
+    footer p{
+        width: 100%;
+    }
+    footer>div:last-of-type>a{
+        display: block;
+        margin-right: 16px;
+    }
+
+}
+
+@media screen and (max-width: 640px){
+    nav>div{
+        width: 100%;
+    }
+    nav>div:last-of-type{
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    nav>div:last-of-type a{
+        margin: 8px;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 420px){
+    .box div{
+        padding-left: 32px;
+    }
+}

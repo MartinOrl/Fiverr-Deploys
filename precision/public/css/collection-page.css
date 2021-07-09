@@ -154,6 +154,8 @@ main{
     font-size: 20px;
     font-weight: var(--light);
     margin: 4px 0;
+    width: 100%;
+    word-break: break-all;
 }
 
 .box a{
@@ -305,3 +307,77 @@ main{
 .modal-fill-active{
     display: block;
 }
+
+@media screen and (max-width: 1240px){
+    body>div, footer{
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 1080px){
+    .container{
+        flex-direction: column;
+    }
+    .box{
+        width: 100% !important;
+    }
+}
+
+
+@media screen and (max-width: 980px){
+    nav{
+        flex-direction: column;
+        text-align: center;
+    }
+    nav>div{
+        margin-bottom: 24px;
+    }
+    nav>div:last-of-type{
+        width: 70%;
+    }
+    .info{
+        text-align: center;
+    }
+    footer{
+        flex-direction: column;
+        align-items: unset;
+        padding: 4px 40px 4px 32px;
+    }
+    footer>div:last-of-type{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    footer>div{
+        width: 100%;
+    }
+    footer p{
+        width: 100%;
+        word-break: break-all;
+    }
+    footer>div:last-of-type>a{
+        display: block;
+        margin-right: 16px;
+    }
+    .modal-active>div, .modal-active p{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 640px){
+    nav>div{
+        width: 100%;
+    }
+    nav>div:last-of-type{
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    nav>div:last-of-type a{
+        margin: 8px;
+        display: block;
+    }
+    .modal-active>div, .modal-active p{
+        width: 90%;
+    }
+}
+

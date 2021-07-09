@@ -9,6 +9,33 @@
     }
 }
 
+@keyframes colorChange{
+    0%{
+        background: #ffed90;
+    }
+    15%{
+        color: #000;
+    }
+    25%{
+        background: #64DFDF;
+        color: #fff
+    }
+    50%{
+        background: #6930C3;
+        color: #fff
+    }
+    75%{
+        background: #64DFDF;
+        color: #fff
+    }
+    90%{
+        color: #000;
+    }
+    100%{
+        background: #ffed90;
+    }
+}
+
 
 
 body{
@@ -27,7 +54,7 @@ body{
     min-height: 100vh;
     background-image: url('/public/assets/hero.png');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     background-position: 0 -64px;
     display: flex;
     flex-direction: column;
@@ -38,7 +65,7 @@ body{
     margin-bottom: 96px;
 }
 .hero img{
-    height: 152px;
+    height: 196px;
 }
 .hero h1{
     margin: 24px 0;
@@ -47,6 +74,7 @@ body{
 }
 .hero p{
     margin: 16px auto;
+    font-size: 1.4rem;
 }
 
 
@@ -66,7 +94,7 @@ p{
     background: #ffed90;
     border-radius: 6px;
     width: max-content;
-    font-size: 2.5rem;
+    font-size: 2.5rem !important;
     color: #000;
     font-family: 'Syne', 'Segoe UI', sans-serif;
     transition: 250ms ease-in-out;
@@ -76,7 +104,7 @@ p{
 
 .hero-button:hover{
     color: #000;
-    background: #fff;
+    animation: colorChange 10s ease-in-out infinite;
 }
 
 .row{
@@ -114,7 +142,7 @@ p{
 }
 
 .row div img{
-    width: 350px;
+    width: 420px;
     object-fit: contain;
     display: block;
     margin: 0 auto;
@@ -141,6 +169,7 @@ p{
     margin: 0 24px;
     width: 250px;
     animation: sliding 40s linear infinite;
+    background: white;
 }
 
 .special-button{
@@ -167,9 +196,9 @@ p{
 
 .roadmap{
     width: 100%;
-
+    min-height: 1140px;
     background-image: url('/public/assets/bgRoadmap.png');
-    background-size: cover;
+    background-size: 100%;
     background-repeat: no-repeat;
     display: flex;
     justify-content: space-between;
@@ -201,14 +230,14 @@ p{
     display: block;
     margin: 6px 0;
 }
-.roadmap>div:first-of-type>h1{
+.roadmap>div>div:first-of-type>h1{
     font-size: 35px;
     font-weight: 800;
     text-align: center;
     margin-bottom: 16px;
 }
 
-.roadmap div{
+.roadmap>div{
     width: 80%;
 }
 
@@ -312,6 +341,12 @@ button[type='submit']{
     margin-left: -4px;
     outline: none;
     border: 1px solid transparent;
+    cursor: pointer;
+    transition: 250ms ease-in-out;
+}
+
+button[type='submit']:hover{
+    background: white;
 }
 
 @media screen and (max-width: 1505px){
@@ -343,18 +378,42 @@ button[type='submit']{
 @media screen and (max-width: 1280px){
     .hero{
         padding-top: 48px;
+        min-height: 640px;
+        background-size: cover;
+    }
+    .hero img{
+        height: 116px;
+    }
+    .hero h1{
+        font-size: 26px;
+        margin-bottom: 16px;
+    }
+    .hero p{
+        margin-bottom: 0;
+        font-size: 1.2rem;
     }
     .welcome p{
         width: 80%;
     }
     .hero-button{
         width: max-content !important;
+        font-size: 1.5rem !important;
+        margin-top: 24px !important;
     }
+
     .roadmap{
         background-position: center;
+        position: relative;
+        padding: 0;
+    }
+    .roadmap>div{
+        position: absolute;
+        top: 144px;
+        left: 50%;
+        transform: translateX(-50%);
     }
     .row div img{
-        width: 240px;
+        width: 360px;
     }
     .row div p{
         width: 100%;
@@ -373,6 +432,14 @@ button[type='submit']{
     }
     .welcome img{
         width: 240px;
+        position: relative;
+        z-index: 4;
+    }
+    .bosses>span{
+        display: none;
+    }
+    .bosses-container{
+        flex-direction: column;
     }
 }
 
@@ -383,21 +450,53 @@ button[type='submit']{
 }
 
 @media screen and (max-width: 740px){
-    .hero h1{
-        font-size: 1.8rem;
-        width: 80%;
+    .hero img{
+        height: 80px
     }
-    .hero p{
-        font-size: 1.2rem;
-        margin: 8px 0;
+    .roadmap>div>div:first-of-type>h1{
+        font-size: 26px;
     }
-    .hero-button{
-        font-size: 1.8rem !important;
+    .roadmap h1{
+        font-size: 24px;
+    }
+    .roadmap p{
+        font-size: 16px;
+    }
+    .welcome h1{
+        font-size: 32px;
+    }
+    .welcome p{
+        font-size: 24px;
+        line-height: 40px;
+    }
+    .bosses-container h1{
+        font-size: 24px;
+    }
+    .bosses-container div{
+        margin-bottom: 24px;
+    }
+    .newsletter h1{
+        font-size: 26px;
+    }
+    .newsletter p{
+        font-size: 20px;
+    }
+    form{
+        width: 90%;
+        margin: 48px auto 64px;
+    }
+    form>div{
+        flex-direction: column;
+        width: 100%;
+    }
+    form input{
+        width: 100%;
+        margin-bottom: 24px;
     }
 }
 
-@media screen and (max-width: 680px){
+@media screen and (max-width: 620px){
     .roadmap{
-        padding: 96px 64px 48px;
+        background-size: cover;
     }
 }
