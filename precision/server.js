@@ -30,7 +30,7 @@ app.get('/video-copy', (req,res) => {
     res.sendFile(path.join(__dirname + "/client/video-page/video-page.html"))
 })
 
-app.get('/freaky-trolls', (req, res) => {
+app.get('/trolls', (req, res) => {
     res.sendFile(path.join(__dirname + "/client/trolls/pickle.html"))
 })
 
