@@ -156,19 +156,17 @@ body>div{
 }
 
 @media screen and (max-width: 980px){
-    .hero .row{
-        flex-direction: column;
-    }
     .link{
         margin: 24px 0;
         width: max-content;
     }
+    .container{
+        width: 85%;
+    }
 }
 
 @media screen and (max-width: 760px){
-    .row{
-        flex-wrap: wrap;
-    }
+
     .mint{
         margin-top: 16px;
     }
