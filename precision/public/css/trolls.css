@@ -175,3 +175,16 @@ body>div{
         line-height: 56px;
     }
 }
+
+@media screen and (max-width: 540px){
+    .container{
+        flex-wrap: wrap;
+    }
+    .hero .row{
+        flex-direction: column-reverse;
+    }
+    .link{
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
