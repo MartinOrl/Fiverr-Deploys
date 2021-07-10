@@ -616,10 +616,23 @@ button[type='submit']:hover{
         width: 100% !important;
         text-align: center;
     }
+    .button-fix{
+        width: max-content !important;
+    }
+    .row{
+        width: 90%;
+    }
+    .row div{
+        width: 100% !important;
+    }
 }
 
 @media screen and (max-width: 571px){
     header>a{
         margin: 0 auto 8px;
+    }
+    .row h1, .welcome h1, .row h1 span{
+        widtH: 100%;
+        word-wrap: break-word;
     }
 }
