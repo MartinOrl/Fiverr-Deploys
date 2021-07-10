@@ -45,25 +45,106 @@ body{
     color: #fff;
     font-family: 'Syne', 'Roboto','Segoe UI', sans-serif, -apple-system, Oxygen;
     overflow-x: hidden;
-    padding-bottom: 164px;
+}
+
+header{
+    width: 100%;
+    padding: 16px 32px;
+    background: #070707;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+header>div{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+header img{
+    height: 40px;
+    object-fit: contain;
+    margin-right: 32px;
+}
+
+header>div:last-of-type{
+    margin-left: auto;
+}
+
+header>div:last-of-type img{
+    filter: grayscale();
+    height: 20px;
+    margin: 0;
+    width: 20px;
+}
+
+header a{
+    color: rgba(255,255,255,.4);
+    transition: 250ms ease-in-out;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    display: block;
+    margin: 4px 16px;
+    font-size: 16px;
+}
+
+.link{
+    padding: 4px 0;
+    border-bottom: 1px solid rgba(255,255,255,.4);
+}
+
+.link:hover{
+    color: rgba(255,255,255,.8);
+    border-bottom: 1px solid rgba(255,255,255,.8);
+    transform: scale(1.06);
+    transform-origin: center;
+}
+
+footer{
+    text-align: center;
+    margin-top: 64px;
+    padding: 16px 0;
+    box-sizing: border-box;
+    background: #070707;
 }
 
 
+footer p{
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    font-size: 18px;
+}
 
 .hero{
     min-height: 100vh;
-    background-image: url('/public/assets/hero.png');
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: 0 -64px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    position: relative;
     padding: 96px 0 32px;
     text-align: center;
     margin-bottom: 96px;
 }
+.hero::before{
+    height: 100%;
+    width: 100%;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.4;
+    background-image: url('/public/assets/hero.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0 -64px;
+}
+
 .hero img{
     height: 196px;
 }
@@ -84,7 +165,7 @@ body{
 p{
     font-weight: 600;
     font-size: 1.6rem;
-    width: 780px;
+    width: 700px;
     font-family: 'Syne', 'Segoe UI', sans-serif;
     line-height: 2.8rem;
 }
@@ -180,7 +261,9 @@ p{
     transition: 250ms ease-in-out;
     box-sizing: border-box;
     cursor: pointer;
-    font-size: 2.2rem;
+    font-size: 28px !important;
+    margin: 0 auto 96px !important;
+    display: block;
 }
 
 .special-button:hover{
@@ -197,9 +280,7 @@ p{
 .roadmap{
     width: 100%;
     min-height: 1140px;
-    background-image: url('/public/assets/bgRoadmap.png');
-    background-size: 100%;
-    background-repeat: no-repeat;
+
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -207,6 +288,21 @@ p{
     padding: 1200px 168px 620px;
     box-sizing: border-box;
     font-weight: 600;
+    position: relative;
+}
+
+.roadmap::before{
+    background-image: url('/public/assets/bgRoadmap.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.4;
+    content: "";
+    height: 100%;
+    width: 100%;
 }
 
 .roadmap h1, .row h1 span, .welcome span{
@@ -255,7 +351,7 @@ p{
 
 .bosses{
     width: 100%;
-    margin: 16px auto 144px;
+    margin: 16px auto 72px;
     position: relative;
 }
 
@@ -315,7 +411,7 @@ form{
 
     display: flex;
     justify-content: space-around;
-    margin: 144px 0 96px;
+    margin: 24px 0 96px;
 }
 form>div{
     display: flex;
@@ -332,6 +428,7 @@ input{
     font-family: 'Syne', 'Segoe UI', sans-serif;
     border: 1px solid white;
 }
+
 
 button[type='submit']{
     padding: 8px 40px;
@@ -379,6 +476,9 @@ button[type='submit']:hover{
     .hero{
         padding-top: 48px;
         min-height: 640px;
+        background-size: cover;
+    }
+    .hero::before{
         background-size: cover;
     }
     .hero img{
@@ -495,8 +595,26 @@ button[type='submit']:hover{
     }
 }
 
+@media screen and (max-width: 727px){
+    header div{
+        margin-bottom: 16px;
+    }
+    header div:last-of-type{
+        margin: 8px auto 16px
+    }
+}
+
 @media screen and (max-width: 620px){
-    .roadmap{
+    .roadmap::before{
         background-size: cover;
+    }
+    .special-button span{
+        margin-left: 16px;
+    }
+}
+
+@media screen and (max-width: 571px){
+    header>a{
+        margin: 0 auto 8px;
     }
 }
