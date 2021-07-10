@@ -308,6 +308,13 @@ main{
     display: block;
 }
 
+.small-image{
+    width: 240px;
+    height: 160px;
+    object-fit: cover;
+}
+
+
 @media screen and (max-width: 1240px){
     body>div, footer{
         width: 80%;

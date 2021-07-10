@@ -135,9 +135,11 @@ main{
 
 .image{
     width: 100%;
-    height: 620px;
+    height: 480px;
     object-fit: cover;
-
+    transition: 500ms ease-in-out;
+    
+    user-select: none;
 }
 
 .box h1{
@@ -170,7 +172,11 @@ main{
     font-weight: var(--light);
     line-height: 28px;
     font-size: 19px;
-    min-height: 360px;
+
+}
+
+.description:last-of-type{
+    margin-bottom: 96px;
 }
 
 .white-bar{
@@ -182,11 +188,6 @@ main{
     background: white;
 }
 
-.images img:nth-of-type(2), .images img:nth-of-type(3){
-    position: absolute;
-    left: 0;
-    top: 0;
-}
 
 .control{
     position: absolute;
@@ -249,24 +250,27 @@ main{
     transform: rotate(180deg);
 }
 
-.image{
-    transition: 500ms ease-in-out;
-    opacity: 0;
-    user-select: none;
-}
-
-.visible-image{
-    opacity: 1;
-}
 
 .modal{
     transition: 400ms ease-in-out;
     
 }
 
-.modal p{
+.modal>p{
     display: none;
     cursor: pointer;
+}
+
+.image-info{
+    margin: 0 0 48px !important;
+}
+
+.modal>div:first-of-type{
+    margin-bottom: 0;
+}
+
+#name{
+    font-style: italic;
 }
 
 .modal-active{
@@ -291,6 +295,15 @@ main{
     margin: 16px auto;
 }
 
+.modal-active img{
+    height: auto;
+    max-height: 760px;
+}
+
+.modal-active .image-choice{
+    display: none;
+}
+
 .modal-active p{
     display: block;
     text-align: end;
@@ -300,6 +313,10 @@ main{
     font-weight: bold;
 }
 
+.modal-active .image-info{
+    display: none;
+}
+
 .modal-fill{
     display: none;
 }
@@ -307,6 +324,28 @@ main{
 .modal-fill-active{
     display: block;
 }
+
+.small-image{
+    width: 220px;
+    height: 140px;
+    object-fit: cover;
+    margin: 8px 8px 0 0;
+    cursor: pointer;
+    display: block;
+    box-sizing: border-box;
+}
+
+.image-choice{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.small-image-active{
+    border: 2px solid black;
+}
+
+
 
 @media screen and (max-width: 1240px){
     body>div, footer{
