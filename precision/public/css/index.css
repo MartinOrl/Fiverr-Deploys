@@ -609,7 +609,12 @@ button[type='submit']:hover{
         background-size: cover;
     }
     .special-button span{
-        margin-left: 16px;
+        display: none;
+    }
+    .special-button{
+        word-wrap: break-word;
+        width: 100% !important;
+        text-align: center;
     }
 }
 
