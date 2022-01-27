@@ -1,0 +1,118 @@
+.guides>p{
+    color: var(--green);
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 144px 0 24px;
+}
+
+.guide{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 128px;
+}
+
+.guide h2{
+    font-size: 32px;
+    color: var(--green);
+    font-weight: 600;
+    margin: 32px 0 24px;
+}
+
+.guides-container{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 128px;
+}
+
+.guide img{
+    height: 240px;
+    object-fit: contain;
+    display: block;
+}
+
+.guide p{
+    font-size: 16px;
+    margin: 0;
+    color: var(--white);
+    opacity: 0.4;
+    font-weight: 600;
+    width: 330px
+}
+
+.guides>.guide{
+    margin-bottom: 0;
+}
+
+.hero{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 72px;
+}
+
+.hero>div>div{
+    display: flex;
+    align-items: center;
+}
+
+.hero h1, .hero p{
+    width: 460px;
+    color: var(--white);
+}
+
+.hero h1{
+    font-weight: 700;
+    font-size: 48px;
+    width: 463px;
+    margin: 0 0 24px;
+}
+
+.hero p{
+    font-weight: 600;
+    opacity: 0.4;
+    margin: 0 0 56px;
+}
+
+.hero-cta{
+    background: var(--white);
+    color: var(--dark-primary);
+    padding: 12px 96px;
+    font-size: 24px;
+    margin: 0;
+    font-weight: 600;
+}
+
+.hero img{
+    margin-right: 48px;
+    transform: scale(0.95);
+}
+
+.hero>div{
+    padding-top: 96px;
+}
+
+.sub-cta{
+    font-size: 24px;
+    color: var(--white);
+    margin-left: 32px;
+}
+
+.sub-cta span{
+    width: 100%;
+    height: 4px;
+    margin-top: 8px;
+    background: var(--green);
+    border-radius: 16px;
+    content: '';
+    display: block;
+}
+
+.sub-cta a{
+    padding: 0 8px;
+    text-decoration: none;
+    outline: none;
+    color: var(--white);
+    margin: 0;
+}
