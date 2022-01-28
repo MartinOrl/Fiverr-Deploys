@@ -14,7 +14,7 @@
 <body>
 
     <header>
-        <nav>
+        <nav class="nav">
             <a href="/" class="nav-link branding ">Logo</a>
             <div class="nav-collapse">
                 <div class="navmap">
@@ -25,6 +25,11 @@
                     <a href="/admin" class="nav-link">Admin</a>
                 </div>
                 <a href="#" class="button metamask">Connect Metamask</a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </nav>
     </header>
@@ -38,75 +43,83 @@
             
         <div class="row justify-between section-container main-content">
             <div class="filter-sidebar">
-          
-                <div class="filter-group">
-                    <div class="row justify-between align-center filter-group-head ">
-                        <h2>Listing Type</h2>
-                        <img src="/public/images/icons/chevron.png" alt="">
-                    </div>
-                    <div class="filter-collapse">
-                        <div class="row align-center checkbox-container">
-                            <div class="checkbox">
-                                <img src="/public/images/icons/tick.png" alt="">
-                            </div>
-                            <p>Fixed Price</p>
-                        </div>
-                        <div class="row align-center checkbox-container">
-                            <div class="checkbox">
-                                <img src="/public/images/icons/tick.png" alt="">
-                            </div>
-                            <p>Auction</p>
-                        </div>
-    
-                    </div>
+                <div class="row align-center justify-between filters-head">
+                    <h2>Filters</h2>
+                    <img src="/public/images/icons/chevron.png" alt="" class="filter-dropdown-toggle">
                 </div>
-                <div class="filter-group">
-                    <div class="row justify-between align-center filter-group-head ">
-                        <h2>Category</h2>
-                        <img src="/public/images/icons/chevron.png" alt="">
+                <div class="filter-group-collapse">
+                    <div class="filter-group">
+                        <div class="row justify-between align-center filter-group-head ">
+                            <h2>Listing Type</h2>
+                            <img src="/public/images/icons/chevron.png" alt="">
+                        </div>
+                        <div class="filter-collapse">
+                            <div class="row align-center checkbox-container">
+                                <div class="checkbox">
+                                    <img src="/public/images/icons/tick.png" alt="">
+                                </div>
+                                <p>Fixed Price</p>
+                            </div>
+                            <div class="row align-center checkbox-container">
+                                <div class="checkbox">
+                                    <img src="/public/images/icons/tick.png" alt="">
+                                </div>
+                                <p>Auction</p>
+                            </div>
+        
+                        </div>
                     </div>
-                    <div class="filter-collapse">
-                        <div class="row align-center checkbox-container">
-                            <div class="checkbox">
-                                <img src="/public/images/icons/tick.png" alt="">
-                            </div>
-                            <p>Art</p>
+                    <div class="filter-group">
+                        <div class="row justify-between align-center filter-group-head ">
+                            <h2>Category</h2>
+                            <img src="/public/images/icons/chevron.png" alt="">
                         </div>
-                        <div class="row align-center checkbox-container">
-                            <div class="checkbox">
-                                <img src="/public/images/icons/tick.png" alt="">
+                        <div class="filter-collapse">
+                            <div class="row align-center checkbox-container">
+                                <div class="checkbox">
+                                    <img src="/public/images/icons/tick.png" alt="">
+                                </div>
+                                <p>Art</p>
                             </div>
-                            <p>Music</p>
-                        </div>
-                        
-                        <div class="row align-center checkbox-container">
-                            <div class="checkbox">
-                                <img src="/public/images/icons/tick.png" alt="">
+                            <div class="row align-center checkbox-container">
+                                <div class="checkbox">
+                                    <img src="/public/images/icons/tick.png" alt="">
+                                </div>
+                                <p>Music</p>
                             </div>
-                            <p>GIF</p>
+                            
+                            <div class="row align-center checkbox-container">
+                                <div class="checkbox">
+                                    <img src="/public/images/icons/tick.png" alt="">
+                                </div>
+                                <p>GIF</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="cards-parent-container">
-                <div class="row align-center tabs-container">
-                    <div class="tab tab-active" --data-type="buy">
-                        <p>Ongoing Buy Operation</p>
-                        <span></span>
-                    </div>
-                    <div class="tab" --data-type="sell">
-                        <p>Ongoing Sell Operation</p>
-                        <span></span>
-                    </div>
-                    <div class="tab" --data-type="listed">
-                        <p>Listed NFTs</p>
-                        <span></span>
-                    </div>
-                    <div class="tab" --data-type="unlisted">
-                        <p>Unlisted NFTs</p>
-                        <span></span>
+                <div class="tabs-overflow">
+                    <div class="row align-center tabs-container">
+                        <div class="tab tab-active" --data-type="buy">
+                            <p>Ongoing Buy Operation</p>
+                            <span></span>
+                        </div>
+                        <div class="tab" --data-type="sell">
+                            <p>Ongoing Sell Operation</p>
+                            <span></span>
+                        </div>
+                        <div class="tab" --data-type="listed">
+                            <p>Listed NFTs</p>
+                            <span></span>
+                        </div>
+                        <div class="tab" --data-type="unlisted">
+                            <p>Unlisted NFTs</p>
+                            <span></span>
+                        </div>
                     </div>
                 </div>
+     
                 <div class="cards-container" id="cards-target">
                     <div class="card-common">
                         <img src="/public/images/art.jpg" alt="">

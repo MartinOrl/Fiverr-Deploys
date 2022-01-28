@@ -13,7 +13,7 @@
 <body>
 
     <header>
-        <nav>
+        <nav class="nav">
             <a href="/" class="nav-link branding ">Logo</a>
             <div class="nav-collapse">
                 <div class="navmap">
@@ -25,6 +25,11 @@
                 </div>
                 <a href="#" class="button metamask">Connect Metamask</a>
             </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
 
@@ -35,51 +40,57 @@
         </div>
         <div class="row justify-between section-container main-content">
             <div class="filter-sidebar">
-                <div class="filter-group">
-                    <div class="row justify-between align-center filter-group-head ">
-                        <h2>Listing Type</h2>
-                        <img src="/public/images/icons/chevron.png" alt="">
-                    </div>
-                    <div class="filter-collapse">
-                        <div class="row align-center checkbox-container">
-                            <div class="checkbox">
-                                <img src="/public/images/icons/tick.png" alt="">
-                            </div>
-                            <p>Fixed Price</p>
-                        </div>
-                        <div class="row align-center checkbox-container">
-                            <div class="checkbox">
-                                <img src="/public/images/icons/tick.png" alt="">
-                            </div>
-                            <p>Auction</p>
-                        </div>
-    
-                    </div>
+                <div class="row align-center justify-between filters-head">
+                    <h2>Filters</h2>
+                    <img src="/public/images/icons/chevron.png" alt="" class="filter-dropdown-toggle">
                 </div>
-                <div class="filter-group">
-                    <div class="row justify-between align-center filter-group-head ">
-                        <h2>Category</h2>
-                        <img src="/public/images/icons/chevron.png" alt="">
+                <div class="filter-group-collapse">
+                    <div class="filter-group">
+                        <div class="row justify-between align-center filter-group-head ">
+                            <h2>Listing Type</h2>
+                            <img src="/public/images/icons/chevron.png" alt="">
+                        </div>
+                        <div class="filter-collapse">
+                            <div class="row align-center checkbox-container">
+                                <div class="checkbox">
+                                    <img src="/public/images/icons/tick.png" alt="">
+                                </div>
+                                <p>Fixed Price</p>
+                            </div>
+                            <div class="row align-center checkbox-container">
+                                <div class="checkbox">
+                                    <img src="/public/images/icons/tick.png" alt="">
+                                </div>
+                                <p>Auction</p>
+                            </div>
+        
+                        </div>
                     </div>
-                    <div class="filter-collapse">
-                        <div class="row align-center checkbox-container">
-                            <div class="checkbox">
-                                <img src="/public/images/icons/tick.png" alt="">
-                            </div>
-                            <p>Art</p>
+                    <div class="filter-group">
+                        <div class="row justify-between align-center filter-group-head ">
+                            <h2>Category</h2>
+                            <img src="/public/images/icons/chevron.png" alt="">
                         </div>
-                        <div class="row align-center checkbox-container">
-                            <div class="checkbox">
-                                <img src="/public/images/icons/tick.png" alt="">
+                        <div class="filter-collapse">
+                            <div class="row align-center checkbox-container">
+                                <div class="checkbox">
+                                    <img src="/public/images/icons/tick.png" alt="">
+                                </div>
+                                <p>Art</p>
                             </div>
-                            <p>Music</p>
-                        </div>
-                        
-                        <div class="row align-center checkbox-container">
-                            <div class="checkbox">
-                                <img src="/public/images/icons/tick.png" alt="">
+                            <div class="row align-center checkbox-container">
+                                <div class="checkbox">
+                                    <img src="/public/images/icons/tick.png" alt="">
+                                </div>
+                                <p>Music</p>
                             </div>
-                            <p>GIF</p>
+                            
+                            <div class="row align-center checkbox-container">
+                                <div class="checkbox">
+                                    <img src="/public/images/icons/tick.png" alt="">
+                                </div>
+                                <p>GIF</p>
+                            </div>
                         </div>
                     </div>
                 </div>

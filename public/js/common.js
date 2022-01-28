@@ -9,3 +9,6 @@ if(document.querySelector(".modal")){
 
 
 
+document.querySelector(".nav-toggle").addEventListener("click", () => {
+    document.querySelector(".nav").classList.toggle("nav-collapsed")
+})

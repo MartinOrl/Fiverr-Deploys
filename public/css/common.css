@@ -32,6 +32,7 @@ nav{
     padding: 32px 192px;
     box-sizing: border-box;
     background: var(--dark-secondary);
+    position: relative;
 }
 .nav-link{
     text-decoration: none;
@@ -91,7 +92,7 @@ nav{
 }
 
 .section-heading h2{
-    margin: 0;
+    margin: 0 auto;
     font-size: 32px;
     width: max-content;
     color: var(--white)
@@ -403,4 +404,154 @@ footer>p{
 
 .modal-show{
     top: 0;
+}
+
+.nav-toggle{
+    position: absolute;
+    top: 48px;
+    display: none;
+    right: 48px;;
+    z-index: 15;
+    width: 24px;
+    height: auto;
+}
+
+.nav-toggle span{
+    height: 3px;
+    margin-bottom: 3px;
+    display: block;
+    transform-origin: center;
+    transition: 250ms ease-in-out;
+    border-radius: 24px;
+    background: var(--white);
+    content: '';
+}
+
+.nav-toggle span:nth-of-type(1){
+    width: 100%;
+}
+
+.nav-toggle span:nth-of-type(2){
+    width: 75%;
+}
+.nav-toggle span:nth-of-type(3){
+    width: 50%;
+}
+
+.nav-collapsed .nav-collapse{
+    max-height: 480px;
+}
+
+.nav-collapsed .nav-toggle span:nth-of-type(1){
+    width: 100%;
+}
+
+.nav-collapsed .nav-toggle span:nth-of-type(2){
+    width: 100%;
+}
+.nav-collapsed .nav-toggle span:nth-of-type(3){
+    width: 100%;
+}
+
+@media screen and (max-width: 1440px){
+    .section-container, footer>div{
+        padding-left: 128px !important;
+        padding-right: 128px !important;
+    }
+    nav{
+        padding: 32px 128px
+    }
+}
+
+@media screen and (max-width: 1280px){
+    .section-container,footer>div{
+        padding-left: 96px !important;
+        padding-right: 96px !important;
+    }
+    nav{
+        padding: 32px 96px
+    }
+}
+
+@media screen and (max-width: 960px){
+    nav{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav .branding{
+        width: max-content;
+    }
+    .nav-collapse{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        margin-top: 32px;
+        max-height: 0;
+        transition: 250ms ease-in-out;
+        overflow: hidden;
+    }
+    .nav-collapse a{
+        display: block;
+        margin: 0 0 16px;
+    }
+
+    .nav-toggle{
+        display: block;
+    }
+
+    footer>div{
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-details{
+        justify-content: space-between;
+        width: 90%;
+    }
+    .footer-details>div{
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .section-container, footer>div{
+        padding-left: 48px !important;
+        padding-right: 48px !important;
+    }
+    nav{
+        padding: 24px 48px 16px;
+    }
+    .section-heading{
+        margin: 32px auto 24px;
+        width: 90%;
+
+    }
+    .section-heading h2{
+        width: 100%;
+        text-align: center;
+    }
+
+    .section-heading p{
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-details{
+        flex-direction: column;
+        justify-content: unset;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-branding{
+        margin-bottom: 32px;
+    }
+    .socials{
+        padding: 0;
+    }
+
+    .footer-column{
+        margin-bottom: 24px;
+    }
+
 }

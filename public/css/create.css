@@ -164,3 +164,39 @@
     opacity: 0;
 }
 
+@media screen and (max-width: 768px){
+    .section-heading{
+        width: max-content;
+        
+    }
+    .section-heading h2{
+        width: max-content;
+        padding: 0 24px;
+    }
+
+    .form{
+        width: 80%;
+        margin: 48px auto 0;
+    }
+    .image-upload{
+        padding: 72px 0;
+    }
+    .submit{
+        flex-direction: column;
+    }
+    .submit input{
+        margin: 0 0 24px;
+    }
+    .submit p{
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .submit input{
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+    }
+    
+}

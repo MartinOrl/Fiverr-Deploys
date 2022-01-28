@@ -125,6 +125,20 @@ const chatManagement = {
         return temp
     },
 
+    sendMessage(id, message){
+        this.data.openedChats.map(chat => {
+            if(chat.id === id){
+                chat.messages.push({
+                    id: "kbghnlfai12",
+                    timestamp: Date.now(),
+                    type: 2,
+                    message: message
+                })
+                this.renderChatMessages(id)
+            }
+        })
+    },
+
     renderMainChat(){
         let chat_content = document.querySelector(".chat-content")
         let tempTemplate = `
@@ -182,8 +196,8 @@ const chatManagement = {
                 </div>
             </div>
             <div class="message-write row align-center  justify-between">
-                <input type="text" name="message" id="new-message-text" placeholder="Message Text" />
-                <img src="/public/images/icons/send.png" />
+                <input type="text" name="message" id="new-message-text" placeholder="Message Text" --data-chat-id='${id}' />
+                <img src="/public/images/icons/send.png" id='new-message-send' />
             </div>
         </div>
         `
@@ -220,6 +234,14 @@ const chatManagement = {
             chatManagement.renderMessageHistory()
             document.querySelector(".chat-window").classList.remove("chat-window-show")
             
+        })
+
+        document.querySelector("#new-message-send").addEventListener("click", () => {
+            let messageText = document.querySelector("#new-message-text")
+            if(messageText.value.length > 1){
+                let id = messageText.attributes["--data-chat-id"].value
+                this.sendMessage(id,messageText.value)
+            }
         })
     },
 

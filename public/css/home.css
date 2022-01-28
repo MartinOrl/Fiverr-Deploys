@@ -116,3 +116,91 @@
     color: var(--white);
     margin: 0;
 }
+
+@media screen and (max-width: 1440px){
+    .hero img{
+        width: 45%;
+        transform: scale(1);
+        object-fit: contain;
+    }
+    .hero h1{
+        font-size: 40px;
+        width: 395px;
+    }
+    .hero>div>div{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .hero>div>div>a{
+        margin-bottom: 32px;
+    }
+    .sub-cta{
+        margin: 0;
+    }
+    .hero-cta{
+        padding: 8px 72px;
+    }
+    .hero p{
+        margin: 0 0 32px
+    }
+    .guide{
+        width: 420px;
+    }
+    .guide p{
+        width: 80%;
+    }
+    .guides-container{
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .guides>.guide{
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 960px){
+    .hero{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .hero>div{
+        padding-top: 64px;
+    }
+    .hero h1{
+        width: 100%;
+        font-size: 32px;
+    }
+    .hero p{
+        width: 90%;
+        margin: 0 auto 24px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .hero>div{
+        padding-top: 0;
+    }
+    .hero>div>div{
+        align-items: center;
+    }
+    .hero img{
+        margin-top: 32px;
+        width: 90%;
+    }
+    .guide{
+        width: 90%;
+    }
+
+    .guide img{
+        width: 90%;
+    }
+    .guide h2{
+        margin: 24px auto 16px;
+    }
+    .guide p{
+        width: 95%;
+    }
+}

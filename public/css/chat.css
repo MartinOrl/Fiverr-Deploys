@@ -165,7 +165,13 @@
 .message-search, .message-write{
     background: #EBEBEB;
     padding: 10px 16px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
 }
+
+
 
 .message-search img, .message-write img{
     filter: brightness(0);
@@ -277,4 +283,10 @@
 .message-received{
     background: var(--dark-primary);
     color: var(--white)
+}
+
+@media screen and (max-width: 768px){
+    .chat-toggles, .chats-container{
+        right: 32px;
+    }
 }

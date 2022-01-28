@@ -145,3 +145,11 @@
     max-width: 72%;
 }
 
+@media screen and (max-width: 960px){
+    .cards-parent-container{
+        max-width: 100%;
+    }
+    .card-common{
+        width: 310px;
+    }
+}

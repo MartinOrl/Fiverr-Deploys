@@ -32,8 +32,18 @@
     padding-left: 16px;
 }
 
+.filters-head{
+    cursor: pointer;
+    margin-bottom: 32px;
+    display: none;
+}
+
+.filters-head h2{
+    font-size: 32px;
+}
+
 .filter-group{
-    margin-bottom: 48px;
+    margin-bottom: 32px;
 }
 
 .filter-group-head{
@@ -61,6 +71,14 @@
     transform: rotate(180deg);
 }
 
+.filter-dropdown-toggle{
+    transform-origin: center;
+    transition: 250ms ease-in-out;
+}
+
+.dropdown-toggled{
+    transform: rotate(180deg);
+}
 
 .checkbox{
     width: 28px;
@@ -86,4 +104,28 @@
 
 .checkbox-checked img{
     opacity: 1;
+}
+
+@media screen and (max-width: 960px){
+    .filter-sidebar{
+        width: 100%;
+        padding-bottom: 0;
+        margin-bottom: 32px;
+    }
+    .filters-head{
+        display: flex;
+    }
+    .filter-group-head h2{
+        font-size: 20px;
+    }
+    .filter-group-collapse{
+        max-height: 0;
+        overflow-y: hidden;
+        transition: 250ms ease-in-out;
+    }
+
+    .filter-group-collapsed{
+        max-height: 560px !important;
+    }
+
 }
