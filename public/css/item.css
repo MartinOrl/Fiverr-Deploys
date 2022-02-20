@@ -1,0 +1,184 @@
+main{
+    padding: 32px 192px;
+    box-sizing: border-box;
+}
+
+.item{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 48px;
+}
+
+.art{
+    width: 50%;
+}
+
+.art img{
+    width: 100%;
+    border-radius: 24px;
+}
+
+.item-info{
+    width: 45%;
+    color: #F5EEDC;
+}
+
+
+.person-info{
+    display: flex;
+    align-items: center;
+}
+
+.person-info>div{
+    margin-right: 72px;
+}
+
+.item-info h1{
+    margin: 0 0 24px;
+    font-size: 40px;
+}
+
+.person-info>div>div{
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+.person-info>div>div p{
+    font-size: 24px;
+    margin: 0;
+}
+
+.person-info img{
+    border: 3px solid white;
+    border-radius: 50%;
+    display: block;
+    margin-right: 12px;
+}
+
+.price p:first-of-type{
+    color: #4aa96c;
+    font-weight: 600;
+    margin: 0 0 8px;
+}
+
+.price p:last-of-type{
+    font-size: 24px;
+    font-weight: 600;
+    color: #F5EEDC;
+    margin: 0;
+}
+
+.price>div:first-of-type{
+    margin-right: 48px;
+}
+
+.price span{
+    color: #4aa96c;
+    font-size: 16px;
+    margin-left: 8px;
+}
+
+.price{
+    display: flex;
+    margin: 32px 0;
+}
+
+.card-button{
+    border-radius: 8px;
+    padding: 8px 72px;
+    font-size: 24px;
+    width: max-content;
+    margin-right: 24px;
+}
+
+.bid-button{
+    margin: 0 48px 0 0;
+    padding: 8px 48px;
+    box-sizing: border-box;
+    width: max-content;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    border: 3px solid #4aa96c;
+
+}
+
+.bid-button img{
+    margin-left: 16px;
+}
+
+.buttons p{
+    cursor: pointer;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 1440px){
+    main{
+        padding: 32px 128px;
+    }
+}
+
+@media screen and (max-width: 1280px){
+    main{
+        padding: 32px 96px;
+    }
+    .card-button{
+        padding: 8px 32px;
+        font-size: 20px;
+    }
+    .bid-button{
+        padding: 8px 16px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 968px){
+    .item{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    .art{
+        width: 90%;
+        margin-bottom: 32px;
+    }
+    .item-info{
+        width: 90%;
+    }
+    
+}
+
+@media screen and (max-width: 768px){
+    main{
+        padding:  24px 48px;
+    }
+    .person-info, .price{
+        flex-direction: column;
+    }
+
+    .price>div:first-of-type{
+        margin: 0 0 32px;
+    }
+    .buttons{
+        flex-direction: column;
+    }
+
+    .buttons p{
+        width: 100%;
+        text-align: center;
+    }
+    .card-button{
+        margin: 0;
+    }
+    .bid-button{
+        margin: 24px 0 0 0;
+        justify-content: center;
+    }
+
+}

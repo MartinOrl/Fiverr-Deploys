@@ -3,11 +3,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redesign | Home</title>
+    <title>Redesign | Item</title>
     <link rel="stylesheet" href="/public/css/common.css">
-    <link rel="stylesheet" href="/public/css/home.css">
     <link rel="stylesheet" href="/public/css/chat.css">
-
+    <link rel="stylesheet" href="/public/css/card.css">
+    <link rel="stylesheet" href="/public/css/item.css">
 </head>
 <body>
 
@@ -33,43 +33,50 @@
     </header>
 
     <main>
-        <div class="hero section-container">
-            <div>
-                <h1>Crypto-Collectibles Marketplace</h1>
-                <p>We are all new crypto-collectibles marketplace from arts, music, games to domains, and templates, and many more in the list. Now you can buy & sell rare items.</p>
+        <div class="section-heading">
+            <h2>Storefront</h2>
+            <span class="glow-green"></span>
+        </div>
+        <div class="item">
+            <div class="art">
+                <img src="/public/images/art.jpg" alt="">
+            </div>
+            <div class="item-info">
+                <h1>The Valley</h1>
                 <div>
-                    <a href="/store" class="button hero-cta">View Store</a>
-                    <div class="sub-cta">
-                        <a href="/create">Create Item</a>
-                        <span class="glow-green"></span>
+
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Felis amet volutpat ut facilisi enim. Gravida potenti fermentum ut ultrices enim, rhoncus diam nisi sollicitudin. Ut integer eu, sollicitudin id tellus. Augue pellentesque convallis aliquet arcu, pharetra. Pretium dui viverra sapien.</p>
+                <div class="person-info">
+                    <div>
+                        <p>Creator</p>
+                        <div>
+                            <img src="/public/images/profile1.png" alt="">
+                            <p>The Oni</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p>Owner</p>
+                        <div>
+                            <img src="/public/images/profile2.png" alt="">
+                            <p>Soulboy</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <img src="/public/images/hero.png" alt="">
-        </div>
-        <div class="guides section-container">
-            <p class="glow-green-text" >Guides</p>
-            <div class="section-heading">
-                <h2>Guides For NFT Marketplace</h2>
-                <span class="glow-green"></span>
-                <p>Get to know how to use NFT – Marketplace, how to sell or buy, and how to create your store on our platform.</p>
-            </div>
-            <div class="guides-container">
-                <div class="guide">
-                    <img src="/public/images/what.png" alt="">
-                    <h2 class="glow-green-text">What Is NFTs (Digital Items)</h2>
-                    <p>NFTs are non-fungible tokens that exist on blockchain like any other cryptocurrencies; every digital item has its own tokenize value.</p>
+                <div class="price">
+                    <div>
+                        <p>Price</p>
+                        <p>3.567 ETH <span>/  $57,567</span></p>
+                    </div>
+                    <div>
+                        <p>Collection</p>
+                        <p>Peaceful Lands</p>
+                    </div>
                 </div>
-                <div class="guide">
-                    <img src="/public/images/store.png" alt="">
-                    <h2 class="glow-green-text">Create Your Store Easily</h2>
-                    <p>You need is crypto wallet if you already have then just connected it or else if you don't then create on, then go to create the store page and fill in the basic data.</p>
+                <div class="buttons">
+                    <p class="card-button card-buy glow-green">Buy Now</p>
+                    <p class="bid-button glow-green">Place a bid <span><img src="/public/images/icons/bag.png" alt=""></span></p>
                 </div>
-            </div>
-            <div class="guide">
-                <img src="/public/images/selling.png" alt="">
-                <h2 class="glow-green-text">Start Selling More Items</h2>
-                <p>The only way to sell any NFT (items) is by having good content, high-quality items, and most important give buyers' good descriptive reason to buy.</p>
             </div>
         </div>
     </main>
@@ -129,7 +136,7 @@
 
     
     <script src="/public/js/common.js"></script>
-    <script src="/public/js/home.js"></script>
+    <script src="/public/js/item.js"></script>
     <script src="/public/js/chat.js"></script>
 </body>
 </html>

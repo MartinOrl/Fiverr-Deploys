@@ -16,7 +16,7 @@
     background: var(--dark-secondary);
 }
 
-.card-common>img{
+.card-common>a>img{
     height: 264px;
 }
 

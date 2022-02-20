@@ -33,6 +33,10 @@ app.get('/admin', (req,res) => {
     res.sendFile(path.join(__dirname, 'client','admin.html'))
 })
 
+app.get('/item', (req,res) => {
+    res.sendFile(path.join(__dirname, 'client','item.html'))
+})
+
 app.listen(port, error => {
     if(error) throw error;
     console.log("Server running on port " + port)
